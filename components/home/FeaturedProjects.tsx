@@ -18,9 +18,9 @@ const FeaturedProjects = () => {
                             <span className="text-sub text-gold">
                                 <i className="bi bi-dash-lg"></i> Featured Projects
                             </span>
-                            <h3 className="text-head py-2">Exclusive by Us</h3>
-                            <p className="text-para">
-                            Your search for UAE's top off-plan developments starts here. Our dedicated property advisors will work closely with you to understand your budget & aspirations, matching you with the perfect opportunity, allowing you to capitalize on the benefits of early investment, flexible payment plans & the potential for substantial returns.
+                            <h3 className="text-head py-2">Exclusive from Trëysta</h3>
+                            <p className="text-para mb-4">
+                            Start your search for UAE's top off-plan developments with Treysta. Our expert advisors will match you with the perfect opportunity, offering early investment benefits, flexible payment plans, and the potential for great returns—all backed by our trusted approach.
                             </p>
                             <div>
                             <Link href="/off-plan" className='btn btn-main-white'>
@@ -32,21 +32,21 @@ const FeaturedProjects = () => {
                     <div className="col-12 col-md-8 col-lg-7 my-auto">
                         <Swiper 
                          navigation
-                         autoplay={true}
+                         autoplay={false}
                          loop={true}
                          modules={[Autoplay, Navigation]}
                          breakpoints={{
                             768: {
                                 slidesPerView: 1,
-                                spaceBetween: 30,
+                                spaceBetween: 20,
                             },
                             992: {
                                 slidesPerView: 2,
-                                spaceBetween: 30,
+                                spaceBetween: 20,
                             },
                             1200: {
-                                slidesPerView: 3,
-                                spaceBetween: 30,
+                                slidesPerView: 2.2,
+                                spaceBetween: 20,
                             },
                         }}
                         className="projectSwiper">

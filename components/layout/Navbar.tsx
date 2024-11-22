@@ -15,7 +15,7 @@ const CustomNavbar = () => {
       {/* Main Logo on Top */}
       <div className="text-center bg-black py-3">
         <Link href="/">
-          <img src="/logo.png" alt="Logo" style={{ height: '50px' }} />
+          <img src="/assets/frontend/images/logo.png" className="invertImg" alt="Logo" style={{ height: '50px' }} />
         </Link>
       </div>
 
@@ -24,7 +24,7 @@ const CustomNavbar = () => {
         <Container>
           {/* Navbar Brand */}
           <NavbarBrand href="/" className="fw-bold">
-            LOGO
+          <img src="/assets/frontend/images/logo.png" alt="Logo" style={{ height: '50px' }} />
           </NavbarBrand>
 
           
@@ -68,7 +68,7 @@ const CustomNavbar = () => {
       {/* Offcanvas Menu */}
       <Offcanvas show={showOffcanvas} onHide={toggleOffcanvas} placement="end">
         <OffcanvasHeader closeButton>
-          <OffcanvasTitle>Menu</OffcanvasTitle>
+          <OffcanvasTitle><img src="/assets/frontend/images/logo.png" alt="Logo" style={{ height: '50px' }} /></OffcanvasTitle>
         </OffcanvasHeader>
         <OffcanvasBody>
           <Nav className="flex-column">

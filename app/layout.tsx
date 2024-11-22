@@ -4,6 +4,7 @@ import '../public/assets/frontend/css/style.css';
 import { Metadata } from "next";
 import Head from "next/head";
 import CustomNavbar from "@/components/layout/Navbar";
+import Footer from '@/components/layout/Footer';
 
 
 // Example metadata
@@ -40,7 +41,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </Head>
       <body>
         <CustomNavbar />
-        {children}</body>
+        {children}
+        <Footer />
+        </body>
     </html>
   );
 }

@@ -3,6 +3,8 @@ import VideoBanner from '../components/home/VideoBanner';
 import About from "@/components/home/About";
 import Partner from "@/components/home/Partner";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
+import Newsletter from "@/components/layout/Newsletter";
+import Blogs from "@/components/home/Blogs";
 export default function Home() {
   return (
    <main>
@@ -10,6 +12,8 @@ export default function Home() {
     <About />
     <Partner />
     <FeaturedProjects />
+    <Blogs />
+    <Newsletter />
    </main>
   );
 }

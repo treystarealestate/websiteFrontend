@@ -7,7 +7,7 @@ const VideoBanner = () => {
     <section className='position-relative videoBanner'>
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-12 col-md-12">
+          <div className="col-12 col-lg-8 col-md-8">
             {/* Video Background */}
             <video
               className='video d-none d-md-block d-lg-block'
@@ -37,7 +37,7 @@ const VideoBanner = () => {
 
             {/* Text Content */}
             <div className="text-white textContent">
-              <h1 className="display-4">Your Heading Here</h1>
+              <h1 className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine Real Estate</h1>
             </div>
           </div>
         </div>

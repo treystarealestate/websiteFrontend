@@ -27,9 +27,9 @@ const About = () => {
                         <div className="col-12 col-lg-6 col-md-6 my-auto">
                             <div className="descCont p-sm-1 p-md-3 p-lg-5">
                                 <span className='text-sub text-gold'><i className="bi bi-dash-lg"></i> About Us</span>
-                                <h3 className="text-head py-2">Creation timelines for the standard lorem ipsum passage</h3>
-                                <p className="text-para">So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.</p>
-                                <p className="text-para pb-2">It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples. </p>
+                                <h3 className="text-head py-2">Your Trusted Partner in Real Estate</h3>
+                                <p className="text-para">At Treysta, we redefine the real estate experience by making trust the cornerstone of every interaction. Rooted in the Nordic concept of "trust," we combine integrity and reliability with a touch of fun, ensuring that your property journey is both smooth and enjoyable.</p>
+                                <p className="text-para pb-2">Whether you're buying, selling, or investing, our team is committed to providing you with a refreshing, stress-free approach. With Treysta, real estate doesn't have to be a daunting process—it's an exciting opportunity, guided by experts you can truly trust.</p>
                                 <div>
                                 <Link href="/about-us" className='btn btn-main'>
                                 <span className='align-top'>Know More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
