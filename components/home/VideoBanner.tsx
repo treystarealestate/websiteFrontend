@@ -1,13 +1,14 @@
 'use client';
 
 import React from 'react';
+import Search from '../layout/Search';
 
 const VideoBanner = () => {
   return (
     <section className='position-relative videoBanner'>
       <div className="container">
-        <div className="row">
-          <div className="col-12 col-lg-8 col-md-8">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-10 col-md-10">
             {/* Video Background */}
             <video
               className='video d-none d-md-block d-lg-block'
@@ -37,7 +38,10 @@ const VideoBanner = () => {
 
             {/* Text Content */}
             <div className="text-white textContent">
-              <h1 className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine Real Estate</h1>
+              <h1 className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine <span className='text-gold fw-bold'> Real Estate</span></h1>
+            </div>
+            <div>
+              <Search />
             </div>
           </div>
         </div>

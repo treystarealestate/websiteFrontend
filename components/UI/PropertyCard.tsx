@@ -4,10 +4,10 @@ import { Badge, Card } from "react-bootstrap";
 function PropertyCard({ }) {
   return (
     <>
-      <Card >
+      <Card  className="rounded-4 bg-transparent">
       <Card.Img className="projImg" variant="top" src="/assets/frontend/images/about.jpg" />
       <div className="topRightCont">
-        <Badge className="bg-gold" text="dark">
+        <Badge className="bg-gold" text="light">
             Q4 2025
         </Badge>
       </div>

@@ -5,6 +5,7 @@ import Partner from "@/components/home/Partner";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import Newsletter from "@/components/layout/Newsletter";
 import Blogs from "@/components/home/Blogs";
+import CommunityPage from "@/components/home/Community";
 export default function Home() {
   return (
    <main>
@@ -12,6 +13,7 @@ export default function Home() {
     <About />
     <Partner />
     <FeaturedProjects />
+    <CommunityPage />
     <Blogs />
     <Newsletter />
    </main>

@@ -14,7 +14,7 @@ const FeaturedProjects = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12 col-lg-4 col-md-4 offset-1">
-                        <div className="text-start text-white p-1 p-md-4 p-lg-4">
+                        <div className="descCont text-start text-white p-1 p-md-4 p-lg-4">
                             <span className="text-sub text-gold">
                                 <i className="bi bi-dash-lg"></i> Featured Projects
                             </span>
@@ -32,7 +32,10 @@ const FeaturedProjects = () => {
                     <div className="col-12 col-md-8 col-lg-7 my-auto">
                         <Swiper 
                          navigation
-                         autoplay={false}
+                         autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: true,
+                        }}
                          loop={true}
                          modules={[Autoplay, Navigation]}
                          breakpoints={{

@@ -12,13 +12,6 @@ const CustomNavbar = () => {
 
   return (
     <>
-      {/* Main Logo on Top */}
-      <div className="text-center bg-black py-3">
-        <Link href="/">
-          <img src="/assets/frontend/images/logo.png" className="invertImg" alt="Logo" style={{ height: '50px' }} />
-        </Link>
-      </div>
-
       {/* Navbar */}
       <Navbar expand="lg" className="bg-light border-bottom">
         <Container>

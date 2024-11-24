@@ -10,8 +10,8 @@ const Newsletter = () => {
                         <div className='row justify-content-center'>
                             <div className="col-12 col-lg-6 col-md-7">
                                 <div className='pb-5 pb-lg-0 pb-md-0'>
-                                    <div className="mainHead text-center pb-3 ">
-                                        <h4 className="text-head text-black fw-bold">STAY UPDATED</h4>
+                                    <div className="descCont text-center pb-3 ">
+                                        <h4 className="text-head text-black fw-bold">Stay Updated</h4>
                                         <p className="text-desc">Unlock new realms of real estate. Get instant access to market news, trends, and updates in your inbox.</p>
                                     </div>
                                     <div>

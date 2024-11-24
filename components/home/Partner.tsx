@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay'; // Optional, Swiper autoplay functionality doesn't need a separate module
 import Image from 'next/image';
 import partner1 from '../../public/assets/frontend/images/partners/1.webp';
+import { Autoplay } from 'swiper/modules';
 
 const Partner = () => {
     return (
@@ -12,7 +13,7 @@ const Partner = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div className="text-center py-4">
+                        <div className="descCont text-center py-4">
                             <span className="text-sub text-gold">
                                 <i className="bi bi-dash-lg"></i> Partners
                             </span>
@@ -23,10 +24,13 @@ const Partner = () => {
                         <Swiper
                             slidesPerView={2}
                             spaceBetween={30}
+                            modules={[Autoplay]}
                             autoplay={{
-                                delay: 2500,
-                                disableOnInteraction: false,
+                                delay: 2100,
+                                disableOnInteraction: true,
                             }}
+                            
+                            loop={true}
                             breakpoints={{
                                 768: {
                                     slidesPerView: 3,
@@ -42,6 +46,19 @@ const Partner = () => {
                                 },
                             }}
                         >
+                            {[...Array(6)].map((_, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="client-box">
+                                        <Image
+                                            src={`/assets/frontend/images/partners/${index + 1}.webp`}
+                                            alt={`Partner Logo ${index + 1}`}
+                                            className="img-fluid"
+                                            width={150}
+                                            height={100}
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
                             {[...Array(6)].map((_, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="client-box">

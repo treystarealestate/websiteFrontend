@@ -50,14 +50,14 @@ const Blogs = () => {
             <Container className='my-5'>
                 <Row className='g-3 my-5'>
                     <Col xs={12} md={6} lg={6} className='my-auto'>
-                        <div className="heading-all text-uppercase text-main borNewBott mb-3">
-                            <h4>Latest Blogs</h4>
+                        <div className="descCont mb-3">
+                            <h4 className='text-head mb-0'>Latest Blogs</h4>
                         </div>
                     </Col>
                     <Col xs={12} md={6} lg={6} className='my-auto'>
                         <div className="text-center text-md-end text-lg-end mb-3">
                         <Link href="/blogs" className='btn btn-main'>
-                                <span className='align-top'>Read More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
+                                <span className='align-top'>View All </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
                                 </Link>
                         </div>
                     </Col>

@@ -27,7 +27,7 @@ const About = () => {
                         <div className="col-12 col-lg-6 col-md-6 my-auto">
                             <div className="descCont p-sm-1 p-md-3 p-lg-5">
                                 <span className='text-sub text-gold'><i className="bi bi-dash-lg"></i> About Us</span>
-                                <h3 className="text-head py-2">Your Trusted Partner in Real Estate</h3>
+                                <h3 className="text-head py-2">Turning Dreams into Reality with Integrity</h3>
                                 <p className="text-para">At Treysta, we redefine the real estate experience by making trust the cornerstone of every interaction. Rooted in the Nordic concept of "trust," we combine integrity and reliability with a touch of fun, ensuring that your property journey is both smooth and enjoyable.</p>
                                 <p className="text-para pb-2">Whether you're buying, selling, or investing, our team is committed to providing you with a refreshing, stress-free approach. With Treysta, real estate doesn't have to be a daunting process—it's an exciting opportunity, guided by experts you can truly trust.</p>
                                 <div>
