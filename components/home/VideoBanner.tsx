@@ -38,6 +38,7 @@ const VideoBanner = () => {
 
             {/* Text Content */}
             <div className="text-white textContent">
+              
               <h1 className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine <span className='text-gold fw-bold'> Real Estate</span></h1>
             </div>
             <div>
