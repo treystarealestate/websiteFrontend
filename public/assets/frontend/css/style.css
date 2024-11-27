@@ -48,7 +48,7 @@
 .bgSearch .form-control, .bgSearch .form-select {
   background-color: transparent !important;
   border-radius: 0.5rem !important;
-  border: 1px solid #9e6c1730 !important;
+  border: 1px solid #B3774930 !important;
   font-size: 16px !important;
   color: var(--background) !important;
 }
@@ -271,7 +271,7 @@
 .accordButton {
   width: 30px;
   height: 30px;
-  background-color: #9e6c17;
+  background-color: #B37749;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -280,6 +280,13 @@
 .accordButton span{
   color: #fff;
   font-size: 18px;
+}
+.quotSec {
+  position: absolute;
+  top:0px;
+  left:0;
+  z-index: 0;
+  opacity: 0.1;
 }
   @media (max-width: 600px) {
   

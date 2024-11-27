@@ -53,11 +53,11 @@ a {
   color: var(--background);
 }
 .text-gold {
-  color: #9e6c17;
+  color: #B37749;
 }
 .topRightCont .bg-gold {
-  background-color: #9e6c17 !important;
+  background-color: #B37749 !important;
 }
 .bg-darkGold {
-  background-color: #9e6c1730;
+  background-color: #B3774930;
 }
