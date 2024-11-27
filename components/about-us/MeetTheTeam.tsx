@@ -4,7 +4,48 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-
+const teams = [
+  {
+      id: 1,
+      name: "Ali Dab",
+      image: "/assets/frontend/images/team/Ali Dab.webp"
+  },
+  {
+      id: 2,
+      name: "ishu bhatia",
+      image: "/assets/frontend/images/team/ishu bhatia.webp"
+  },
+  {
+      id: 3,
+      name: "vaibhav setiya",
+      image: "/assets/frontend/images/team/vaibhav setiya.webp"
+  },
+  {
+      id: 4,
+      name: "simran sethi",
+      image: "/assets/frontend/images/team/simran sethi.webp"
+  },
+  {
+      id: 5,
+      name: "priyanka halari",
+      image: "/assets/frontend/images/team/priyanka halari.webp"
+  },
+  {
+      id: 6,
+      name: "Pallavi Tathe",
+      image: "/assets/frontend/images/team/Pallavi Tathe.webp"
+  },
+  {
+      id: 7,
+      name: "Muhammad Fayyaz",
+      image: "/assets/frontend/images/team/Muhammad Fayyaz.webp"
+  },
+  {
+      id: 7,
+      name: "Mohammed Shuraim",
+      image: "/assets/frontend/images/team/Mohammed Shuraim.webp"
+  }
+];
 export const MeetTheTeam = () => {
   return (
     <section className="py-5">
@@ -69,17 +110,17 @@ export const MeetTheTeam = () => {
               }}
               className="projectSwiper"
             >
-              {[...Array(6)].map((_, index) => (
-                <SwiperSlide key={index}>
+              {teams.map((team) => (
+                <SwiperSlide key={team.id}>
                   <div className="card bg-transparent border-0">
                     <img
-                      src="/assets/frontend/images/ceo1.webp"
+                      src={team.image}
                       alt="team"
-                      className="card-img-top"
+                      className="card-img-top teamImage rounded-3"
                     />
                     <div className="card-body">
-                      <h5 className="mb-0">John Joe</h5>
-                      <p className="text-sec text-gold">CEO</p>
+                      <h5 className="mb-0">{team.name}</h5>
+                      <p className="text-sec text-gold">Client Manager</p>
                     </div>
                   </div>
                 </SwiperSlide>
