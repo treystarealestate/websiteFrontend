@@ -42,7 +42,7 @@ const VideoBanner = () => {
               <h1 className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine <span className='text-gold fw-bold'> Real Estate</span></h1>
             </div>
             <div>
-              <Search />
+            <Search bgClass="bgSearch" formClass="formSearch" />
             </div>
           </div>
         </div>

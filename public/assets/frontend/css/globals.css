@@ -58,6 +58,9 @@ a {
 .topRightCont .bg-gold {
   background-color: #B37749 !important;
 }
+.topLeftCont .bg-gold {
+  background-color: #B37749 !important;
+}
 .bg-darkGold {
   background-color: #B3774930;
 }
@@ -98,4 +101,7 @@ a {
   background-color: #000;
   outline: 0;
   box-shadow: none !important;
+}
+.fs-14 {
+  font-size: 14px;
 }
