@@ -12,22 +12,17 @@ const teams = [
   },
   {
       id: 2,
-      name: "ishu bhatia",
+      name: "Ishu Bhatia",
       image: "/assets/frontend/images/team/ishu bhatia.webp"
   },
   {
-      id: 3,
-      name: "vaibhav setiya",
-      image: "/assets/frontend/images/team/vaibhav setiya.webp"
-  },
-  {
       id: 4,
-      name: "simran sethi",
+      name: "Simran Sethi",
       image: "/assets/frontend/images/team/simran sethi.webp"
   },
   {
       id: 5,
-      name: "priyanka halari",
+      name: "Priyanka Halari",
       image: "/assets/frontend/images/team/priyanka halari.webp"
   },
   {
@@ -44,6 +39,11 @@ const teams = [
       id: 7,
       name: "Mohammed Shuraim",
       image: "/assets/frontend/images/team/Mohammed Shuraim.webp"
+  },
+  {
+      id: 8,
+      name: "Imran Chishti",
+      image: "/assets/frontend/images/team/Imran Chishti.webp"
   }
 ];
 export const MeetTheTeam = () => {
@@ -120,7 +120,7 @@ export const MeetTheTeam = () => {
                     />
                     <div className="card-body">
                       <h5 className="mb-0">{team.name}</h5>
-                      <p className="text-sec text-gold">Client Manager</p>
+                      {/* <p className="text-sec text-gold">Client Manager</p> */}
                     </div>
                   </div>
                 </SwiperSlide>

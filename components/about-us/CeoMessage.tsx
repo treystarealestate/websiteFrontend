@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ceoImage from "../../public/assets/frontend/images/ceo1.webp";
+import ceoImage from "../../public/assets/frontend/images/team/ceo.webp";
 import quoteIcon from "../../public/assets/frontend/images/icons/quote.png";
 
 export const CeoMessage = () => {
@@ -13,11 +13,11 @@ export const CeoMessage = () => {
               {/* Image Section */}
               <div className="col-12 col-lg-4 col-md-5 my-auto">
                 <div>
-                <Image
-                      src={ceoImage}
-                      alt="Ceo"
-                      className="img-fluid rounded-4"
-                    />
+                  <Image
+                    src={ceoImage}
+                    alt="Ceo"
+                    className="img-fluid rounded-4"
+                  />
                 </div>
               </div>
 
@@ -37,14 +37,9 @@ export const CeoMessage = () => {
                   {/* CEO Message */}
                   <div className="mb-3 mt-4">
                     <p className="text-sec text-white">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC, making it over 2000 years old.
-                      Richard McClintock, a Latin professor at Hampden-Sydney
-                      College in Virginia, looked up one of the more obscure
-                      Latin words, consectetur, from a Lorem Ipsum passage, and
-                      going through the cites of the word in classical
-                      literature, discovered the undoubtable source.
+                      Inspired by Fatherhood, Built on Trust Vaibhav always believed that great foundations—whether in buildings or in life—are built on trust. As a civil engineer, he spent years designing structures that stood the test of time. But his perspective shifted profoundly when he held his newborn daughter,Baani, for the first time. That moment wasn’t just life-changing; it was eye-opening.</p>
+                    <p className="text-sec text-white">
+                      “Everything I did suddenly felt bigger than myself,” Vaibhav recalls. “I wanted to create something lasting—not just for my family, but for everyone who trusted me with their future.”
                     </p>
                   </div>
 

@@ -20,7 +20,7 @@ const blogPosts: BlogPost[] = [
         date: "November 05, 2024",
         image: "/assets/frontend/images/service3.webp",
         url: "/blog/remote-work-rental-choices-2024",
-    },{
+    }, {
         title: "Dubai’s Q2 2024 Economic Growth Reaches 3.3%",
         date: "November 11, 2024",
         image: "/assets/frontend/images/service1.webp",
@@ -31,7 +31,7 @@ const blogPosts: BlogPost[] = [
         date: "November 05, 2024",
         image: "/assets/frontend/images/service6.webp",
         url: "/blog/remote-work-rental-choices-2024",
-    },{
+    }, {
         title: "Dubai’s Q2 2024 Economic Growth Reaches 3.3%",
         date: "November 10, 2024",
         image: "/assets/frontend/images/service4.webp",
@@ -42,7 +42,7 @@ const blogPosts: BlogPost[] = [
         date: "November 12, 2024",
         image: "/assets/frontend/images/service2.webp",
         url: "/blog/remote-work-rental-choices-2024",
-    },{
+    }, {
         title: "Dubai’s Q2 2024 Economic Growth Reaches 3.3%",
         date: "November 15, 2024",
         image: "/assets/frontend/images/service1.webp",
@@ -74,7 +74,7 @@ const page = () => {
             <Breadcrumb items={breadcrumbItems} />
             <section>
                 <div className="container py-5">
-                <div className="descCont text-center pb-3 ">
+                    <div className="descCont text-center pb-3 ">
                         <h4 className="text-head ">Our Blogs</h4>
                         <p className="text-desc">Get insight on the latest trends in Dubai Real Estate.</p>
                     </div>

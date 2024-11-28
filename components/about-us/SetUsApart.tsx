@@ -12,19 +12,23 @@ export const SetUsApart = () => {
 
     const accordionData = [
         {
-            title: "Commitment to Excellence",
-            content: "Forget the impersonal transactions. We’re actively striving to bring back the true essence of having a real estate advisor, a guiding hand, unforgettable customer service, & someone willing to go the extra mile for you. Our advisors are more than agents – they're guides who understand their dedicated communities, anticipate your needs, & strive to become your trusted real estate partner for life.",
+            title: "Trust as Our Foundation",
+            content: "We earn your trust every step of the way.",
         },
         {
-            title: "Customer-Centric Approach",
-            content: "Forget the impersonal transactions. We’re actively striving to bring back the true essence of having a real estate advisor, a guiding hand, unforgettable customer service, & someone willing to go the extra mile for you. Our advisors are more than agents – they're guides who understand their dedicated communities, anticipate your needs, & strive to become your trusted real estate partner for life.",
+            title: "Fun in the Process",
+            content: "Buying property should feel like a win, not a chore.",
         },
         {
-            title: "Innovative Practices",
-            content: "Forget the impersonal transactions. We’re actively striving to bring back the true essence of having a real estate advisor, a guiding hand, unforgettable customer service, & someone willing to go the extra mile for you. Our advisors are more than agents – they're guides who understand their dedicated communities, anticipate your needs, & strive to become your trusted real estate partner for life.",
+            title: "Transparency Always",
+            content: "We provide straight answers and clear processes, with no surprises.",
+        },
+        {
+            title: "Experience Matters",
+            content: "Turning what could be a nerve- wracking process into a rewarding experience.",
         },
     ];
-
+    
     return (
         <>
             <section className="py-5">
@@ -37,7 +41,7 @@ export const SetUsApart = () => {
                                         <span className="text-sub text-gold">
                                             <i className="bi bi-dash-lg"></i> Trust & Integrity
                                         </span>
-                                        <h3 className="text-head">What sets us Apart?</h3>
+                                        <h3 className="text-head">Core Values: Our Foundation</h3>
                                     </div>
                                     <div className="accordion aboutAccordion">
                                         {accordionData.map((item, index) => (
@@ -91,10 +95,10 @@ export const SetUsApart = () => {
                                 <div className="col-12 col-lg-8 col-md-8">
                                     <div className=''>
                                         <div className="descCont text-center py-3 ">
-                                            <h4 className="text-head text-black fw-bold">We Focus On The Journey, Not The Destination</h4>
-                                            <p className="text-desc">
-
-                                                A home is more than just a physical space; it’s the heartbeat of our most cherished memories & our deepest emotions. Whether you're a first-time homebuyer, an investor, or looking for that perfect commercial space, we make sure the journey is as important as the destination.</p>
+                                            <h4 className="text-head text-black fw-bold"> Our Promise: More Than Just Transactions
+                                            </h4>
+                                            <p className="text-desc">We build trust by earning your confidence through honest guidance and transparent communication. Your success is our priority, and we work tirelessly to achieve your real estate goals.</p>
+                                            <p className="text-desc">We make the property journey exciting by infusing joy and enthusiasm into every step. With clarity and support, we turn your real estate dreams into reality.</p>
                                         </div>
                                     </div>
                                 </div>
