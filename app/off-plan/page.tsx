@@ -7,19 +7,7 @@ import { Pagination } from 'react-bootstrap'; // Using Bootstrap for pagination
 import ProjectGrid from '@/components/UI/ProjectGrid';
 import ProjectList from '@/components/UI/ProjectList';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  price: number;
-  bedroom: string;
-  accommodation: string;
-  developer: string;
-  handover: string;
-}
-
-const projects: Project[] = [
+const projects = [
     { 
         id: 1, 
         title: 'Project A', 

@@ -1,5 +1,7 @@
+"use client";
 import Breadcrumb from '@/components/UI/Breadcrumb';
-import React from 'react'
+import ServiceModal from '@/components/UI/ServiceModal';
+import React, { useState } from 'react'
 
 function page() {
     interface Service {
@@ -8,7 +10,7 @@ function page() {
         image: string;
         ctaText: string;
       }
-      
+      const [selectedService, setSelectedService] = useState<Service | null>(null);
       const services = [
         {
           title: "Property Management",
@@ -58,44 +60,65 @@ function page() {
         { label: "Home", link: "/", active: false },
         { label: "Services", link: "/services", active: true },
     ];
+    const openModal = (service: Service) => {
+      setSelectedService(service);
+  };
+
+  const closeModal = () => {
+      setSelectedService(null);
+  };
   return (
     <main>
-        <Breadcrumb items={breadcrumbItems} />
-        <section>
-        <div className="container py-5">
-      <div className="row">
-        <div className="col-12 col-lg-12 col-md-12">
-        <div className="descCont text-center pb-3 ">
-                                    <h4 className="text-head ">Our Services</h4>
-                                    <p className="text-desc">Explore the range of real estate services we offer in Dubai.</p>
+            <Breadcrumb items={breadcrumbItems} />
+            <section>
+                <div className="container py-5">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="descCont text-center pb-3">
+                                <h4 className="text-head">Our Services</h4>
+                                <p className="text-desc">Explore the range of real estate services we offer in Dubai.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row g-5">
+                        {services.map((service, index) => (
+                            <div className="col-12" key={index}>
+                                <div className={`row align-items-center ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
+                                    <div className="col-12 col-md-6">
+                                        <img
+                                            src={service.image}
+                                            alt={service.title}
+                                            className="img-fluid rounded-4 shadow-sm d-block mx-auto"
+                                        />
+                                    </div>
+                                    <div className="col-12 col-md-6 my-auto">
+                                        <div className="descCont p-3">
+                                            <h2 className="text-subhead">{service.title}</h2>
+                                            <p className="text-para">{service.description}</p>
+                                            <button
+                                                className="btn btn-main"
+                                                onClick={() => openModal(service)}
+                                            >
+                                                <span className="align-top">{service.ctaText}</span>&nbsp;
+                                                <i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-        </div>
-      </div>
-      <div className="row g-5">
-        {services.map((service, index) => (
-          <div className="col-12" key={index}>
-            <div className={`row align-items-center ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
-              <div className="col-12 col-md-6">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="img-fluid rounded-4 shadow-sm d-block mx-auto"
-                />
-              </div>
-              <div className="col-12 col-md-6 my-auto">
-                <div className="descCont p-3">
-                    <h2 className="text-subhead">{service.title}</h2>
-                    <p className="text-para">{service.description}</p>
-                    <button className="btn btn-main"><span className='align-top'>{service.ctaText}</span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i></button>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-        </section>
-    </main>
+            </section>
+
+            {/* Service Modal */}
+            <ServiceModal
+                isOpen={!!selectedService}
+                title={selectedService?.title || ''}
+                formName={selectedService?.title || ''}
+                onClose={closeModal}
+            />
+        </main>
   )
 }
 

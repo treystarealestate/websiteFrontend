@@ -10,8 +10,10 @@ interface FormData {
     phone: string;
     message: string;
 }
-
-const ContactForm: React.FC = () => {
+interface formNameProp {
+    formName: string;
+}
+const ContactForm: React.FC<formNameProp> = ({formName}) => {
     const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
@@ -38,6 +40,7 @@ const ContactForm: React.FC = () => {
     return (
         <form onSubmit={handleSubmit} className="contact-form">
             <div className="mb-2">
+            <input type="hidden" name="formName" value={formName} />
                 <label htmlFor="name" className="form-label">
                     Name *
                 </label>

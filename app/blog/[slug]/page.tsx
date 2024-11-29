@@ -4,14 +4,8 @@ import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
 import moment from 'moment';
-interface popularBlog {
-    id: Number,
-    title: string;
-    publish_date: string;
-    image: string;
-    slug: string;
-}
-const popularBlogs : popularBlog[] = [
+
+const popularBlogs = [
     {
         id: 1,
         title: "The Impact of Remote Work on Rental Choices",

@@ -57,11 +57,10 @@ export const MeetTheTeam = () => {
               <span className="text-sub text-gold">
                 <i className="bi bi-dash-lg"></i> Our Team
               </span>
-              <h3 className="text-head py-2">Meet the Team</h3>
+              <h3 className="text-head py-2">Meet the Treysta Team
+              </h3>
               <p className="text-para mb-4">
-                At Treysta, our team of industry experts leads with passion and
-                precision, ensuring that every aspect of your real estate
-                experience is handled with care and professionalism.
+              At Treysta, we don’t just know real estate—we live it, with a passion that goes beyond just closing deals. Each of us is here because we love what we do, but more importantly, we’re here because we believe in making your experience smoother, simpler, and more human. Buying or selling a home can feel overwhelming, but with us, it’s never just about the transaction—it’s about you. We blend sharp data-driven insights with a genuine care for your goals, ensuring that every step is guided by a personal touch. At Treysta, trust isn’t a promise, it’s a way of life, and we’re here to make your journey effortless, with the knowledge and passion to back it up.
               </p>
               {/* Swiper Navigation */}
               <div className="d-flex justify-content-start mt-3">

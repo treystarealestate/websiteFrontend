@@ -68,7 +68,7 @@ export default function page() {
                             <div className="descCont text-start pb-2 ">
                                     <h4 className="text-head ">Get in Touch with Us</h4>
                                 </div>
-                                <ContactForm />
+                                <ContactForm formName='Contact Us Form' />
                             </div>
                         </div>
 
