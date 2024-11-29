@@ -53,7 +53,7 @@ a {
   color: var(--background);
 }
 .text-gold {
-  color: #B37749;
+  color: #B37749 !important;
 }
 .topRightCont .bg-gold {
   background-color: #B37749 !important;

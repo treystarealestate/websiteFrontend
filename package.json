@@ -17,6 +17,7 @@
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.53.2",
+    "react-image-lightbox": "^5.1.4",
     "react-phone-number-input": "^3.4.9",
     "swiper": "^10.3.1"
   },
