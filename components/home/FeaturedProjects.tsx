@@ -10,7 +10,10 @@ import "swiper/css/pagination";
 import PropertyCard from '../UI/PropertyCard';
 import { motion } from 'framer-motion';
 import { useVariants } from '@/hooks/useVariants';
-const FeaturedProjects = () => {
+interface FeaturedProps {
+    openModal: (projectName: string, fileUrl: string, formName: string) => void; 
+}
+const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal }) => {
     const { introHeaderVariants } = useVariants();
     return (
         <section className="py-5 bg-black">
@@ -64,7 +67,7 @@ const FeaturedProjects = () => {
                             {[...Array(6)].map((_, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="propertyCard">
-                                        <PropertyCard  />
+                                        <PropertyCard openModal={openModal} />
                                     </div>
                                 </SwiperSlide>
                             ))}

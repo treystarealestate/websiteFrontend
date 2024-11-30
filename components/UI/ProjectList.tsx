@@ -15,9 +15,10 @@ interface Project {
 
 interface ProjectListProps {
     projects: Project[];
+    openModal: (projectName: string, fileUrl: string, formName: string) => void; 
 }
 
-const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
+const ProjectList: React.FC<ProjectListProps> = ({ projects,openModal }) => {
     return (
 
         <>
@@ -57,7 +58,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
                                                 <span className="text-gold">{project.developer}</span>
                                             </div>
                                             <div className="my-auto">
-                                                <button className="btn-main-sm"><span className='align-top'>Pre Register </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill align-top text-gold"></i></button>
+                                                <button className="btn-main-sm" onClick={() => openModal(project.title, '', "Pre-Register Now")}><span className='align-top'>Pre Register </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill align-top text-gold"></i></button>
                                             </div>
                                         </div>
                                     </Card.Body>

@@ -12,8 +12,10 @@ interface FormData {
 }
 interface formNameProp {
     formName: string;
+    projectName?: string;
+    fileUrl?: string;
 }
-const ContactForm: React.FC<formNameProp> = ({formName}) => {
+const ContactForm: React.FC<formNameProp> = ({formName,projectName,fileUrl}) => {
     const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
@@ -41,6 +43,8 @@ const ContactForm: React.FC<formNameProp> = ({formName}) => {
         <form onSubmit={handleSubmit} className="contact-form">
             <div className="mb-2">
             <input type="hidden" name="formName" value={formName} />
+            <input type="hidden" name="fileUrl" value={fileUrl} />
+            <input type="hidden" name="projectName" value={projectName} />
                 <label htmlFor="name" className="form-label">
                     Name *
                 </label>

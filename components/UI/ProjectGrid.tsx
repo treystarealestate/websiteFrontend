@@ -44,11 +44,12 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
                                     </div>
                                 </div>
                                 <div className="d-flex justify-content-between">
+                                   
                                     <div className="my-auto">
-                                        <span className="text-gold">{project.developer}</span>
+                                    <p className='text-desc mb-0'><i className="bi bi-geo-alt"></i>&nbsp;<span className='align-middle'>Dubai Islands</span></p>
                                     </div>
                                     <div className="my-auto">
-                                        <button className="btn-main-sm"><span className='align-top'>Pre Register </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill align-top text-gold"></i></button>
+                                        <span className="text-gold">{project.developer}</span>
                                     </div>
                                 </div>
                             </Card.Body>

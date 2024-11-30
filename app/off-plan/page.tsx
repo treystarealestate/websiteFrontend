@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import { Pagination } from 'react-bootstrap'; // Using Bootstrap for pagination
 import ProjectGrid from '@/components/UI/ProjectGrid';
 import ProjectList from '@/components/UI/ProjectList';
+import ProjectModal from '@/components/UI/ProjectModal';
 
 const projects = [
     { 
@@ -77,6 +78,21 @@ const projects = [
 ];
 
 const Page = () => {
+    const [selectedProject, setSelectedProject] = useState<{
+        projectName: string;
+        fileUrl: string;
+        formName: string;
+      } | null>(null);
+    
+      // Function to open the modal and pass project details and formName
+      const openModal = (projectName: string, fileUrl: string, formName: string) => {
+        setSelectedProject({ projectName, fileUrl, formName });
+      };
+    
+      // Function to close the modal
+      const closeModal = () => {
+        setSelectedProject(null);
+      };
     const breadcrumbItems = [
         { label: "Home", link: "/", active: false },
         { label: "Off-Plan Properties", link: "/off-plan", active: true },
@@ -84,7 +100,7 @@ const Page = () => {
 
     const [view, setView] = useState<'grid' | 'list'>('grid');
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(3); // Items per page for pagination
+    const [itemsPerPage] = useState(4); // Items per page for pagination
     const [sortBy, setSortBy] = useState<'title' | 'id' | 'price-low-high' | 'price-high-low'>('id');
 
     // Sorting logic
@@ -162,7 +178,7 @@ const Page = () => {
                     </div>
 
                     {/* Display Projects based on view */}
-                    {view === 'grid' ? <ProjectGrid projects={currentProjects} /> : <ProjectList projects={currentProjects} />}
+                    {view === 'grid' ? <ProjectGrid projects={currentProjects} /> : <ProjectList projects={currentProjects} openModal={openModal} />}
                 </div>
             </section>
 
@@ -180,6 +196,13 @@ const Page = () => {
                     </div>
                 </div>
             </section>
+            <ProjectModal
+        isOpen={!!selectedProject}
+        title={selectedProject?.projectName || ""}
+        formName={selectedProject?.formName || "Pre-Register Now"}
+        fileUrl={selectedProject?.fileUrl}
+        onClose={closeModal}
+      />
         </main>
     );
 };

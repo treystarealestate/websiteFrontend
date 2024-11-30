@@ -34,8 +34,8 @@ const CustomNavbar = () => {
               <NavLink as={Link} href="/services">
                 Services
               </NavLink>
-              <NavLink as={Link} href="/resources">
-                Resources
+              <NavLink as={Link} href="/off-plan">
+                Off-Plan
               </NavLink>
               <NavLink as={Link} href="/contact-us">
                 Contact Us

@@ -19,15 +19,14 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.53.2",
     "react-phone-number-input": "^3.4.9",
-    "react-photoswipe-gallery": "^3.0.2",
-    "swiper": "^10.3.1"
+    "swiper": "^10.3.1",
+    "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.32",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/react-modal-image": "^2.6.3",
     "typescript": "^5"
   }
 }

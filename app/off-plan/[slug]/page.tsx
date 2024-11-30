@@ -1,5 +1,7 @@
+
+"use client";
 import Breadcrumb from '@/components/UI/Breadcrumb';
-import React from 'react';
+import React, { useState } from 'react';
 import LightboxImage from '@/components/UI/LightboxImage';
 import { Badge } from 'react-bootstrap';
 import ProjectDetails from '@/components/off-plan/ProjectDetails';
@@ -9,8 +11,19 @@ import Location from '@/components/off-plan/Location';
 import ProjectAminities from '@/components/off-plan/ProjectAminities';
 import PaymentPlan from '@/components/off-plan/PaymentPlan';
 import RelatedProject from '@/components/off-plan/RelatedProject';
-import ProjectFloorplan from '@/components/off-plan/ProjectFloorplan';
+import ContactSection from '@/components/off-plan/ContactSection';
+import ProjectModal from '@/components/UI/ProjectModal';
 const Page = ({ params }: { params: { slug: string } }) => {
+    interface Project {
+        title: string;
+        fileUrl: string;
+    }
+    
+    const project = {
+        title: "Damac Sun City",
+        fileUrl: "/assets/frontend/images/service1.webp", // Replace with actual image paths
+
+    };
     const breadcrumbItems = [
         { label: "Home", link: "/", active: false },
         { label: "Off-Plan", link: "/off-plan", active: false },
@@ -30,7 +43,21 @@ const Page = ({ params }: { params: { slug: string } }) => {
         "/assets/frontend/images/service2.webp",
         "/assets/frontend/images/service3.webp"
     ];
-
+    const [selectedProject, setSelectedProject] = useState<{
+        projectName: string;
+        fileUrl: string;
+        formName: string;
+      } | null>(null);
+    
+      // Function to open the modal and pass project details and formName
+      const openModal = (projectName: string, fileUrl: string, formName: string) => {
+        setSelectedProject({ projectName, fileUrl, formName });
+      };
+    
+      // Function to close the modal
+      const closeModal = () => {
+        setSelectedProject(null);
+      };
     return (
         <main>
             <Breadcrumb items={breadcrumbItems} />
@@ -51,10 +78,10 @@ const Page = ({ params }: { params: { slug: string } }) => {
                             <div className="project-main-image mb-3">
                                 <img src="/assets/frontend/images/service4.webp" className="img-fluid rounded-4" alt="project title" />
                                 <div className="topRightCont">
-                                        <Badge className="bg-gold badge" text="light">
-                                            New Launch
-                                        </Badge>
-                                    </div>
+                                    <Badge className="bg-gold badge" text="light">
+                                        New Launch
+                                    </Badge>
+                                </div>
                             </div>
                         </div>
 
@@ -81,46 +108,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
                             <ProjectDetails />
                         </div>
                         <div className="col-12 col-lg-4 col-md-4">
-                            <AgentDetails />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="my-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-12 col-md-12">
-                            <ProjectAminities />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="my-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-12 col-md-12">
-                            <ProjectFloorplan />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="my-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-12 col-md-12">
-                            <Community />
-                        </div>
-                        <div className="col-12 col-lg-12 col-md-12">
-                            <Location />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="my-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-12 col-md-12">
-                            <PaymentPlan  />
+                        <AgentDetails project={project} openModal={openModal} />
                         </div>
                     </div>
                 </div>
@@ -129,11 +117,83 @@ const Page = ({ params }: { params: { slug: string } }) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-12 col-md-12">
-                            <RelatedProject  />
+
+                            <div className="descCont">
+                                <div className=" pb-3 text-center">
+                                    <h4 className="text-subhead ">Amenities</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-lg-12 col-md-12">
+                            <ProjectAminities />
                         </div>
                     </div>
                 </div>
             </section>
+            <section className="my-5">
+                <div className="container">
+                    <div className=" bg-black p-3 rounded-4 text-white">
+                        <div className="row">
+                            <div className="col-12 col-lg-12 col-md-12">
+                            <Community project={project} openModal={openModal} />
+                            </div>
+                            <div className="col-12 col-lg-12 col-md-12">
+                                <Location />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="my-5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-lg-12 col-md-12">
+
+                            <div className="descCont">
+                                <div className=" pb-3 text-center">
+                                    <h4 className="text-subhead ">Payment Plan</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-lg-12 col-md-12">
+                            <PaymentPlan />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="my-5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-lg-12 col-md-12">
+                            <ContactSection formName='Off-plan Contact Agent' projectName={project.title} fileUrl={project.fileUrl} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="py-5 bg-darkGold">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-lg-12 col-md-12">
+
+                            <div className="descCont">
+                                <div className=" pb-3 text-center">
+                                    <h4 className="text-subhead ">Similar Projects</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-lg-12 col-md-12">
+                            <RelatedProject openModal={openModal} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <ProjectModal
+        isOpen={!!selectedProject}
+        title={selectedProject?.projectName || ""}
+        formName={selectedProject?.formName || "Brochure Request"}
+        fileUrl={selectedProject?.fileUrl}
+        onClose={closeModal}
+      />
         </main>
     )
 }
