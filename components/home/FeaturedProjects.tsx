@@ -8,13 +8,20 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import PropertyCard from '../UI/PropertyCard';
+import { motion } from 'framer-motion';
+import { useVariants } from '@/hooks/useVariants';
 const FeaturedProjects = () => {
+    const { introHeaderVariants } = useVariants();
     return (
         <section className="py-5 bg-black">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-12 col-lg-4 col-md-4 offset-1">
+                    <div className="col-12 col-lg-4 col-md-4 offset-0 offset-md-1">
                         <div className="descCont text-start text-white p-1 p-md-4 p-lg-4">
+                        <motion.div variants={introHeaderVariants} // Use the header animation variants
+                                            initial="hide"
+                                            whileInView="show"
+                                            transition={{ duration: 1 }}>
                             <span className="text-sub text-gold">
                                 <i className="bi bi-dash-lg"></i> Featured Projects
                             </span>
@@ -22,11 +29,12 @@ const FeaturedProjects = () => {
                             <p className="text-para mb-4">
                             Start your search for UAE's top off-plan developments with Treysta. Our expert advisors will match you with the perfect opportunity, offering early investment benefits, flexible payment plans, and the potential for great returns—all backed by our trusted approach.
                             </p>
-                            <div>
+                            <div className='mb-3'>
                             <Link href="/off-plan" className='btn btn-main-white'>
                                 <span className='align-top'>View All Projects </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
                                 </Link>
                             </div>
+                            </motion.div>
                         </div>
                     </div>
                     <div className="col-12 col-md-8 col-lg-7 my-auto">

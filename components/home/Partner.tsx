@@ -6,18 +6,26 @@ import 'swiper/css/autoplay'; // Optional, Swiper autoplay functionality doesn't
 import Image from 'next/image';
 import partner1 from '../../public/assets/frontend/images/partners/1.webp';
 import { Autoplay } from 'swiper/modules';
-
+import { motion } from 'framer-motion';
+import { useVariants } from '@/hooks/useVariants';
 const Partner = () => {
+    const { introTopVariants } = useVariants();
+
     return (
         <section className="py-5">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
                         <div className="descCont text-center py-4">
+                            <motion.div variants={introTopVariants} // Use the header animation variants
+                                            initial="hide"
+                                            whileInView="show"
+                                            transition={{ duration: 1 }}>
                             <span className="text-sub text-gold">
                                 <i className="bi bi-dash-lg"></i> Partners
                             </span>
                             <h3 className="text-head py-2">We partner with the best</h3>
+                            </motion.div>
                         </div>
                     </div>
                     <div className="col-12">

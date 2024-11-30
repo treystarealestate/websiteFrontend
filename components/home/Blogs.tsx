@@ -3,7 +3,8 @@ import React from 'react';
 import { Col, Container, Row, Card } from 'react-bootstrap';
 import moment from 'moment';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
+import { useVariants } from '@/hooks/useVariants';
 // TypeScript interface for the blog data
 interface Blog {
     id: number;
@@ -45,24 +46,37 @@ const popularBlogs: Blog[] = [
 ];
 
 const Blogs = () => {
+    const { introHeaderVariants, introPictureVariants } = useVariants();
     return (
         <section className='my-5'>
             <Container className='my-5'>
                 <Row className='g-3 my-5'>
                     <Col xs={12} md={6} lg={6} className='my-auto'>
                         <div className="descCont mb-3">
-                            <h4 className='text-head mb-0'>Latest Blogs</h4>
+                            <motion.h4 variants={introHeaderVariants} // Use the header animation variants
+                                            initial="hide"
+                                            whileInView="show"
+                                            transition={{ duration: 0.9 }} className='text-head mb-0'>Latest Blogs</motion.h4>
                         </div>
                     </Col>
                     <Col xs={12} md={6} lg={6} className='my-auto'>
                         <div className="text-center text-md-end text-lg-end mb-3">
+                            <motion.div variants={introPictureVariants} // Use the header animation variants
+                                            initial="hide"
+                                            whileInView="show"
+                                            transition={{ duration: 0.9 }}>
                         <Link href="/blogs" className='btn btn-main'>
                                 <span className='align-top'>View All </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
                                 </Link>
+                                </motion.div>
                         </div>
                     </Col>
                     {/* Col-8 with one blog */}
                     <Col xs={12} md={7} lg={7}>
+                    <motion.div variants={introHeaderVariants} // Use the header animation variants
+                                            initial="hide"
+                                            whileInView="show"
+                                            transition={{ duration: 1 }}>
                         <Card className='bg-offwhite shadow-sm border-0'>
                             <Row className='g-0'>
                                 <Col xs={12} md={12} lg={12} className="my-auto">
@@ -90,11 +104,16 @@ const Blogs = () => {
                                 </Col>
                             </Row>
                         </Card>
+                        </motion.div>
                     </Col>
 
                     {/* Col-4 with multiple blogs */}
                     <Col xs={12} md={5} lg={5}>
                         {popularBlogs.slice(1).map((blog) => (
+                            <motion.div variants={introPictureVariants} // Use the header animation variants
+                            initial="hide"
+                            whileInView="show"
+                            transition={{ duration: 1 }}>
                             <Card className='bg-offwhite shadow-sm border-0 mb-3' key={blog.id}>
                                 <Row className='g-0'>
                                     <Col xs={4} md={4} lg={5} className="my-auto">
@@ -122,6 +141,7 @@ const Blogs = () => {
                                     </Col>
                                 </Row>
                             </Card>
+                            </motion.div>
                         ))}
                     </Col>
                 </Row>

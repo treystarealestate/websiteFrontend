@@ -44,7 +44,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
                 <div className="container py-5">
                     <div className="row">
                         <div className="col-12 col-lg-8 col-md-8">
-                            <div className="descCont pe-2">
+                            <div className="descCont pe-2 pb-3">
                                 <div className=" pb-3 ">
                                     <h4 className="text-subhead ">The Impact of Remote Work on Rental Choices</h4>
                                     <small>

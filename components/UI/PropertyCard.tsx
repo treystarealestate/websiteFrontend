@@ -5,14 +5,16 @@ function PropertyCard({ }) {
   return (
     <>
       <Card  className="rounded-4 bg-transparent">
+        <Link href='/off-plan/damac-sun-city'>
       <Card.Img className="projImg" variant="top" src="/assets/frontend/images/about.jpg" />
       <div className="topRightCont">
         <Badge className="bg-gold" text="light">
             Q4 2025
         </Badge>
       </div>
+      </Link>
       <Card.Body className="bg-offwhite">
-        <Card.Title className="mb-1">Damac Sun City</Card.Title>
+      <Link href='/off-plan/damac-sun-city'><Card.Title className="mb-1">Damac Sun City</Card.Title></Link>
         <h6 className="fw-bold text-gold">Starting Price: AED 1.5M</h6>
         <div className="d-flex justify-content-start my-2">
           <div className="my-auto">

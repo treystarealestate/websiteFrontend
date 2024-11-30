@@ -132,12 +132,11 @@ const Page = () => {
                         {/* Sorting and View Toggle */}
                         <div className="col-12 col-lg-6 d-flex justify-content-end align-items-center">
                             <select title='sort'
-                                className="form-select formSort w-auto me-3"
+                                className="form-select formSort  me-3"
                                 value={sortBy}
-                                onChange={(e) => setSortBy(e.target.value as 'title' | 'id' | 'price-low-high' | 'price-high-low')}
+                                onChange={(e) => setSortBy(e.target.value as  'price-low-high' | 'price-high-low')}
                             >
-                                <option value="id">Sort by ID</option>
-                                <option value="title">Sort by Title</option>
+                                <option value="">Sort</option>
                                 <option value="price-low-high">Sort by Price (Low to High)</option>
                                 <option value="price-high-low">Sort by Price (High to Low)</option>
                             </select>

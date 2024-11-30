@@ -9,11 +9,10 @@ import Footer from '@/components/layout/Footer';
 
 // Example metadata
 export const metadata: Metadata = {
-  title: "My Website",
-  description: "A website about Next.js and TypeScript",
+  title: "Treysta",
+  description: "Where Trust Meets Fun in Real Estate",
   keywords: ["next.js", "typescript", "react"], // Array of strings
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

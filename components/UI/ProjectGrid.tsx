@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Badge, Card } from "react-bootstrap";
 interface Project {
@@ -7,9 +8,9 @@ interface Project {
     imageUrl: string;
     price: number;
     bedroom: string;
-    accommodation: string;  
-    developer: string;  
-    handover: string;  
+    accommodation: string;
+    developer: string;
+    handover: string;
 }
 
 interface ProjectGridProps {
@@ -24,14 +25,18 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
                 {projects.map((project) => (
                     <div className="col-12 col-lg-3 col-md-4 mb-3" key={project.id}>
                         <Card className="rounded-4 border-0 shadow-sm bg-transparent">
-                            <Card.Img className="projImg" variant="top" src={project.imageUrl} alt={project.title} />
-                            <div className="topRightCont">
-                                <Badge className="bg-gold" text="light">
-                                {project.handover}
-                                </Badge>
-                            </div>
+                            <Link href='/off-plan/damac-sun-city'>
+                                <Card.Img className="projImg" variant="top" src={project.imageUrl} alt={project.title} />
+                                <div className="topRightCont">
+                                    <Badge className="bg-gold" text="light">
+                                        {project.handover}
+                                    </Badge>
+                                </div>
+                            </Link>
                             <Card.Body className="bg-offwhite">
-                                <Card.Title className="mb-1">{project.title}</Card.Title>
+                                <Link href='/off-plan/damac-sun-city'>
+                                    <Card.Title className="mb-1">{project.title}</Card.Title>
+                                </Link>
                                 <h6 className="fw-bold text-gold">Starting Price: AED {project.price}</h6>
                                 <div className="d-flex justify-content-start my-2">
                                     <div className="my-auto">

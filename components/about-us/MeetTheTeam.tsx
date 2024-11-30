@@ -52,7 +52,7 @@ export const MeetTheTeam = () => {
       <div className="container-fluid">
         <div className="row">
           {/* Text Content */}
-          <div className="col-12 col-lg-4 col-md-4 offset-1">
+          <div className="col-12 col-lg-4 col-md-4  offset-0 offset-md-1">
             <div className="descCont text-start p-1 p-md-4 p-lg-4">
               <span className="text-sub text-gold">
                 <i className="bi bi-dash-lg"></i> Our Team
@@ -63,7 +63,7 @@ export const MeetTheTeam = () => {
               At Treysta, we don’t just know real estate—we live it, with a passion that goes beyond just closing deals. Each of us is here because we love what we do, but more importantly, we’re here because we believe in making your experience smoother, simpler, and more human. Buying or selling a home can feel overwhelming, but with us, it’s never just about the transaction—it’s about you. We blend sharp data-driven insights with a genuine care for your goals, ensuring that every step is guided by a personal touch. At Treysta, trust isn’t a promise, it’s a way of life, and we’re here to make your journey effortless, with the knowledge and passion to back it up.
               </p>
               {/* Swiper Navigation */}
-              <div className="d-flex justify-content-start mt-3">
+              <div className="d-flex justify-content-start my-3">
                 <button
                   title="Previous Slide"
                   className="swiper-button-prevNew btn btn-outline-dark me-3"

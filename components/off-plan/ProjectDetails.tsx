@@ -10,27 +10,23 @@ const ProjectDetails = () => {
         <p className="mb-0 fs-14">Starting from: <span className="fw-bold">AED 3,00,000</span></p>
         </Col>
         <Col xs lg="4">
-          <p className="mb-0 fs-14">
           <p className="mb-0 fs-14">Starting Size: <span className="fw-bold">500 Sq.Ft</span></p>
-          </p>
+
         </Col>
         <Col xs lg="4">
-          <p className="mb-0 fs-14">
           <p className="mb-0 fs-14">Bedrooms: <span className="fw-bold">1,2,3</span></p>
-          </p>
+
         </Col>
         <Col xs lg="4">
         <p className="mb-0 fs-14">Property Type: <span className="fw-bold">Apartment</span></p>
         </Col>
         <Col xs lg="4">
-          <p className="mb-0 fs-14">
           <p className="mb-0 fs-14">Developer: <span className="fw-bold">DAMAC</span></p>
-          </p>
+
         </Col>
         <Col xs lg="4">
-          <p className="mb-0 fs-14">
           <p className="mb-0 fs-14">Handover: <span className="fw-bold">Q4 2025</span></p>
-          </p>
+
         </Col>
       </Row>
       </div>

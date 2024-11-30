@@ -2,7 +2,8 @@
 import React from 'react';
 import { Col, Container, Row, Card } from 'react-bootstrap';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
+import { useVariants } from '@/hooks/useVariants';
 // TypeScript interface for the community data
 interface Community {
     id: number;
@@ -39,12 +40,17 @@ const communities: Community[] = [
 ];
 
 const CommunityPage = () => {
+    const { introTopVariants } = useVariants();
     return (
         <section className='my-5'>
             <Container className='py-3'>
                 <Row className='g-3'>
                 <div className="col-12">
                         <div className="descCont text-center py-4">
+                        <motion.div variants={introTopVariants} // Use the header animation variants
+                                            initial="hide"
+                                            whileInView="show"
+                                            transition={{ duration: 1 }}>
                             <span className="text-sub text-gold">
                                 <i className="bi bi-dash-lg"></i> Communities
                             </span>
@@ -52,6 +58,7 @@ const CommunityPage = () => {
                             Explore Dubai's Most Popular Communities
                             </h3>
                             <p className="text-para">Discover the communities that make Dubai a top destination for residents and investors alike.</p>
+                       </motion.div>
                         </div>
                     </div>
                     {/* Col-6 with one large community image and overlay */}
