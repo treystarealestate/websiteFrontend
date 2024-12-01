@@ -60,7 +60,7 @@ const About = () => {
                                             initial="hide"
                                             whileInView="show"
                                             transition={{ duration: 1.05 }}>
-                                        <Link href="/about-us" className='btn btn-main'>
+                                        <Link href="/about" className='btn btn-main'>
                                             <span className='align-top'>Know More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
                                         </Link>
                                     </motion.div>

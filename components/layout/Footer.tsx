@@ -65,7 +65,7 @@ const Footer = () => {
                                     <div className="">
                                         <h6 className='text-gold'>Quick Links</h6>
                                         <ul className="list-unstyled socialLightFoot">
-                                            <li><Link href="/about-us">About</Link></li>
+                                            <li><Link href="/about">About</Link></li>
                                             <li><Link href="/services">Our Services</Link></li>
                                             <li><Link href="/off-plan">Off-Plan Projects</Link></li>
                                             <li><Link href="/contact-us">Contact Us</Link></li>

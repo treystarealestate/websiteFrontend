@@ -4,7 +4,7 @@ import PAGES from "@/src/constants/pages";
 import { getMetaDataByPage } from "@/src/api/seo";
 import { getTeams } from "@/src/api/teams";
 const AboutPage = dynamic(
-  () => import("@/components/about-us/AboutPage")
+  () => import("@/components/about/AboutPage")
 );
 type Props = {
   params: { slug: string };

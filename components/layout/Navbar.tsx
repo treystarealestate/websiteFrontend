@@ -28,7 +28,7 @@ const CustomNavbar = () => {
               <NavLink as={Link} href="/">
                 Home
               </NavLink>
-              <NavLink as={Link} href="/about-us">
+              <NavLink as={Link} href="/about">
                 About Us
               </NavLink>
               <NavLink as={Link} href="/services">
@@ -68,7 +68,7 @@ const CustomNavbar = () => {
             <NavLink as={Link} href="/" onClick={toggleOffcanvas}>
               Home
             </NavLink>
-            <NavLink as={Link} href="/about-us" onClick={toggleOffcanvas}>
+            <NavLink as={Link} href="/about" onClick={toggleOffcanvas}>
               About Us
             </NavLink>
             <NavLink as={Link} href="/services" onClick={toggleOffcanvas}>
