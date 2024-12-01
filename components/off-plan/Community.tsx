@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import parse from "html-react-parser";
 interface CommunityProps {
-  communityName: string;
-  communityDescription: string;
-  communityOtherDescription: string;
+  communityName?: string; // Optional property
+  communityDescription?: string; // Optional property
+  communityOtherDescription?: string; // Optional property
   openModal: (projectName: string, fileUrl: string, formName: string) => void;
 }
 
@@ -27,7 +27,7 @@ const Community: React.FC<CommunityProps> = ({ communityName, communityDescripti
         </div>
           {/* Button that triggers the modal, passing project details */}
           <button
-            onClick={() => openModal(communityName, '', "Download Brochure")} // Open modal with relevant data
+            onClick={() => openModal(communityName ?? "Unknown Agent", "", "Download Brochure")}
             className="btn btn-main-white mb-3"
           >
             <span className="align-top">Download Brochure </span>&nbsp;

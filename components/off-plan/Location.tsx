@@ -1,8 +1,8 @@
 import React from "react";
 
 interface LocationProps {
-  lat?: number; // Latitude as a number (optional for type safety)
-  lng?: number; // Longitude as a number (optional for type safety)
+  lat?: string; // Latitude as a number (optional for type safety)
+  lng?: string; // Longitude as a number (optional for type safety)
 }
 
 const Location: React.FC<LocationProps> = ({ lat, lng }) => {

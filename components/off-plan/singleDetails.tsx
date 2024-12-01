@@ -21,44 +21,49 @@ interface GalleryItem {
     order: number | null;
 }
 interface AmenityItem {
-    id: number;
+    id: string;
     name: string;
     image: string;
 }
-interface agentItem{
+interface agentItem {
     name: string;
+    contact?: string; // Optional, in case contact is not provided
+    whatsapp?: string; // Optional, in case whatsapp is not provided
+    email: string;
     image: string;
-    email:string,
-    contact:string,
-    whatsapp:string
 }
-interface paymentItem{
-    id: string,
-    name: string,
-    value: string
-}
+interface PaymentRow {
+    id: string;
+    key: string;
+    value: string;
+  }
+  
+  interface PaymentPlanItem {
+    title: string;
+    rows: PaymentRow[];
+  }
 interface Project {
     title: string;
     fileUrl: string;
-    tag:string,
+    tag: string,
     communityName: string,
     mainImage: string,
     price: string,
-    area:string,
-    longDescription:string,
-    bedrooms:string,
-    accommodation:string,
-    developerName:string,
-    handOver:string,
-    address_longitude:string,
-    address_latitude:string,
+    area: string,
+    longDescription: string,
+    bedrooms: string,
+    accommodation: string,
+    developerName: string,
+    handOver: string,
+    address_longitude: string,
+    address_latitude: string,
     interiorGallery: GalleryItem[],
     exteriorGallery: GalleryItem[],
     amenities: AmenityItem[],
-    agent:agentItem[],
-    payment:paymentItem[],
+    agent: agentItem,
+    payment: PaymentPlanItem[];
     communityOtherDescription: string,
-    communityDescription:string
+    communityDescription: string
 
 }
 
@@ -68,17 +73,19 @@ interface SingeleDetailsProps {
 }
 
 const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, projectData }) => {
-    console.log(nearByProjects)
+
     const project = {
         title: "Damac Sun City",
         fileUrl: "/assets/frontend/images/service1.webp", // Replace with actual image paths
     };
 
+
     const breadcrumbItems = [
         { label: "Home", link: "/", active: false },
         { label: "Off-Plan", link: "/off-plan", active: false },
-        { label: projectData?.title, link: "/off-plan/damac-sun-city", active: true },
+        { label: projectData?.title || "Project", active: true },
     ];
+
 
     const interiorImages = projectData?.interiorGallery?.map((image) => image.path) || [];
     const exteriorImages = projectData?.exteriorGallery?.map((image) => image.path) || [];
@@ -123,7 +130,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                                 />
                                 <div className="topRightCont">
                                     <Badge className="bg-gold badge" text="light">
-                                       {projectData?.tag}
+                                        {projectData?.tag}
                                     </Badge>
                                 </div>
                             </div>
@@ -158,7 +165,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                                 developer: projectData?.developerName,
                                 handoverDate: projectData?.handOver,
                                 description: projectData?.longDescription
-                            }}/>
+                            }} />
                         </div>
                         <div className="col-12 col-lg-4 col-md-4">
                             <AgentDetails agent={projectData?.agent} openModal={openModal} />
@@ -178,7 +185,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                             </div>
                         </div>
                         <div className="col-12 col-lg-12 col-md-12">
-                            <ProjectAminities amenities={projectData?.amenities}/>
+                            <ProjectAminities amenities={projectData?.amenities} />
                         </div>
                     </div>
                 </div>
@@ -189,34 +196,35 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                     <div className="bg-black p-3 rounded-4 text-white">
                         <div className="row">
                             <div className="col-12 col-lg-12 col-md-12">
-                                <Community communityName= {projectData?.communityName} communityDescription={projectData?.communityDescription} communityOtherDescription={projectData?.communityOtherDescription}  openModal={openModal} />
+                                <Community communityName={projectData?.communityName} communityDescription={projectData?.communityDescription} communityOtherDescription={projectData?.communityOtherDescription} openModal={openModal} />
                             </div>
                             <div className="col-12 col-lg-12 col-md-12">
-                                <Location lat={projectData?.address_latitude} lng={projectData?.address_longitude}/>
+                                <Location lat={projectData?.address_latitude} lng={projectData?.address_longitude} />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             {
-                projectData?.payment?.length > 0  && <section className="my-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-12 col-md-12">
-                            <div className="descCont">
-                                <div className="pb-3 text-center">
-                                    <h4 className="text-subhead">Payment Plan</h4>
+                projectData?.payment && projectData.payment.length > 0 && (
+                    <section className="my-5">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-lg-12 col-md-12">
+                                    <div className="descCont">
+                                        <div className="pb-3 text-center">
+                                            <h4 className="text-subhead">Payment Plan</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-12 col-lg-12 col-md-12 text-center">
+                                    <PaymentPlan payment={projectData?.payment ?? []} />
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-12 col-md-12 text-center">
-                            <PaymentPlan payment={projectData?.payment}/>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
+                )
             }
-            
 
             <section className="my-5">
                 <div className="container">
@@ -231,25 +239,25 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                     </div>
                 </div>
             </section>
-{
-    nearByProjects && <section className="py-5 bg-darkGold">
-    <div className="container">
-        <div className="row">
-            <div className="col-12 col-lg-12 col-md-12">
-                <div className="descCont">
-                    <div className="pb-3 text-center">
-                        <h4 className="text-subhead">Similar Projects</h4>
+            {
+                nearByProjects && <section className="py-5 bg-darkGold">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-12 col-md-12">
+                                <div className="descCont">
+                                    <div className="pb-3 text-center">
+                                        <h4 className="text-subhead">Similar Projects</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-lg-12 col-md-12">
+                                {/* <RelatedProject openModal={openModal} /> */}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="col-12 col-lg-12 col-md-12">
-                {/* <RelatedProject openModal={openModal} /> */}
-            </div>
-        </div>
-    </div>
-</section>
-}
-            
+                </section>
+            }
+
 
             <ProjectModal
                 isOpen={!!selectedProject}

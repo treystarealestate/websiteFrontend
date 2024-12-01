@@ -11,7 +11,7 @@ interface Agent {
 }
 
 interface AgentDetailsProps {
-  agent: Agent;
+  agent?: Agent; // Make 'agent' optional
   openModal: (projectName: string, fileUrl: string, formName: string) => void;
 }
 
@@ -57,14 +57,14 @@ const AgentDetails: React.FC<AgentDetailsProps> = ({ agent, openModal }) => {
       <div className="d-grid gap-3 p-3">
         <Button
           className="btn-bg-white"
-          onClick={() => openModal(agent.name, "", "Book A Meeting with Agent")}
+          onClick={() => openModal(agent?.name ?? "Unknown Agent", "", "Book A Meeting with Agent")}
           size="lg"
         >
           Book A Meeting
         </Button>
         <Button
           className="btn-main-white"
-          onClick={() => openModal(agent.name, "", "Download Brochure")}
+          onClick={() => openModal(agent?.name ?? "Unknown Agent", "", "Download Brochure")}
           size="lg"
         >
           Download Brochure
