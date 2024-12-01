@@ -11,6 +11,7 @@ type Props = {
 
 export default async function SingleMedia({ params }: Props) {
     const slug = params?.slug?.[0];  // Ensure you are accessing the correct value
+   
     if (!slug) {
       console.error("Slug is missing or incorrect");
       return <div>No slug found</div>;

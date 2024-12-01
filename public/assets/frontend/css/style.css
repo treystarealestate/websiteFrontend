@@ -487,6 +487,28 @@
   width: 100%;
 }
   }
+
+  /* Ensure that the swiper container takes full width */
+.achievemntSwiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Optional: Add spacing around the swiper */
+.achievemntSwiper .swiper-wrapper {
+  display: flex;
+  justify-content: center; /* Center the swiper slides */
+}
+
+/* Optional: Set a fixed width for slides so they are more evenly spaced */
+.achievemntSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   
 
   

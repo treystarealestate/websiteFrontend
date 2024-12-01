@@ -76,7 +76,7 @@ export const CeoMessage = () => {
 
                   {/* CEO Info */}
                   <div className="text-white">
-                    <h5 className="mb-0">John Joe</h5>
+                    <h5 className="mb-0">Vaibhav Setiya</h5>
                     <p className="text-sec text-gold">CEO</p>
                   </div>
                 </div>

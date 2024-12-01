@@ -31,13 +31,13 @@ interface ContactFormData {
     email: string;
     phone: string;
     message: string;
-  }
+}
 
 const ContactForm: React.FC<formNameProp> = ({ formName, projectName, fileUrl }) => {
     const currentPageURL = getCurrentUrl();
-   const { register, handleSubmit, control, formState: { errors }, reset } = useForm<ContactFormData>();
+    const { register, handleSubmit, control, formState: { errors }, reset } = useForm<ContactFormData>();
 
-   const onSubmit = (data: ContactFormData) => {
+    const onSubmit = (data: ContactFormData) => {
         saveContactFormApi(data)
             .then((res) => {
 
@@ -49,7 +49,7 @@ const ContactForm: React.FC<formNameProp> = ({ formName, projectName, fileUrl })
                     text: "Thank you. Our team will get back to you soon.",
                     showConfirmButton: false,
                     timer: 2000,
-                    
+
                 });
                 reset();
             })

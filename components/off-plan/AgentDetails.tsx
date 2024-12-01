@@ -1,42 +1,77 @@
+import React from "react";
+import { Button } from "react-bootstrap";
+import { getCurrentUrl } from "@/src/utils/helpers/common";
 
-import React from 'react'
-import { Button } from 'react-bootstrap'
-interface AgentDetailsProps {
-  project: {
-    title: string;
-    fileUrl: string;
-  };
-  openModal: (projectName: string, fileUrl: string, formName: string) => void; // Accept openModal as a prop
+interface Agent {
+  name: string;
+  contact?: string; // Optional, in case contact is not provided
+  whatsapp?: string; // Optional, in case whatsapp is not provided
+  email: string;
+  image: string;
 }
 
-const AgentDetails: React.FC<AgentDetailsProps> = ({ project, openModal }) => {
+interface AgentDetailsProps {
+  agent: Agent;
+  openModal: (projectName: string, fileUrl: string, formName: string) => void;
+}
+
+const AgentDetails: React.FC<AgentDetailsProps> = ({ agent, openModal }) => {
+  const currentPageURL = getCurrentUrl();
+  console.log(currentPageURL);
+
   return (
     <div className="bg-black p-3 rounded-4 mb-3 text-white">
       <div className="my-3 text-center">
-        <img src="/assets/frontend/images/team/Imran Chishti.webp" alt="Agent" className="mb-2 img-fluid agentImgOff d-block mx-auto" />
-        <h5>Imran Chishti</h5>
+        <img
+          src={agent?.image || "/assets/frontend/images/team/default-agent.webp"}
+          alt="Agent"
+          className="mb-2 img-fluid agentImgOff d-block mx-auto"
+        />
+        <h5>{agent?.name}</h5>
       </div>
       <div className="d-flex justify-content-evenly pb-3 border-bottom">
+        {agent?.contact && (
+          <div className="my-auto">
+            <a href={`tel:${agent.contact}`} className="btn btn-main-white">
+              <i className="bi bi-telephone"></i>
+            </a>
+          </div>
+        )}
+        {agent?.whatsapp && (
+          <div className="my-auto">
+            <a
+            target="_blnaket"
+              href={`https://wa.me/${agent.whatsapp}?text=Hi, ${agent.name} Please let me know more about the following property ${currentPageURL}`}
+              className="btn btn-main-white"
+            >
+              <i className="bi bi-whatsapp"></i>
+            </a>
+          </div>
+        )}
         <div className="my-auto">
-          <a href="" className="btn btn-main-white"><i className="bi bi-telephone"></i></a>
-        </div>
-        <div className="my-auto">
-          <a href="" className="btn btn-main-white"><i className="bi bi-whatsapp"></i></a>
-        </div>
-        <div className="my-auto">
-          <a href="" className="btn btn-main-white"><i className="bi bi-envelope"></i></a>
+          <a href={`mailto:${agent?.email}`} className="btn btn-main-white">
+            <i className="bi bi-envelope"></i>
+          </a>
         </div>
       </div>
       <div className="d-grid gap-3 p-3">
-      <Button className='btn-bg-white' onClick={() => openModal(project.title, project.fileUrl, "Book A Meeting with Agent")} size="lg">
-        Book A Meeting
-      </Button>
-      <Button className='btn-main-white' onClick={() => openModal(project.title, project.fileUrl, "Download Brochure")} size="lg">
-        Download Brochure
-      </Button>
+        <Button
+          className="btn-bg-white"
+          onClick={() => openModal(agent.name, "", "Book A Meeting with Agent")}
+          size="lg"
+        >
+          Book A Meeting
+        </Button>
+        <Button
+          className="btn-main-white"
+          onClick={() => openModal(agent.name, "", "Download Brochure")}
+          size="lg"
+        >
+          Download Brochure
+        </Button>
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default AgentDetails
+export default AgentDetails;
