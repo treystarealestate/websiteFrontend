@@ -8,38 +8,15 @@ import { useVariants } from '@/hooks/useVariants';
 interface Community {
     id: number;
     name: string;
-    image: string;
+    mainImage: string;
 }
 
-const communities: Community[] = [
-    {
-        id: 1,
-        name: "Downtown Dubai",
-        image: "/assets/frontend/images/about1.jpg"
-    },
-    {
-        id: 2,
-        name: "Palm Jumeirah",
-        image: "/assets/frontend/images/about.jpg"
-    },
-    {
-        id: 3,
-        name: "Dubai Marina",
-        image: "/assets/frontend/images/about.jpg"
-    },
-    {
-        id: 4,
-        name: "Arabian Ranches",
-        image: "/assets/frontend/images/about1.jpg"
-    },
-    {
-        id: 5,
-        name: "Jumeirah Lake Towers",
-        image: "/assets/frontend/images/about1.jpg"
-    }
-];
+interface PartnerProps {
+    communities: Community[];
+}
+  
+const CommunityPage = ({ communities }: PartnerProps) => {
 
-const CommunityPage = () => {
     const { introTopVariants } = useVariants();
     return (
         <section className='my-5'>
@@ -65,7 +42,7 @@ const CommunityPage = () => {
                     <Col xs={12} md={6} lg={6}>
                         <div className="position-relative">
                             <img 
-                                src={communities[0].image} 
+                                src={communities[0].mainImage} 
                                 alt={communities[0].name} 
                                 className="img-fluid rounded-3 w-100"
                                 style={{ objectFit: "cover", height: "420px" }} 
@@ -85,7 +62,7 @@ const CommunityPage = () => {
                                     <Card className='bg-offwhite shadow-sm border-0'>
                                         <div className="position-relative">
                                             <Card.Img 
-                                                src={community.image} 
+                                                src={community.mainImage} 
                                                 className="img-fluid rounded-3"
                                                 style={{ objectFit: "cover", height: "200px" }}
                                             />

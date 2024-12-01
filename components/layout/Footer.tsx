@@ -65,11 +65,11 @@ const Footer = () => {
                                     <div className="">
                                         <h6 className='text-gold'>Quick Links</h6>
                                         <ul className="list-unstyled socialLightFoot">
-                                            <li><a href="/about-us">About</a></li>
-                                            <li><a href="/services">Our Services</a></li>
+                                            <li><Link href="/about-us">About</Link></li>
+                                            <li><Link href="/services">Our Services</Link></li>
                                             <li><Link href="/off-plan">Off-Plan Projects</Link></li>
-                                            <li><a href="/contact-us">Contact Us</a></li>
-                                            <li><a href="/blogs">Blogs</a></li>
+                                            <li><Link href="/contact-us">Contact Us</Link></li>
+                                            <li><Link href="/blogs">Blogs</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -79,15 +79,15 @@ const Footer = () => {
                                     <div className="text-center text-lg-start text-md-start">
                                         <div className='pt-4'>
                                             <ul className="list-unstyled footCopyLink lh-1 mb-0">
-                                                <li className="d-inline">
+                                                {/* <li className="d-inline">
                                                     <Link href="/terms-of-use" className='text-white'>Terms of use</Link>
-                                                </li>
+                                                </li> */}
                                                 <li className="d-inline">
                                                     <Link href="/privacy-policy" className='text-white'>Privacy policy</Link>
                                                 </li>
-                                                <li className="d-inline">
+                                                {/* <li className="d-inline">
                                                     <a href="http://" className='text-white'>Sitemap</a>
-                                                </li>
+                                                </li> */}
                                             </ul>
                                         </div>
                                     </div>

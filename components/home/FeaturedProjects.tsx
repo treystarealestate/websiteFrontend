@@ -12,8 +12,10 @@ import { motion } from 'framer-motion';
 import { useVariants } from '@/hooks/useVariants';
 interface FeaturedProps {
     openModal: (projectName: string, fileUrl: string, formName: string) => void; 
+    projects: Array<{ title: string }>; // Define the shape of the project object
 }
-const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal }) => {
+
+const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal, projects }) => {
     const { introHeaderVariants } = useVariants();
     return (
         <section className="py-5 bg-black">
@@ -64,10 +66,10 @@ const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal }) => {
                             },
                         }}
                         className="projectSwiper">
-                            {[...Array(6)].map((_, index) => (
+                             {projects?.map((project, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="propertyCard">
-                                        <PropertyCard openModal={openModal} />
+                                        <PropertyCard project={project} openModal={openModal} />
                                     </div>
                                 </SwiperSlide>
                             ))}

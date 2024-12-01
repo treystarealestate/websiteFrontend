@@ -10,7 +10,9 @@ interface Project {
     bedroom: string;
     accommodation: string;
     developer: string;
+    community: string;
     handover: string;
+    slug:string
 }
 
 interface ProjectListProps {
@@ -28,7 +30,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects,openModal }) => {
                         <Card className="rounded-4 bg-transparent border-0 shadow-sm">
                             <div className="row g-0">
                                 <div className="col-4 col-md-5">
-                                <Link href='/off-plan/damac-sun-city'>
+                                <Link href={`/off-plan/${project.slug}`}>
                                     <Card.Img className="projImg" variant="top" src={project.imageUrl} alt={project.title} />
                                     <div className="topLeftCont">
                                         <Badge className="bg-gold badge" text="light">
@@ -40,7 +42,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects,openModal }) => {
                                 <div className="col-8 col-md-7">
                                     <Card.Body className="bg-offwhite h-100 pb-2">
                                         <div>
-                                        <Link href='/off-plan/damac-sun-city' >
+                                        <Link href={`/off-plan/${project.slug}`} >
                                         <Card.Title className="mb-1">{project.title}</Card.Title>
                                         </Link>
                                         <h6 className="fw-bold text-gold">Starting Price: AED {project.price}</h6>
@@ -50,7 +52,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects,openModal }) => {
                                             </div>
                                         </div>
                                         <div className="my-auto">
-                                                <p className='text-desc mb-0'><i className="bi bi-geo-alt"></i>&nbsp;<span className='align-middle'>Dubai Islands</span></p>
+                                                <p className='text-desc mb-0'><i className="bi bi-geo-alt"></i>&nbsp;<span className='align-middle'>{project.community}</span></p>
                                             </div>
                                         </div>
                                         <div className="d-flex justify-content-between pt-2 border-top">

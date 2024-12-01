@@ -74,8 +74,8 @@ const CustomNavbar = () => {
             <NavLink as={Link} href="/services" onClick={toggleOffcanvas}>
               Services
             </NavLink>
-            <NavLink as={Link} href="/resources" onClick={toggleOffcanvas}>
-              Resources
+            <NavLink as={Link} href="/blogs" onClick={toggleOffcanvas}>
+              Blogs
             </NavLink>
             <NavLink as={Link} href="/contact-us" onClick={toggleOffcanvas}>
               Contact Us

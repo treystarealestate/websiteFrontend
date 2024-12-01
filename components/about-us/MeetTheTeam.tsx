@@ -4,49 +4,12 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-const teams = [
-  {
-      id: 1,
-      name: "Ali Dab",
-      image: "/assets/frontend/images/team/Ali Dab.webp"
-  },
-  {
-      id: 2,
-      name: "Ishu Bhatia",
-      image: "/assets/frontend/images/team/ishu bhatia.webp"
-  },
-  {
-      id: 4,
-      name: "Simran Sethi",
-      image: "/assets/frontend/images/team/simran sethi.webp"
-  },
-  {
-      id: 5,
-      name: "Priyanka Halari",
-      image: "/assets/frontend/images/team/priyanka halari.webp"
-  },
-  {
-      id: 6,
-      name: "Pallavi Tathe",
-      image: "/assets/frontend/images/team/Pallavi Tathe.webp"
-  },
-  {
-      id: 7,
-      name: "Muhammad Fayyaz",
-      image: "/assets/frontend/images/team/Muhammad Fayyaz.webp"
-  },
-  {
-      id: 7,
-      name: "Mohammed Shuraim",
-      image: "/assets/frontend/images/team/Mohammed Shuraim.webp"
-  },
-  {
-      id: 8,
-      name: "Imran Chishti",
-      image: "/assets/frontend/images/team/Imran Chishti.webp"
-  }
-];
-export const MeetTheTeam = () => {
+interface TeamMember {
+  id: number;
+  name: string;
+  image: string;
+}
+export const MeetTheTeam = ({teamData}: { teamData: any }) => {
   return (
     <section className="py-5">
       <div className="container-fluid">
@@ -109,12 +72,12 @@ export const MeetTheTeam = () => {
               }}
               className="projectSwiper"
             >
-              {teams.map((team) => (
+              {teamData?.map((team) => (
                 <SwiperSlide key={team.id}>
                   <div className="card bg-transparent border-0">
                     <img
                       src={team.image}
-                      alt="team"
+                      alt={team.name}
                       className="card-img-top teamImage rounded-3"
                     />
                     <div className="card-body">

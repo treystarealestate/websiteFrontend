@@ -1,46 +1,37 @@
-"use client";
-import Image from "next/image";
-import VideoBanner from '../components/home/VideoBanner';
+import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import PAGES from "@/src/constants/pages";
+import { getMetaDataByPage } from "@/src/api/seo";
+import VideoBanner from '@/components/home/VideoBanner';
 import About from "@/components/home/About";
-import Partner from "@/components/home/Partner";
-import FeaturedProjects from "@/components/home/FeaturedProjects";
-import Newsletter from "@/components/layout/Newsletter";
-import Blogs from "@/components/home/Blogs";
-import CommunityPage from "@/components/home/Community";
-import ProjectModal from "@/components/UI/ProjectModal";
-import { useState } from "react";
-export default function Home() {
-   // Function to open the modal and pass project details and formName
-   const [selectedProject, setSelectedProject] = useState<{
-    projectName: string;
-    fileUrl: string;
-    formName: string;
-  } | null>(null);
+import { getHomeData } from "@/src/api/home";
 
-  // Function to open the modal and pass project details and formName
-  const openModal = (projectName: string, fileUrl: string, formName: string) => {
-    setSelectedProject({ projectName, fileUrl, formName });
-  };
+const HomePage = dynamic(() => import("@/components/home/HomePage"));
 
-  // Function to close the modal
-  const closeModal = () => {
-    setSelectedProject(null);
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const meta = await getMetaDataByPage(PAGES.home);
+
+  return {
+    title: meta?.data?.title,
+    description: meta?.data?.meta_description,
+    keywords: meta?.data?.meta_keywords,
   };
+};
+
+export default async function Page() {
+  const homeData = await getHomeData();
   return (
-   <main>
-    <VideoBanner />
-    <About />
-    <Partner />
-    <FeaturedProjects openModal={openModal}/>
-    <CommunityPage />
-    <Blogs />
-    <Newsletter />
-    <ProjectModal isOpen={!!selectedProject}
-        title={selectedProject?.projectName || ""}
-        formName={selectedProject?.formName || "Brochure Request"}
-        fileUrl={selectedProject?.fileUrl}
-        onClose={closeModal}
-      />
-   </main>
+    <>
+      <main>
+        <VideoBanner />
+        <About />
+        <HomePage homeData={homeData.data} />
+      </main>
+    </>
   );
 }

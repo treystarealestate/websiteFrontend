@@ -10,7 +10,9 @@ interface Project {
     bedroom: string;
     accommodation: string;
     developer: string;
+    community: string;
     handover: string;
+    slug: string
 }
 
 interface ProjectGridProps {
@@ -25,7 +27,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
                 {projects.map((project) => (
                     <div className="col-12 col-lg-3 col-md-4 mb-3" key={project.id}>
                         <Card className="rounded-4 border-0 shadow-sm bg-transparent">
-                            <Link href='/off-plan/damac-sun-city'>
+                            <Link href={`/off-plan/${project.slug}`}>
                                 <Card.Img className="projImg" variant="top" src={project.imageUrl} alt={project.title} />
                                 <div className="topRightCont">
                                     <Badge className="bg-gold" text="light">
@@ -34,7 +36,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
                                 </div>
                             </Link>
                             <Card.Body className="bg-offwhite">
-                                <Link href='/off-plan/damac-sun-city'>
+                                <Link href={`/off-plan/${project.slug}`}>
                                     <Card.Title className="mb-1">{project.title}</Card.Title>
                                 </Link>
                                 <h6 className="fw-bold text-gold">Starting Price: AED {project.price}</h6>
@@ -46,7 +48,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
                                 <div className="d-flex justify-content-between">
                                    
                                     <div className="my-auto">
-                                    <p className='text-desc mb-0'><i className="bi bi-geo-alt"></i>&nbsp;<span className='align-middle'>Dubai Islands</span></p>
+                                    <p className='text-desc mb-0'><i className="bi bi-geo-alt"></i>&nbsp;<span className='align-middle'>{project.community}</span></p>
                                     </div>
                                     <div className="my-auto">
                                         <span className="text-gold">{project.developer}</span>

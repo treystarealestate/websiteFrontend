@@ -3,6 +3,12 @@
 import React, { useState } from "react";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import { isValidPhoneNumber } from 'react-phone-number-input'
+import { getCurrentUrl } from "@/src/utils/helpers/common";
+import { useForm, Controller, FieldError } from "react-hook-form";
+import { saveContactFormApi } from "@/src/services/HomeService";
+import Swal from 'sweetalert2'
+import { toast } from "react-toastify";
 
 interface FormData {
     name: string;
@@ -15,48 +21,59 @@ interface formNameProp {
     projectName?: string;
     fileUrl?: string;
 }
-const ContactForm: React.FC<formNameProp> = ({formName,projectName,fileUrl}) => {
-    const [formData, setFormData] = useState<FormData>({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-    });
+const ContactForm: React.FC<formNameProp> = ({ formName, projectName, fileUrl }) => {
+    const currentPageURL = getCurrentUrl();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        control,
+        reset,
+    } = useForm();
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
+    const onSubmit = (data) => {
+        saveContactFormApi(data)
+            .then((res) => {
 
-    const handlePhoneChange = (value: string | undefined) => {
-        setFormData({ ...formData, phone: value || "" });
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log("Form Data Submitted:", formData);
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    showCloseButton: true,
+                    title: "Form Submitted",
+                    text: "Thank you. Our team will get back to you soon.",
+                    showConfirmButton: false,
+                    timer: 2000,
+                    didOpen: (toast) => {
+                        Swal.getPopup().setAttribute('id', 'footerContactForm');
+                    }
+                });
+                reset();
+            })
+            .catch((err) => {
+                toast.error("Something went wrong, please try again");
+            });
     };
 
     return (
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form onSubmit={handleSubmit(onSubmit)} className="contact-form">
             <div className="mb-2">
-            <input type="hidden" name="formName" value={formName} />
-            <input type="hidden" name="fileUrl" value={fileUrl} />
-            <input type="hidden" name="projectName" value={projectName} />
+
+                <input type="hidden" value="formName" {...register("formName", { required: false })} />
+                <input type="hidden" value={fileUrl} {...register("fileUrl", { required: false })} />
+                <input type="hidden" value={projectName} {...register("projectName", { required: false })} />
+                <input type="hidden" value={currentPageURL} {...register("page", { required: false })} />
+
                 <label htmlFor="name" className="form-label">
                     Name *
                 </label>
                 <input
                     type="text"
                     id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="form-control"
-                    required
+                    {...register("name", { required: true })}
+                    className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+
                 />
+                {errors.name && <small className="text-danger">Name is required.</small>}
             </div>
             <div className="mb-2">
                 <label htmlFor="email" className="form-label">
@@ -65,22 +82,46 @@ const ContactForm: React.FC<formNameProp> = ({formName,projectName,fileUrl}) => 
                 <input
                     type="email"
                     id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="form-control"
-                    required
+                    {...register("email", { required: true })}
+                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+
                 />
+                {errors.email && <small className="text-danger">Email is required.</small>}
             </div>
             <div className="mb-2">
                 <label htmlFor="phone" className="form-label">
                     Phone Number *
                 </label>
-                <PhoneInput
-                    value={formData.phone}
-                    onChange={handlePhoneChange}
-                    defaultCountry="AE" // Sets the default country
-                    className="form-control"
+                <Controller
+                    name="phone"
+
+                    control={control}
+                    rules={{
+                        required: 'Phone is required.',
+                        validate: {
+                            validPhoneNumber: (value) => isValidPhoneNumber(value) || 'Invalid phone number'
+                        }
+                    }}
+                    render={({ field }) => (
+                        <>
+                            <PhoneInput
+                                international
+                                countryCallingCodeEditable={false}
+                                className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+                                defaultCountry="AE"
+                                placeholder="Enter Phone Number"
+                                error={errors.phone ? 'Invalid phone number' : undefined}
+                                {...field}
+
+                            />
+                            {errors.phone && (
+                                <small className="text-danger">
+                                    {(errors.phone as FieldError).message}
+                                </small>
+                            )}
+
+                        </>
+                    )}
                 />
             </div>
             <div className="mb-3">
@@ -89,18 +130,19 @@ const ContactForm: React.FC<formNameProp> = ({formName,projectName,fileUrl}) => 
                 </label>
                 <textarea
                     id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="form-control"
+                    {...register("message", { required: false })}
+                    className={`form-control ${errors.message ? 'is-invalid' : ''}`}
                     rows={3}
-                    required
+
                 />
+                {errors.message && (
+                    <small className="text-danger">Message is required.</small>
+                )}
             </div>
             <div className="text-end">
-            <button type="submit" className="btn btn-main-black">
-            <span className='align-top'>Submit Now </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
-            </button>
+                <button type="submit" className="btn btn-main-black">
+                    <span className='align-top'>Submit Now </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
+                </button>
             </div>
         </form>
     );
