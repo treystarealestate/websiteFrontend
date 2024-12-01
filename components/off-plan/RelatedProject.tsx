@@ -39,7 +39,7 @@ const RelatedProject : React.FC<RelatedProjectProps> = ({ openModal }) => {
                             {[...Array(6)].map((_, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="propertyCard">
-                                        <PropertyCard openModal={openModal} />
+                                        {/* <PropertyCard openModal={openModal} /> */}
                                     </div>
                                 </SwiperSlide>
                             ))}

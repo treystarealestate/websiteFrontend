@@ -12,9 +12,17 @@ import { motion } from 'framer-motion';
 import { useVariants } from '@/hooks/useVariants';
 interface FeaturedProps {
     openModal: (projectName: string, fileUrl: string, formName: string) => void; 
-    projects: Array<{ title: string }>; // Define the shape of the project object
+    projects: Array<Project>; // Use the full Project type here
 }
-
+export interface Project {
+    title: string;
+    image: string;
+    price: string;
+    bedrooms: string;
+    developer: string;
+    completionDate: string;
+    slug: string;
+  }
 const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal, projects }) => {
     const { introHeaderVariants } = useVariants();
     return (

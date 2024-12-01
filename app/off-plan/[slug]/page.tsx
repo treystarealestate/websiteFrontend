@@ -182,7 +182,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
                             </div>
                         </div>
                         <div className="col-12 col-lg-12 col-md-12">
-                            <RelatedProject openModal={openModal} />
+                            {/* <RelatedProject openModal={openModal} /> */}
                         </div>
                     </div>
                 </div>

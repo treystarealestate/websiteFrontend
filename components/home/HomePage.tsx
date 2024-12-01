@@ -12,23 +12,29 @@ interface Developer {
   name: string;
   logo: string;
 }
+
 interface Community {
-    id: number;
-    name: string;
-    mainImage: string;
+  id: number;
+  name: string;
+  mainImage: string;
 }
+
 interface Blog {
-    id: number;
-    url: string;
-    title: string;
-    image: string;
-    publish_date: string;
+  id: number;
+  url: string;
+  title: string;
+  image: string;
+  publish_date: string;
 }
 
 interface Project {
-    id: number;
-    title: string;
-    mainImage: string;
+  title: string;
+  image: string;
+  price: string;
+  bedrooms: string;
+  developer: string;
+  completionDate: string;
+  slug: string;
 }
 
 interface HomeData {
@@ -38,8 +44,6 @@ interface HomeData {
   projects: Project[];
   // Other properties if necessary
 }
-
-
 
 type HomePageProps = {
   homeData: HomeData;
@@ -60,15 +64,19 @@ const HomePage = ({ homeData }: HomePageProps) => {
   const closeModal = () => {
     setSelectedProject(null);
   };
-  console.log(homeData)
+
+  if (!homeData) {
+    return <div>Loading...</div>; // Handle loading state if homeData is not yet available
+  }
+
   return (
     <>
-      <Partner developers={homeData?.developers} />
-      <FeaturedProjects projects={homeData?.projects} openModal={openModal} />
-      <CommunityPage communities = {homeData?.communities}/>
-      <Blogs blogs = {homeData?.blogs}/>
+      <Partner developers={homeData.developers} />
+      <FeaturedProjects projects={homeData.projects} openModal={openModal} />
+      <CommunityPage communities={homeData.communities} />
+      <Blogs blogs={homeData.blogs} />
       <Newsletter />
-      <ProjectModal 
+      <ProjectModal
         isOpen={!!selectedProject}
         title={selectedProject?.projectName || ""}
         formName={selectedProject?.formName || "Brochure Request"}

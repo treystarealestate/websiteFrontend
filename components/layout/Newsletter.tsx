@@ -13,18 +13,19 @@ import Swal from "sweetalert2";
 
 const Newsletter = () => {
     const { introTopVariants } = useVariants();
+    
+    const currentPageURL = getCurrentUrl();
+    
+    interface ContactFormData {
+        formName: string;
+        email: string;
+        page: string;
+        
+      }
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        control,
-        reset,
-      } = useForm();
-    
-      const currentPageURL = getCurrentUrl();
-    
-      const onSubmit = (data) => {
+    const { register, handleSubmit, control, formState: { errors }, reset } = useForm<ContactFormData>();
+
+    const onSubmit = (data: ContactFormData) => {
         saveContactFormApi(data)
           .then((res) => {
             Swal.fire({
@@ -35,9 +36,7 @@ const Newsletter = () => {
               text: "Thank you for subscribing to our mailing list.",
               showConfirmButton: false,
               timer: 2000,
-              didOpen: (toast) => {
-                Swal.getPopup().setAttribute("id", "subscribeEmail");
-              },
+             
             });
     
             // toast.success("Thank you for subscribing to our mailing list.", {

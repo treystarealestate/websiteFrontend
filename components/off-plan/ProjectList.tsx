@@ -40,19 +40,6 @@ const ProjectPageList = () => {
   const [itemsPerPage] = useState(8); // Items per page for pagination
   const [sortBy, setSortBy] = useState<'title' | 'id' | 'price-low-high' | 'price-high-low'>('id');
 
-  // Sorting logic
-  const sortedProjects = [...properties].sort((a, b) => {
-    if (sortBy === 'title') {
-      return a.title.localeCompare(b.title);
-    }
-    if (sortBy === 'price-low-high') {
-      return a.price - b.price; // Sort by price low to high
-    }
-    if (sortBy === 'price-high-low') {
-      return b.price - a.price; // Sort by price high to low
-    }
-    return a.id - b.id; // Default: sort by id
-  });
 
 
   // Handle pagination change
@@ -69,7 +56,8 @@ const ProjectPageList = () => {
     bathroom: "",
     completion_status_id: "",
     isCommercial: "",
-    lastUpdated: ""
+    lastUpdated: "",
+    sortBy: '', // Optional or default value
   });
 
 
@@ -77,37 +65,14 @@ const ProjectPageList = () => {
     let getPropertiesURL = process.env.API_HOST + "projects?";
     getPropertiesURL += `page=${currentPage}&`; // Append the page number to the URL
     let payload = { ...form };
-    for (let key in payload) {
-      if (payload.hasOwnProperty(key)) {
-        if (payload[key]) {
-          if (key === "searchBy" && payload[key].length) {
-            let searchBy = undefined;
-            if (typeof payload[key] == "string") {
-              searchBy = JSON.parse(payload[key]);
-            } else if (Array.isArray(payload[key])) {
-              searchBy = payload[key];
-            } else {
-              searchBy = [];
-            }
-            searchBy.forEach((element) => {
-              delete element.id;
-              delete element.slug;
-            });
-            payload[key] = JSON.stringify(searchBy);
-            getPropertiesURL += `${key}=${payload[key]}&`;
-          } else {
-            getPropertiesURL += `${key}=${payload[key]}&`;
-          }
-        }
-      }
-    }
+   
     setLoading(true);
     fetch(getPropertiesURL)
       .then((response) => response.json())
       .then((res) => {
         if (res.success) {
           const propertiesDup = res.data.data;
-          setProperties([...propertiesDup]);
+          setProperties(propertiesDup);
           setTotalProperties(res.data.meta.total);
           setLinks(res.data.links);
         }

@@ -21,17 +21,23 @@ interface formNameProp {
     projectName?: string;
     fileUrl?: string;
 }
+
+interface ContactFormData {
+    formName: string;
+    fileUrl: string;
+    projectName: string;
+    page: string;
+    name: string;
+    email: string;
+    phone: string;
+    message: string;
+  }
+
 const ContactForm: React.FC<formNameProp> = ({ formName, projectName, fileUrl }) => {
     const currentPageURL = getCurrentUrl();
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        control,
-        reset,
-    } = useForm();
+   const { register, handleSubmit, control, formState: { errors }, reset } = useForm<ContactFormData>();
 
-    const onSubmit = (data) => {
+   const onSubmit = (data: ContactFormData) => {
         saveContactFormApi(data)
             .then((res) => {
 
@@ -43,9 +49,7 @@ const ContactForm: React.FC<formNameProp> = ({ formName, projectName, fileUrl })
                     text: "Thank you. Our team will get back to you soon.",
                     showConfirmButton: false,
                     timer: 2000,
-                    didOpen: (toast) => {
-                        Swal.getPopup().setAttribute('id', 'footerContactForm');
-                    }
+                    
                 });
                 reset();
             })
