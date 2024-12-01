@@ -16,6 +16,12 @@ interface Blog {
 
 interface MediaData {
     allMedia: Blog[];
+    media: {
+        title: string;
+        content: string;
+        image: string;
+        date: string
+      };
 }
 function SingleBlogPage({ mediaData }: { mediaData: MediaData }) {
     console.log(mediaData);
