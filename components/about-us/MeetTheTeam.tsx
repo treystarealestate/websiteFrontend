@@ -4,10 +4,11 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-interface TeamMember {
+interface Team {
   id: number;
   name: string;
   image: string;
+  role?: string;  // Optional role property
 }
 export const MeetTheTeam = ({teamData}: { teamData: any }) => {
   return (
@@ -72,7 +73,7 @@ export const MeetTheTeam = ({teamData}: { teamData: any }) => {
               }}
               className="projectSwiper"
             >
-              {teamData?.map((team) => (
+              {teamData.map((team: Team) => (
                 <SwiperSlide key={team.id}>
                   <div className="card bg-transparent border-0">
                     <img
