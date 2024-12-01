@@ -8,7 +8,7 @@ import VideoBanner from '@/components/home/VideoBanner';
 
 
 const HomePage = dynamic(() => import("@/components/home/HomePage"));
-const About = dynamic(() => import("@/components/home/About"));
+const About = dynamic(() => import("@/components/home/AboutSection"));
 type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
