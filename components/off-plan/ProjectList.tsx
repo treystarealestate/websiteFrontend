@@ -7,9 +7,16 @@ import { Pagination } from 'react-bootstrap'; // Using Bootstrap for pagination
 import ProjectGrid from '@/components/UI/ProjectGrid';
 import ProjectList from '@/components/UI/ProjectList';
 import ProjectModal from '@/components/UI/ProjectModal';
+import { useSearchParams } from "next/navigation";
 
 const ProjectPageList = () => {
-
+  interface Form {
+    accommodation: string;
+    community: string;
+    developer: string;
+    search: string;
+  }
+  
   const [loading, setLoading] = useState(false);
   const [sorting, setSorting] = useState("");
   const [links, setLinks] = useState({ next: "", first: "" });
@@ -44,28 +51,49 @@ const ProjectPageList = () => {
 
   // Handle pagination change
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-
-  const [form, setForm] = useState({
-    accommodation_id: "",
-    bedrooms: "",
-    minprice: "",
-    maxprice: "",
-    minarea: "",
-    maxarea: "",
-    amenities: "",
-    bathroom: "",
-    completion_status_id: "",
-    isCommercial: "",
-    lastUpdated: "",
-    sortBy: '', // Optional or default value
+  const searchParams = useSearchParams();
+  const [form, setForm] = useState<Form>({
+    accommodation: "",
+    community: "",
+    developer: "",
+    search: "",
   });
+  useEffect(() => {
+    const newForm = { ...form };
+    
+    if (searchParams.has("accommodation")) {
+      newForm.accommodation = searchParams.get("accommodation") || "";
+    }
 
+    if (searchParams.has("community")) {
+      newForm.community = searchParams.get("community") || "";
+    }
+
+    if (searchParams.has("developer")) {
+        newForm.developer = searchParams.get("developer") || "";
+      }
+
+   
+
+    setForm(newForm);
+  }, [searchParams]);
 
   useEffect(() => {
     let getPropertiesURL = process.env.API_HOST + "projects?";
     getPropertiesURL += `page=${currentPage}&`; // Append the page number to the URL
-    let payload = { ...form };
-   
+
+    let payload: Form = { ...form };
+    
+    // Iterate through the keys of the form
+    for (let key in payload) {
+      if (payload.hasOwnProperty(key)) {
+        // Use keyof Form to assert that key is a valid key of Form
+        const typedKey = key as keyof Form;
+        if (payload[typedKey]) {
+          getPropertiesURL += `${typedKey}=${payload[typedKey]}&`;
+        }
+      }
+    }
     setLoading(true);
     fetch(getPropertiesURL)
       .then((response) => response.json())
@@ -85,9 +113,6 @@ const ProjectPageList = () => {
       });
   }, [form, currentPage]);
 
-  useEffect(() => {
-    setForm({ ...form, sortBy });
-  }, [sortBy]);
   const totalPages = Math.ceil(totalProperties / itemsPerPage);
   return (
     <main>
@@ -111,7 +136,7 @@ const ProjectPageList = () => {
 
             {/* Sorting and View Toggle */}
             <div className="col-12 col-lg-6 d-flex justify-content-end align-items-center">
-              <select title='sort'
+              {/* <select title='sort'
                 className="form-select formSort  me-3"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'price-low-high' | 'price-high-low')}
@@ -119,7 +144,7 @@ const ProjectPageList = () => {
                 <option value="">Sort</option>
                 <option value="price-low-high">Sort by Price (Low to High)</option>
                 <option value="price-high-low">Sort by Price (High to Low)</option>
-              </select>
+              </select> */}
 
               {/* View Toggle */}
               <div className="btn-group" role="group">

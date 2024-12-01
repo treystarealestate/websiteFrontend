@@ -508,6 +508,10 @@
   justify-content: center;
   align-items: center;
 }
+select.form-select option {
+  background-color: #f0f0f0; /* Custom background color */
+  color: #333 !important;  /* Text color */
+}
 
   
 
