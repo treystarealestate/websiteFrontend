@@ -21,6 +21,7 @@ export interface Project {
     bedrooms: string;
     developer: string;
     completionDate: string;
+    accommodation: string;
     slug: string;
   }
 const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal, projects }) => {

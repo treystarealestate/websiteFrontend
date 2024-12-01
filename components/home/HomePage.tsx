@@ -36,6 +36,7 @@ interface Project {
   developer: string;
   completionDate: string;
   slug: string;
+  accommodation: string
 }
 
 interface HomeData {
