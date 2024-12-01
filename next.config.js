@@ -5,6 +5,7 @@ const nextConfig = {
   reactStrictMode: false,
   env: {
     API_HOST: process.env.API_HOST,
+    NEXT_PUBLIC_IMAGE_DOMAIN : process.env.NEXT_PUBLIC_IMAGE_DOMAIN
   },
   images: {
     formats: ["image/avif", "image/webp"],
