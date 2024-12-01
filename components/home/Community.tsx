@@ -4,11 +4,13 @@ import { Col, Container, Row, Card } from 'react-bootstrap';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useVariants } from '@/hooks/useVariants';
+
 // TypeScript interface for the community data
 interface Community {
     id: number;
     name: string;
     mainImage: string;
+    slug: String
 }
 
 interface PartnerProps {
@@ -16,7 +18,6 @@ interface PartnerProps {
 }
   
 const CommunityPage = ({ communities }: PartnerProps) => {
-
     const { introTopVariants } = useVariants();
     return (
         <section className='my-5'>
@@ -41,6 +42,7 @@ const CommunityPage = ({ communities }: PartnerProps) => {
                     {/* Col-6 with one large community image and overlay */}
                     <Col xs={12} md={6} lg={6}>
                         <div className="position-relative">
+                            <Link  href={`community/${communities[0].slug}`}>
                             <img 
                                 src={communities[0].mainImage} 
                                 alt={communities[0].name} 
@@ -51,6 +53,7 @@ const CommunityPage = ({ communities }: PartnerProps) => {
                             <div className="position-absolute bottom-0 left-0 p-4 text-white">
                                 <h3 className="mb-0">{communities[0].name}</h3>
                             </div>
+                            </Link>
                         </div>
                     </Col>
 
@@ -60,7 +63,7 @@ const CommunityPage = ({ communities }: PartnerProps) => {
                             {communities.slice(1, 5).map((community) => (
                                 <Col xs={12} md={6} lg={6} key={community.id}>
                                     <Card className='bg-offwhite shadow-sm border-0'>
-                                        <div className="position-relative">
+                                        <Link className="position-relative"  href={`community/${community.slug}`}>
                                             <Card.Img 
                                                 src={community.mainImage} 
                                                 className="img-fluid rounded-3"
@@ -70,7 +73,7 @@ const CommunityPage = ({ communities }: PartnerProps) => {
                                             <div className="position-absolute bottom-0 left-0 p-4 text-white">
                                                 <h5 className='mb-0'>{community.name}</h5>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </Card>
                                 </Col>
                             ))}

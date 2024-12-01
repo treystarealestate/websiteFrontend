@@ -17,6 +17,7 @@ interface Community {
   id: number;
   name: string;
   mainImage: string;
+  slug:String
 }
 
 interface Blog {

@@ -42,6 +42,19 @@ interface PaymentRow {
     title: string;
     rows: PaymentRow[];
   }
+  interface nearByProjects {
+   
+        id:string;
+        title: string;
+        image: string;
+        price: string;
+        bedrooms: string;
+        developer: string;
+        completionDate: string;
+        accommodation: string;
+        slug: string;
+    
+  }
 interface Project {
     title: string;
     fileUrl: string;
@@ -68,12 +81,12 @@ interface Project {
 }
 
 interface SingeleDetailsProps {
-    nearByProjects?: Project[]; // Optional array of projects
+    nearByProjects?: nearByProjects[]; // Optional array of projects
     projectData?: Project; // Optional single project
 }
 
 const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, projectData }) => {
-
+    console.log(nearByProjects)
     const project = {
         title: "Damac Sun City",
         fileUrl: "/assets/frontend/images/service1.webp", // Replace with actual image paths
@@ -240,7 +253,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                 </div>
             </section>
             {
-                nearByProjects && <section className="py-5 bg-darkGold">
+                nearByProjects && nearByProjects.length > 0 &&  <section className="py-5 bg-darkGold">
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-lg-12 col-md-12">
@@ -251,7 +264,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                                 </div>
                             </div>
                             <div className="col-12 col-lg-12 col-md-12">
-                                {/* <RelatedProject openModal={openModal} /> */}
+                                <RelatedProject nearByProjects={nearByProjects}  openModal={openModal} />
                             </div>
                         </div>
                     </div>
