@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import PAGES from "@/src/constants/pages";
 import { getMetaDataByPage } from "@/src/api/seo";
-import VideoBanner from '@/components/home/VideoBanner';
-import About from "@/components/home/About";
+
 import { getHomeData } from "@/src/api/home";
+import VideoBanner from '@/components/home/VideoBanner';
+
 
 const HomePage = dynamic(() => import("@/components/home/HomePage"));
-
+const About = dynamic(() => import("@/components/home/About"));
 type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
