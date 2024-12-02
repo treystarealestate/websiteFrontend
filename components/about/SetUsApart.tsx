@@ -7,7 +7,7 @@ import aboutImage2 from "../../public/assets/frontend/images/img77-1.jpg";
 import aboutImage3 from "../../public/assets/frontend/images/img61.jpg";
 import aboutImage4 from "../../public/assets/frontend/images/img45.jpg";
 import aboutImage5 from "../../public/assets/frontend/images/img9.jpg";
-import mission from "../../public/assets/frontend/images/mission.png";
+import mission from "../../public/assets/frontend/images/mission2.png";
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandshake, faSmile, faHeart, faDoorOpen } from '@fortawesome/free-solid-svg-icons';
