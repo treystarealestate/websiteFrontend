@@ -145,7 +145,7 @@ const ContactForm: React.FC<formNameProp> = ({ formName, projectName, fileUrl })
             </div>
             <div className="text-end">
                 <button type="submit" className="btn btn-main-black">
-                    <span className='align-top'>Submit Now </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
+                    <span className='align-top'>Submit</span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
                 </button>
             </div>
         </form>

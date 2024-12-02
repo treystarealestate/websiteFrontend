@@ -142,7 +142,7 @@ const ContactSection: React.FC<formNameProp> = ({ formName, projectName, fileUrl
                                     </div>
                                     <div className="col-12 col-md-2 text-end mb-2">
                                         <button type="submit" className="btn btn-main-black w-100">
-                                            <span className='align-top'>Submit Now </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
+                                            <span className='align-top'>Submit </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
                                         </button>
                                     </div>
                                 </div>

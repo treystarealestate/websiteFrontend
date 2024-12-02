@@ -7,8 +7,8 @@ import React from 'react';
 
 export default function Page({ teamData }: { teamData: any }) {
   return (
-    <main>
-      <AboutBanner />
+    <main className='secondaryClr'>
+      {/* <AboutBanner /> */}
       <SetUsApart />
       <VisionMission />
       <CeoMessage />

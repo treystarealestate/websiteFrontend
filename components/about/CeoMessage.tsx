@@ -47,7 +47,7 @@ export const CeoMessage = () => {
                       Built on Trust
                     </h3>
                     <p className="text-sec text-white">
-                      Inspired by Fatherhood, Built on Trust Vaibhav always believed that great foundations—whether in buildings or in life—are built on trust. As a civil engineer, he spent years designing structures that stood the test of time. But his perspective shifted profoundly when he held his newborn daughter, Baani, for the first time. That moment wasn’t just life-changing; it was eye-opening.
+                     Vaibhav always believed that great foundations—whether in buildings or in life—are built on trust. As a civil engineer, he spent years designing structures that stood the test of time. But his perspective shifted profoundly when he held his newborn daughter, Baani, for the first time. That moment wasn’t just life-changing; it was eye-opening.
                     </p>
                     <p className="text-sec text-white">
                       “Everything I did suddenly felt bigger than myself,” Vaibhav recalls. “I wanted to create something lasting—not just for my family, but for everyone who trusted me with their future.”

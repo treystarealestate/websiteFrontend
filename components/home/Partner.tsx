@@ -6,7 +6,7 @@ import "swiper/css/autoplay"; // Optional, Swiper autoplay functionality doesn't
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
-import { useVariants } from "@/hooks/useVariants";
+import { useVariants } from "@/src/hooks/useVariants";
 
 interface Developer {
   logo: string; // Assuming 'logo' is a path to the partner's logo

@@ -512,7 +512,71 @@ select.form-select option {
   background-color: #f0f0f0; /* Custom background color */
   color: #333 !important;  /* Text color */
 }
+@media (min-width: 992px) {
+.communityBigCard{
+  height: 420px; /* Adjust height for desktops */
+}
+}
+.numbered {
+  list-style-type: none; /* Remove default numbers */
+  counter-reset: list-counter; /* Initialize custom counter */
+  padding-left: 0px !important; /* Space for the boxes and line */
+  position: relative;
+}
+.unnumbered li{
+  margin: 10px 0; /* Add spacing between items */
+}
+.unnumbered{
+  padding: 20px;
+}
+.numbered li {
+  counter-increment: list-counter; /* Increment counter */
+  position: relative;
+  margin: 40px 0; /* Add spacing between items */
+  padding-left: 80px; /* Space for text */
+}
 
+.numbered li:before {
+  content: counter(list-counter); /* Display the number */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px; /* Box width */
+  height: 50px; /* Box height */
+  background-color: #e5dfd2; /* Box background color */
+  color: black; /* Number color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid #e5dfd2; /* Border around the box */
+  z-index: 1;
+}
+
+.numbered li:after {
+  content: "";
+  position: absolute;
+  left: 20px; /* Center line under the box */
+  top: 30px; /* Start line below the box */
+  height: calc(100% + 20px); /* Extend line height */
+  width: 2px; /* Line width */
+  background-color: #ccc; /* Line color */
+  z-index: 0;
+}
+
+.numbered li:last-child:after {
+  content: none; /* Remove line for the last item */
+}
+.bgsecondary{
+  background: #e5dfd2 !important;
+}
+.border-none{
+  border: none !important;
+}
+.secondaryClr{
+  background: #efece6;
+}
   
 
   

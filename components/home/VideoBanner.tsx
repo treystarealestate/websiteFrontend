@@ -3,7 +3,7 @@
 import React from 'react';
 import Search from '../layout/Search';
 import { motion } from 'framer-motion';
-import { useVariants } from '@/hooks/useVariants';
+import { useVariants } from '@/src/hooks/useVariants';
 const VideoBanner = () => {
   const { introHeaderVariants } = useVariants();
 
