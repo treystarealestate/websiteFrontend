@@ -140,7 +140,7 @@ const Search: React.FC<SearchProps> = ({ bgClass, formClass }) => {
                         </div>
 
                         {/* Community Name Dropdown */}
-                        <div className="col-6 col-lg-auto">
+                        {/* <div className="col-6 col-lg-auto">
                             <label htmlFor="community">Community</label>
                             <select
                                 name="community"
@@ -155,7 +155,7 @@ const Search: React.FC<SearchProps> = ({ bgClass, formClass }) => {
                                     </option>
                                 ))}
                             </select>
-                        </div>
+                        </div> */}
 
                         {/* Developer Dropdown */}
                         <div className="col-6 col-lg-auto">

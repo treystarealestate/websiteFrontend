@@ -11,9 +11,12 @@ import mission from "../../public/assets/frontend/images/mission.png";
 import 'bootstrap-icons/font/bootstrap-icons.css'; // Import Bootstrap Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandshake, faSmile, faHeart, faDoorOpen } from '@fortawesome/free-solid-svg-icons';
+import { useResponsive } from "@/src/hooks/useResposive";
+
+
 export const SetUsApart = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
-
+    const isMobileDev = useResponsive();
     const toggleAccordion = (index: number) => {
         setActiveIndex((prevIndex) => (prevIndex === index ? -1 : index));
     };
@@ -94,12 +97,12 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section> */}
-            <section className="py-5">
+            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-7 col-md-7 d-flex align-items-center">
                             <div>
-                                <h2 className="text-head text-black fw-bold py-5">
+                                <h2 className={`text-head text-black fw-bold  ${isMobileDev ? "py-2" : "py-5"}`}>
                                     Trëysta:: Where Trust Meets Fun in Real Estate
                                 </h2>
                                 <ul className="unnumbered">
@@ -128,19 +131,20 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-5">
+            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
-                    <h2 className="text-head text-black fw-bold py-5">Our Mission: Trust, Joy, and Success</h2>
-                    <Image
-                                src={mission}
-                                className="img-fluid rounded-3"
-                                alt="about us"
-                            />
+                       
+                        <h2 className={`text-head text-black fw-bold  ${isMobileDev ? "py-2" : "py-5"}`}>Our Mission: Trust, Joy, and Success</h2>
+                        <Image
+                            src={mission}
+                            className="img-fluid rounded-3"
+                            alt="about us"
+                        />
                     </div>
-                    </div>
-                    </section>
-            <section className="py-5">
+                </div>
+            </section>
+            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 col-md-4">
@@ -153,8 +157,9 @@ export const SetUsApart = () => {
                         <div className="col-lg-8 col-md-8 d-flex align-items-center">
 
                             <div className="row">
-                                <h2 className="text-head text-black fw-bold py-5"> Core Values: Our Foundation</h2>
-                                <div className="col-md-6 d-flex flex-column py-3 my-2">
+                                
+                                <h2 className={`text-head text-black fw-bold  ${isMobileDev ? "py-2" : "py-5"}`}>Core Values: Our Foundation</h2>
+                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faHandshake} size="2x" />
                                     </div>
@@ -165,7 +170,7 @@ export const SetUsApart = () => {
                                     </p>
                                 </div>
 
-                                <div className="col-md-6 d-flex flex-column py-3 my-2">
+                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faSmile} size="2x" />
                                     </div>
@@ -176,7 +181,7 @@ export const SetUsApart = () => {
                                     </p>
                                 </div>
 
-                                <div className="col-md-6 d-flex flex-column  py-3 my-2">
+                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faDoorOpen} size="2x" />
                                     </div>
@@ -188,7 +193,7 @@ export const SetUsApart = () => {
                                 </div>
 
 
-                                <div className="col-md-6 d-flex flex-column  py-3 my-2">
+                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faHeart} size="2x" />
                                     </div>
@@ -217,12 +222,12 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-5">
+            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
                         <h2 className="text-head text-black fw-bold py-4 text-center"> The Treysta Difference: Our Unique Approach</h2>
                         <div className="col-lg-6 col-md-6">
-                            <Card className="p-3 bgsecondary border-none my-3">
+                            <Card className="p-5 bgsecondary border-none my-3">
                                 <h4>Coffee Fuels Us</h4>
                                 <h4>Deals Drive Us!</h4>
                                 <p className="text-para">We're passionate about closing great deals and staying
@@ -230,7 +235,7 @@ export const SetUsApart = () => {
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6">
-                            <Card className="p-3 bgsecondary border-none my-3">
+                            <Card className="p-5 bgsecondary border-none my-3">
                                 <h4>We Take Your Calls</h4>
                                 <h4> (Yes! Even at Midnight!)</h4>
                                 <p className="text-para">Your midnight worries about curtains? That's our priority too.</p>
@@ -272,7 +277,7 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-5">
+            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
 

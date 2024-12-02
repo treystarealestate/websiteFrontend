@@ -2,11 +2,13 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import aboutImage1 from "../../public/assets/frontend/images/img93.jpg";
+import { useResponsive } from "@/src/hooks/useResposive";
 export const VisionMission = () => {
+    const isMobileDev = useResponsive();
     return (
 
         <>
-            <section className="py-5">
+            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-8 d-flex align-items-center">
@@ -49,7 +51,7 @@ export const VisionMission = () => {
                 </div>
             </section>
 
-            <section className="py-5">
+            {/* <section className="py-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-12 col-md-12">
@@ -76,7 +78,7 @@ export const VisionMission = () => {
                                 working together to create something meaningful.
                             </p>
 
-                            {/* <div className="row">
+                           <div className="row">
                             <div className="col-12 col-lg-12 col-md-12 my-auto">
                                 <div className="descCont text-center ">
                                     <span className="text-sub text-gold">
@@ -120,11 +122,11 @@ export const VisionMission = () => {
                                     customer-centric solutions that exceed expectations.
                                 </p>
                             </div>
-                        </div> */}
+                        </div> 
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
 
     )

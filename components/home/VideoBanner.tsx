@@ -21,7 +21,7 @@ const VideoBanner = () => {
               playsInline
               poster="/video-poster.jpg" // Fallback image for browsers that don't support video
             >
-              <source src="/assets/frontend/images/banners/homeVideoPc.mp4" type="video/mp4" />
+              <source src="/assets/frontend/images/banners/BannerVideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <video
@@ -32,7 +32,7 @@ const VideoBanner = () => {
               playsInline
               poster="/video-poster.jpg" // Fallback image for browsers that don't support video
             >
-              <source src="/assets/frontend/images/banners/homeVideoMob.mp4" type="video/mp4" />
+              <source src="/assets/frontend/images/banners/BannerVideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
