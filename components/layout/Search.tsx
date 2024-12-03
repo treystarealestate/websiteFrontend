@@ -194,7 +194,7 @@ const Search: React.FC<SearchProps> = ({ bgClass, formClass }) => {
                         </div>
 
                         {/* Search Button */}
-                        <div className="col-6 col-lg-auto mt-auto">
+                        <div className="col-6 col-lg-auto mt-auto searchBtn">
                             <button type="submit" className="btn btn-lg btn-white w-100" onClick={handleSearch}>
                                 <i className="text-gold bi bi-search"></i> Search
                             </button>

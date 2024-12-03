@@ -4,9 +4,10 @@ import React from 'react';
 import Search from '../layout/Search';
 import { motion } from 'framer-motion';
 import { useVariants } from '@/src/hooks/useVariants';
+import { useResponsive } from "@/src/hooks/useResposive";
 const VideoBanner = () => {
   const { introHeaderVariants } = useVariants();
-
+  const isMobileDev = useResponsive();
   return (
     <section className='position-relative videoBanner'>
       <div className="container">
@@ -43,11 +44,23 @@ const VideoBanner = () => {
 
             <div className="text-white textContent">
 
-              <motion.h1
-                variants={introHeaderVariants} // Use the header animation variants
-                initial="hide"
-                whileInView="show"
-                transition={{ duration: 1 }} className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine <span className='text-gold fw-bold'> Real Estate</span></motion.h1>
+
+            {isMobileDev ? (
+                               <h1
+                               className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine <span className='text-gold fw-bold'> Real Estate</span></h1>
+
+                            ) : (
+                              <motion.h1
+                              variants={introHeaderVariants} // Use the header animation variants
+                              initial="hide"
+                              whileInView="show"
+                              transition={{ duration: 1 }} className="display-4">Treysta: Where Trust, Integrity, and Fun Redefine <span className='text-gold fw-bold'> Real Estate</span></motion.h1>
+
+                            )}
+
+
+
+              
             </div>
             <div>
               <Search bgClass="bgSearch" formClass="formSearch" />
