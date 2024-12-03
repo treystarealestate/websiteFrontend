@@ -4,7 +4,7 @@ import { Col, Container, Row, Card } from 'react-bootstrap';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useVariants } from '@/src/hooks/useVariants';
-
+import { useResponsive } from "@/src/hooks/useResposive";
 // TypeScript interface for the community data
 interface Community {
     id: number;
@@ -19,6 +19,7 @@ interface PartnerProps {
   
 const CommunityPage = ({ communities }: PartnerProps) => {
     const { introTopVariants } = useVariants();
+    const isMobileDev = useResponsive();
     return (
         <section className='my-5'>
             <Container className='py-3'>
@@ -46,7 +47,8 @@ const CommunityPage = ({ communities }: PartnerProps) => {
                             <img 
                                 src={communities[0].mainImage} 
                                 alt={communities[0].name} 
-                                className="img-fluid rounded-3 w-100 communityBigCard"
+                               
+                                className={`img-fluid rounded-3 w-100 communityBigCard ${isMobileDev ? "h-200" : ""}`}
                                 style={{ objectFit: "cover" }} 
                             />
                             <div className="position-absolute rounded-3 w-100 h-100 top-0 bottom-0 left-0 right-0 bg-dark opacity-50"></div>
