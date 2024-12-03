@@ -9,9 +9,10 @@ export default function Page({ teamData }: { teamData: any }) {
   return (
     <main className='secondaryClr'>
       {/* <AboutBanner /> */}
+      <CeoMessage />
       <SetUsApart />
       <VisionMission />
-      <CeoMessage />
+     
       <MeetTheTeam teamData={teamData}/>
     </main>
   );

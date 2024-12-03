@@ -45,7 +45,7 @@ export default function page() {
                                     </div>
                                     <div className="my-auto">
                                         <h6 className="mb-1 text-gold">Phone</h6>
-                                        <p className='mb-0'><a href="tel:+971 50 123 4567" className="text-decoration-none text-black">+971 50 123 4567</a></p>
+                                        <p className='mb-0'><a href="tel:+971585336375" className="text-decoration-none text-black">+971 58 533 6375</a></p>
                                     </div>
                                 </div>
                                 <div className="d-flex mb-4">
@@ -59,7 +59,7 @@ export default function page() {
                                     </div>
                                     <div className="my-auto">
                                         <h6 className="mb-1 text-gold">Email</h6>
-                                        <p className='mb-0'><a href="mailto:info@treysta.com" className="text-decoration-none text-black">info@treysta.com</a></p>
+                                        <p className='mb-0'><a href="mailto:Hello@treysta.ae" className="text-decoration-none text-black">Hello@treysta.ae</a></p>
                                     </div>
                                 </div>
                             </div>

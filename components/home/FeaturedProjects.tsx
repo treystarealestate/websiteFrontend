@@ -42,7 +42,7 @@ const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal, projects }) => {
                                     </span>
                                     <h3 className="text-head py-2">Exclusive from Trëysta</h3>
                                     <p className="text-para mb-4">
-                                        Start your search for UAE's top off-plan developments with Treysta. Our expert advisors will match you with the perfect opportunity, offering early investment benefits, flexible payment plans, and the potential for great returns—all backed by our trusted approach.
+                                        Start your search for UAE's top off-plan developments with treysta. Our expert advisors will match you with the perfect opportunity, offering early investment benefits, flexible payment plans, and the potential for great returns—all backed by our trusted approach.
                                     </p>
                                     <div className='mb-3'>
                                         <Link href="/off-plan" className='btn btn-main-white'>
@@ -60,7 +60,7 @@ const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal, projects }) => {
                                     </span>
                                     <h3 className="text-head py-2">Exclusive from Trëysta</h3>
                                     <p className="text-para mb-4">
-                                        Start your search for UAE's top off-plan developments with Treysta. Our expert advisors will match you with the perfect opportunity, offering early investment benefits, flexible payment plans, and the potential for great returns—all backed by our trusted approach.
+                                        Start your search for UAE's top off-plan developments with treysta. Our expert advisors will match you with the perfect opportunity, offering early investment benefits, flexible payment plans, and the potential for great returns—all backed by our trusted approach.
                                     </p>
                                     <div className='mb-3'>
                                         <Link href="/off-plan" className='btn btn-main-white'>

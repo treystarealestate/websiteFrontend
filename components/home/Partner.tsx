@@ -26,17 +26,14 @@ const Partner = ({ developers }: PartnerProps) => {
         <div className="row">
           <div className="col-12">
             <div className="descCont text-center py-4">
-              <motion.div
-                variants={introTopVariants} // Use the header animation variants
-                initial="hide"
-                whileInView="show"
-                transition={{ duration: 1 }}
+              <div
+                
               >
                 <span className="text-sub text-gold">
                   <i className="bi bi-dash-lg"></i> Partners
                 </span>
                 <h3 className="text-head py-2">We partner with the best</h3>
-              </motion.div>
+              </div>
             </div>
           </div>
           <div className="col-12">

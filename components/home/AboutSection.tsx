@@ -62,17 +62,20 @@ const About = () => {
                                     {isMobileDev ? (
                                         <>
                                             <>
-                                                <div>
-                                                    <span className='text-sub text-gold'><i className="bi bi-dash-lg"></i> About Us</span>
-                                                </div>
-                                                <h3 className="text-head py-2">Turning Dreams into Reality with Integrity</h3>
-                                                <p className="text-para">At Treysta, we redefine the real estate experience by making trust the cornerstone of every interaction. Rooted in the Nordic concept of "trust," we combine integrity and reliability with a touch of fun, ensuring that your property journey is both smooth and enjoyable.</p>
-                                                <p className="text-para pb-2">Whether you're buying, selling, or investing, our team is committed to providing you with a refreshing, stress-free approach. With Treysta, real estate doesn't have to be a daunting process—it's an exciting opportunity, guided by experts you can truly trust.</p>
-                                                <div>
-                                                    <Link href="/about-us" className='btn btn-main'>
-                                                        <span className='align-top'>Know More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
-                                                    </Link>
-                                                </div>
+                                            <div >
+                                                <span className='text-sub text-gold'><i className="bi bi-dash-lg"></i> About Us</span>
+                                            </div>
+                                            <h3  className="text-head py-2">trëysta: Where Trust Meets Fun in Real Estate</h3>
+                                            <p  className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY.</p>
+
+                                            <p  className="text-para">Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.</p>
+
+                                            <p  className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal—it can be exciting, enjoyable, and surprisingly refreshing.</p>
+                                            <div>
+                                                <Link href="/about-us" className='btn btn-main'>
+                                                    <span className='align-top'>Know More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
+                                                </Link>
+                                            </div>
                                             </>
 
                                         </>
@@ -88,15 +91,21 @@ const About = () => {
                                             <motion.h3 variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"
-                                                transition={{ duration: 1.01 }} className="text-head py-2">Turning Dreams into Reality with Integrity</motion.h3>
+                                                transition={{ duration: 1.01 }} className="text-head py-2">trëysta: Where Trust Meets Fun in Real Estate</motion.h3>
                                             <motion.p variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"
-                                                transition={{ duration: 1.02 }} className="text-para">At Treysta, we redefine the real estate experience by making trust the cornerstone of every interaction. Rooted in the Nordic concept of "trust," we combine integrity and reliability with a touch of fun, ensuring that your property journey is both smooth and enjoyable.</motion.p>
+                                                transition={{ duration: 1.02 }} className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY.</motion.p>
+
                                             <motion.p variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"
-                                                transition={{ duration: 1.04 }} className="text-para pb-2">Whether you're buying, selling, or investing, our team is committed to providing you with a refreshing, stress-free approach. With Treysta, real estate doesn't have to be a daunting process—it's an exciting opportunity, guided by experts you can truly trust.</motion.p>
+                                                transition={{ duration: 1.02 }} className="text-para">Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.</motion.p>
+
+                                            <motion.p variants={introPictureVariants} // Use the header animation variants
+                                                initial="hide"
+                                                whileInView="show"
+                                                transition={{ duration: 1.04 }} className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal—it can be exciting, enjoyable, and surprisingly refreshing.</motion.p>
                                             <motion.div variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"

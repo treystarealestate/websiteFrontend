@@ -37,12 +37,12 @@ function blogs() {
                                     </div>
                                     <div className="accordion aboutAccordion">
                                     <p className={`fs-14 text-secondary`}>
-            At Treysta, privacy of visitors of our website
+            At treysta, privacy of visitors of our website
             is top priority. This Privacy Policy document gives a detailed view
             in to what types of information is collected from our visitors and
             how we use the same. This Privacy Policy only applies to our online
             activities, with respect to information visitors share with us
-            and/or data collected by Treysta. It does not extend to any data
+            and/or data collected by treysta. It does not extend to any data
             collected offline or through channels other than the above mentioned
             website.
           </p>
@@ -71,7 +71,7 @@ function blogs() {
           <h5 className={``}>How do we use your information?</h5>
           <p className={`fs-14 text-secondary`}>
             There are multiple ways through which we use the information
-            collected via Treysta. They include:
+            collected via treysta. They include:
           </p>
           <ul>
             <li>
@@ -119,11 +119,11 @@ function blogs() {
 
           <h5 className={``}>Web Cookies</h5>
           <p className={`fs-14 text-secondary`}>
-            Treysta uses cookies and web beacons on its website. These cookies
+            treysta uses cookies and web beacons on its website. These cookies
             collect and store information that is used to optimize visitor
             experience. This includes visitors’ likes and preferences, pages
             they visited, time they spent, browser they used and/or other
-            information. This helps Treysta customize and personalize its web
+            information. This helps treysta customize and personalize its web
             page content to provide a better experience.<br></br>
             <br></br>
             You can find more information on cookies here.
@@ -132,7 +132,7 @@ function blogs() {
           <h5 className={``}>Log Files</h5>
           <p className={`fs-14 text-secondary`}>
             Log files is a standard procedure used by all hosting companies.
-            These files log visitors when they visit Treysta. It collects
+            These files log visitors when they visit treysta. It collects
             information including include Internet Protocol (IP) addresses,
             browser type, Internet Service Provider (ISP), referring/exit pages,
             time spent on the website, number of clicks, date and time stamp,
@@ -151,9 +151,9 @@ function blogs() {
             how they use the user data they collect. Third-party ad servers and
             ad networks also use technologies such as cookies, web beacons or
             JavaScript in their advertisements and links that appear on
-            Treysta. These advertisements and link are directly sent to users’
+            treysta. These advertisements and link are directly sent to users’
             browsers and they automatically receive your IP addresses and other
-            such information. It is important to note that My Treysta has no
+            such information. It is important to note that My treysta has no
             access to this information or control over the cookies used by third
             party advertisers.<br></br>
             <br></br>
@@ -185,7 +185,7 @@ function blogs() {
             repercussions of sharing information online on websites or with
             strangers.<br></br>
             <br></br>
-            Treysta does not knowingly collect any personal information from
+            treysta does not knowingly collect any personal information from
             minors.If you believe that you child has shared this type of
             information on our website, we encourage you to contact us
             immediately and we will do our best efforts to promptly remove such
@@ -247,12 +247,12 @@ function blogs() {
           </ul>
 
           <p className={`fs-14 text-secondary`}>
-            Any of the above request you make will be adhered by us.Treysta may
+            Any of the above request you make will be adhered by us.treysta may
             take up to one month to respond to you.If you would wish to exercise
             any of these rights, please contact us.<br></br>
             <br></br>
             If you need more information about our Privacy Policy, feel free to
-            write to us at info@Treysta.<br></br>
+            write to us at info@treysta.<br></br>
             <br></br>
             This Privacy Policy was created with the help of a free privacy
             policy generator.

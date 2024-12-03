@@ -96,7 +96,7 @@ export const SetUsApart = () => {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
             <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
@@ -106,7 +106,7 @@ export const SetUsApart = () => {
                                     Trëysta: Where Trust Meets Fun in Real Estate
                                 </h2>
                                 <ul className="unnumbered">
-                                    <li>At Treysta, trust isn’t just a value; it’s our IDENTITY.</li>
+                                    <li>At treysta, trust isn’t just a value; it’s our IDENTITY.</li>
                                     <li>
                                         Inspired by the Nordic word for “trust,” we’re here to bring
                                         integrity, reliability, and a little fun into the world of real
@@ -143,7 +143,70 @@ export const SetUsApart = () => {
                         />
                     </div>
                 </div>
+            </section>  */}
+
+
+            <section className='py-5 bg-darkGold position-relative'>
+                <div className="bgSkyline"></div>
+                <div className="container">
+                    <div className="row">
+                    <div className="col-lg-12 col-md-12 d-flex align-items-center">
+
+<div className="row">
+    
+    <h2 className={`text-head text-black text-center fw-bold  ${isMobileDev ? "py-2" : "py-2"}`}>Core Values: Our Foundation</h2>
+    <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
+        <div className="icon-container mb-3 d-flex">
+            <FontAwesomeIcon icon={faHandshake} size="2x" />
+        </div>
+        <h5 className="text-dark mb-3">Trust as Our Foundation</h5>
+        <p className="text-muted">
+            We earn your trust every step of the
+            way.
+        </p>
+    </div>
+
+    <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
+        <div className="icon-container mb-3 d-flex">
+            <FontAwesomeIcon icon={faSmile} size="2x" />
+        </div>
+        <h5 className="text-dark mb-3">Fun in the Process</h5>
+        <p className="text-muted">
+            Buying property should feel like a win,
+            not a chore.
+        </p>
+    </div>
+
+    <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
+        <div className="icon-container mb-3 d-flex">
+            <FontAwesomeIcon icon={faDoorOpen} size="2x" />
+        </div>
+        <h5 className="text-dark mb-3">Transparency Always</h5>
+        <p className="text-muted">
+            We provide straight answers and
+            clear processes, with no surprises
+        </p>
+    </div>
+
+
+    <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
+        <div className="icon-container mb-3 d-flex">
+            <FontAwesomeIcon icon={faHeart} size="2x" />
+        </div>
+        <h5 className="text-dark mb-3">Experience Matters</h5>
+        <p className="text-muted">
+            Turning what could be a nervewracking process into a rewarding
+            experience.
+        </p>
+    </div>
+
+</div>
+</div>
+                    </div>
+                </div>
             </section>
+
+{/* 
             <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
@@ -208,10 +271,10 @@ export const SetUsApart = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
-            <section className="">
+            {/* <section className="">
                 <div className="full-container">
                     <div className="row">
                         <Image
@@ -221,14 +284,14 @@ export const SetUsApart = () => {
                         />
                     </div>
                 </div>
-            </section>
-            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
+            </section> */}
+            <section  className={`${isMobileDev ? "py-2" : "py-2"}`}>
                 <div className="container">
                     <div className="row">
-                        <h2 className="text-head text-black fw-bold py-4 text-center"> The Treysta Difference: Our Unique Approach</h2>
+                        <h2 className="text-head text-black fw-bold py-2 text-center"> The treysta Difference: Our Unique Approach</h2>
                         <div className="row">
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                            <Card className="p-5 bgsecondary border-none my-3 w-100">
+                            <Card className="p-5 bgsecondary border-none my-2 w-100">
                             <h4>Coffee Fuels Us</h4>
                             <h4>Deals Drive Us!</h4>
                             <p className="text-para">
@@ -237,7 +300,7 @@ export const SetUsApart = () => {
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                            <Card className="p-5 bgsecondary border-none my-3 w-100">
+                            <Card className="p-5 bgsecondary border-none my-2 w-100">
                             <h4>We Take Your Calls</h4>
                             <h4>(Yes! Even at Midnight!)</h4>
                             <p className="text-para">
@@ -248,7 +311,7 @@ export const SetUsApart = () => {
                         </div>
 
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-3 w-100">
+                        <Card className="p-5 bgsecondary border-none my-2 w-100">
                                 <h4>No such thing as "Too Picky"</h4>
 
                                 <p className="text-para">Bring your 12-page checklist. We love a good challenge.</p>
@@ -256,21 +319,21 @@ export const SetUsApart = () => {
                         </div>
 
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-3 w-100">
+                        <Card className="p-5 bgsecondary border-none my-2 w-100">
                                 <h4>Overthinking is a skill, we've perfected</h4>
 
                                 <p className="text-para">We overthink the small stuff so you don't have to.</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-3 w-100">
+                        <Card className="p-5 bgsecondary border-none my-2 w-100">
                                 <h4>We're Realtors, Not Magicians( But Close)</h4>
 
                                 <p className="text-para">If you want a castle for the price of a studio, we'll do or bestbut no promises!</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-3 w-100">
+                        <Card className="p-5 bgsecondary border-none my-2 w-100">
                                 <h4> Fun is a Non-Negotiable</h4>
 
                                 <p className="text-para">As you can tell, we are a little witty and we do like to have fun!
@@ -321,29 +384,9 @@ export const SetUsApart = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-             <section className='py-5 bg-darkGold position-relative'>
-                <div className="bgSkyline"></div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-12 col-md-12">
-                            <div className='row justify-content-center'>
-                                <div className="col-12 col-lg-8 col-md-8">
-                                    <div className=''>
-                                        <div className="descCont text-center py-3 ">
-                                            <h4 className="text-head text-black fw-bold"> Our Promise: More Than Just Transactions
-                                            </h4>
-                                            <p className="text-desc">We build trust by earning your confidence through honest guidance and transparent communication. Your success is our priority, and we work tirelessly to achieve your real estate goals.</p>
-                                            <p className="text-desc">We make the property journey exciting by infusing joy and enthusiasm into every step. With clarity and support, we turn your real estate dreams into reality.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section> */}
+
+            
         </>
 
     );

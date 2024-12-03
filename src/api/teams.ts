@@ -1,6 +1,5 @@
 export async function getTeams() {
   const response = await fetch(`${process.env.API_HOST}agents`, {
-    cache: "force-cache",
     next: { tags: ["agents"] },
   });
 

@@ -8,13 +8,13 @@ export const VisionMission = () => {
     return (
 
         <>
-            <section  className={`${isMobileDev ? "py-2" : "py-2"}`}>
+            {/*<section  className={`${isMobileDev ? "py-2" : "py-2"}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-8 d-flex align-items-center">
                             <div>
                                 <h2 className="text-head text-black fw-bold py-3"> Ready to Experience the
-                                    Treysta Difference?</h2>
+                                    treysta Difference?</h2>
                                 <ol className="numbered">
 
                                     <li>
@@ -51,7 +51,7 @@ export const VisionMission = () => {
                 </div>
             </section>
 
-            {/* <section className="py-5">
+             <section className="py-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-12 col-md-12">
@@ -72,7 +72,7 @@ export const VisionMission = () => {
                                 extended family—valued, cared for, and secure.
                             </p>
                             <p className="text-para">
-                                Today, Vaibhav leads Treysta with the same values that guide him as a father: trust, transparency, and care. His civil
+                                Today, Vaibhav leads treysta with the same values that guide him as a father: trust, transparency, and care. His civil
                                 engineering expertise ensures a detail-oriented approach, while his fatherly instincts drive his commitment to
                                 building lifelong relationships. Treÿsta isn’t just a real estate agency; it’s a big family of agents, clients, and partners,
                                 working together to create something meaningful.
