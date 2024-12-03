@@ -159,7 +159,7 @@ export const SetUsApart = () => {
                             <div className="row">
                                 
                                 <h2 className={`text-head text-black fw-bold  ${isMobileDev ? "py-2" : "py-5"}`}>Core Values: Our Foundation</h2>
-                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
+                                <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faHandshake} size="2x" />
                                     </div>
@@ -170,7 +170,7 @@ export const SetUsApart = () => {
                                     </p>
                                 </div>
 
-                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
+                                <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faSmile} size="2x" />
                                     </div>
@@ -181,7 +181,7 @@ export const SetUsApart = () => {
                                     </p>
                                 </div>
 
-                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
+                                <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faDoorOpen} size="2x" />
                                     </div>
@@ -193,7 +193,7 @@ export const SetUsApart = () => {
                                 </div>
 
 
-                                <div className={`col-md-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
+                                <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-3 my-2"}`}>
                                     <div className="icon-container mb-3 d-flex">
                                         <FontAwesomeIcon icon={faHeart} size="2x" />
                                     </div>
@@ -277,7 +277,7 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section>
-            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
+            {/*<section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
 
@@ -319,7 +319,7 @@ export const SetUsApart = () => {
                 </div>
             </section>
 
-            {/* <section className='py-5 bg-darkGold position-relative'>
+             <section className='py-5 bg-darkGold position-relative'>
                 <div className="bgSkyline"></div>
                 <div className="container">
                     <div className="row">
