@@ -6,8 +6,8 @@ export function useResponsive() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Check if the window width is below a certain threshold (e.g., 768 pixels for mobile)
-      const isMobileDevice = window.innerWidth < 768;
+      // Check if the window width is below 1024 pixels (tablet and smaller devices)
+      const isMobileDevice = window.innerWidth < 1024;
 
       if (isMobileDevice) {
         document.body.style.overflow = "auto";

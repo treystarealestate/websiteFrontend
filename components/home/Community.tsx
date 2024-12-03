@@ -48,7 +48,7 @@ const CommunityPage = ({ communities }: PartnerProps) => {
                                 src={communities[0].mainImage} 
                                 alt={communities[0].name} 
                                
-                                className={`img-fluid rounded-3 w-100 communityBigCard ${isMobileDev ? "h-200" : ""}`}
+                                className={`img-fluid rounded-3 w-100 communityBigCard `}
                                 style={{ objectFit: "cover" }} 
                             />
                             <div className="position-absolute rounded-3 w-100 h-100 top-0 bottom-0 left-0 right-0 bg-dark opacity-50"></div>

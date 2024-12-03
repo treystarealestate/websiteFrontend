@@ -469,6 +469,11 @@
   outline-offset: 2px;
 }
   @media (max-width: 720px) {
+
+    .communityBigCard{
+      height: 200px; /* Adjust height for desktops */
+    }
+
     .searchBtn{
       margin-top: 15px !important;
     }
@@ -515,9 +520,18 @@ select.form-select option {
   background-color: #f0f0f0; /* Custom background color */
   color: #333 !important;  /* Text color */
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .communityBigCard {
+    height: 420px !important; /* Adjust height for tablets */
+  }
+  .searchBtn{
+    margin-top: 15px !important;
+  }
+}
+
 @media (min-width: 992px) {
 .communityBigCard{
-  height: 420px; /* Adjust height for desktops */
+  height: 420px !important; /* Adjust height for desktops */
 }
 }
 .numbered {
@@ -583,6 +597,17 @@ select.form-select option {
 .h-200{
   height: 200px;
 }
-  
-
+#suggestion-box {
+  position: relative;
+}
+#suggestions {
+  position: absolute;
+  margin-top: .5rem;
+  padding: 10px;
+  width: 100%;
+  white-space: nowrap;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
+}
   

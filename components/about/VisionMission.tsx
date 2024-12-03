@@ -8,7 +8,7 @@ export const VisionMission = () => {
     return (
 
         <>
-            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
+            <section  className={`${isMobileDev ? "py-2" : "py-2"}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-8 d-flex align-items-center">
@@ -39,7 +39,7 @@ export const VisionMission = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-4">
+                        <div className="col-lg-4 col-md-4 d-flex align-items-center">
                             <Image
                                 src={aboutImage1}
                                 className="img-fluid rounded-3"

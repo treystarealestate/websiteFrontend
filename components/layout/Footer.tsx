@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-12 col-md-12">
                             <div className="row justify-content-between pb-5 border-bottom text-white">
-                                <div className="col-12 col-lg-4 col-md-5">
+                                <div className="col-12 col-lg-4 col-md-4">
                                     <div className='pb-5 pb-lg-0 pb-md-0'>
                                         <div className="mainHead text-start pb-3">
                                             <div className='mb-3'>

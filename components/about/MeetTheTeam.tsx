@@ -4,6 +4,8 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useResponsive } from "@/src/hooks/useResposive";
+
 interface Team {
   id: number;
   name: string;
@@ -11,12 +13,13 @@ interface Team {
   role?: string;  // Optional role property
 }
 export const MeetTheTeam = ({teamData}: { teamData: any }) => {
+  const isMobileDev = useResponsive();
   return (
     <section className="py-5">
       <div className="container-fluid">
         <div className="row">
           {/* Text Content */}
-          <div className="col-12 col-lg-4 col-md-4  offset-0 offset-md-1">
+          <div className={`col-12 col-lg-4 col-md-4  offset-0  ${isMobileDev ? "" : "offset-md-1"}`}>
             <div className="descCont text-start p-1 p-md-4 p-lg-4">
               <span className="text-sub text-gold">
                 <i className="bi bi-dash-lg"></i> Our Team

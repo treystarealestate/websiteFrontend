@@ -32,7 +32,7 @@ const FeaturedProjects: React.FC<FeaturedProps> = ({ openModal, projects }) => {
         <section className="py-5 bg-black">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-12 col-lg-4 col-md-4 offset-0 offset-md-1">
+                    <div className={`col-12 col-lg-4 col-md-4  offset-0  ${isMobileDev ? "" : "offset-md-1"}`}>
                         <div className="descCont text-start text-white p-1 p-md-4 p-lg-4">
 
                             {isMobileDev ? (

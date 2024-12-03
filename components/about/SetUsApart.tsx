@@ -131,7 +131,7 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section>
-            <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
+            <section  className={`${isMobileDev ? "py-2" : "py-2"}`}>
                 <div className="container">
                     <div className="row">
                        
@@ -147,7 +147,7 @@ export const SetUsApart = () => {
             <section  className={`${isMobileDev ? "py-2" : "py-5"}`}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-4 col-md-4">
+                        <div className="col-lg-4 col-md-4 d-flex align-items-center">
                             <Image
                                 src={aboutImage4}
                                 className="img-fluid rounded-3"
