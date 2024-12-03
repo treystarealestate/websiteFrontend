@@ -291,7 +291,7 @@ export const SetUsApart = () => {
                         <h2 className="text-head text-black fw-bold py-2 text-center"> The treysta Difference: Our Unique Approach</h2>
                         <div className="row">
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                            <Card className="p-5 bgsecondary border-none my-2 w-100">
+                            <Card className="p-3 bgsecondary border-none my-2 w-100">
                             <h4>Coffee Fuels Us</h4>
                             <h4>Deals Drive Us!</h4>
                             <p className="text-para">
@@ -300,7 +300,7 @@ export const SetUsApart = () => {
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                            <Card className="p-5 bgsecondary border-none my-2 w-100">
+                            <Card className="p-3 bgsecondary border-none my-2 w-100">
                             <h4>We Take Your Calls</h4>
                             <h4>(Yes! Even at Midnight!)</h4>
                             <p className="text-para">
@@ -311,7 +311,7 @@ export const SetUsApart = () => {
                         </div>
 
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bgsecondary border-none my-2 w-100">
                                 <h4>No such thing as "Too Picky"</h4>
 
                                 <p className="text-para">Bring your 12-page checklist. We love a good challenge.</p>
@@ -319,21 +319,21 @@ export const SetUsApart = () => {
                         </div>
 
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bgsecondary border-none my-2 w-100">
                                 <h4>Overthinking is a skill, we've perfected</h4>
 
                                 <p className="text-para">We overthink the small stuff so you don't have to.</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bgsecondary border-none my-2 w-100">
                                 <h4>We're Realtors, Not Magicians( But Close)</h4>
 
                                 <p className="text-para">If you want a castle for the price of a studio, we'll do or bestbut no promises!</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-5 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bgsecondary border-none my-2 w-100">
                                 <h4> Fun is a Non-Negotiable</h4>
 
                                 <p className="text-para">As you can tell, we are a little witty and we do like to have fun!

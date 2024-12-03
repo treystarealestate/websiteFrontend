@@ -38,11 +38,12 @@ const Partner = ({ developers }: PartnerProps) => {
           </div>
           <div className="col-12">
             <Swiper
+            
               slidesPerView={2}
               spaceBetween={30}
               modules={[Autoplay]}
               autoplay={{
-                delay: 2100,
+                delay: 1000,
                 disableOnInteraction: true,
               }}
               loop={true}
@@ -56,7 +57,7 @@ const Partner = ({ developers }: PartnerProps) => {
                   spaceBetween: 40,
                 },
                 1200: {
-                  slidesPerView: 5,
+                  slidesPerView: 6,
                   spaceBetween: 40,
                 },
               }}
