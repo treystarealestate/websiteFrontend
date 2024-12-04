@@ -4,6 +4,26 @@ import Image from 'next/image';
 const Footer = () => {
     return (
         <div>
+             <div className="floatingBtn">
+          <div className="iconMain shake">
+            <a
+              id="websiteWhatsapp"
+              className="whatsappBtnClick"
+              target="_blank"
+              href={process.env.WHATSAPP_LINK}
+            >
+              <Image
+                loading="lazy"
+                className=""
+                src="assets/frontend/images/whatsapp.png"
+                alt="whatsapp"
+                width={60}
+                height={60}
+                unoptimized
+              />
+            </a>
+          </div>
+        </div>
             <footer className='py-5 bg-black'>
                 <div className="container">
                     <div className="row justify-content-center">
