@@ -289,7 +289,7 @@ export const SetUsApart = () => {
                 <div className="container">
                     <div className="row">
                         <h2 className="text-head text-black fw-bold py-2 text-center"> The treÿsta Difference: Our Unique Approach</h2>
-                        <div className="row">
+                       
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                             <Card className="p-3 bgsecondary border-none my-2 w-100">
                             <h4>Coffee Fuels Us</h4>
@@ -308,8 +308,6 @@ export const SetUsApart = () => {
                             </p>
                             </Card>
                         </div>
-                       
-
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                         <Card className="p-3 bgsecondary border-none my-2 w-100">
                                 <h4>No such thing as "Too Picky"</h4>
@@ -341,7 +339,7 @@ export const SetUsApart = () => {
                                     have to be</p>
                             </Card>
                         </div>
-                        </div>
+                      
                     </div>
                 </div>
             </section>
