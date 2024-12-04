@@ -308,7 +308,7 @@ export const SetUsApart = () => {
                             </p>
                             </Card>
                         </div>
-                        </div>
+                       
 
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                         <Card className="p-3 bgsecondary border-none my-2 w-100">
@@ -340,6 +340,7 @@ export const SetUsApart = () => {
                                     Life is stressful enough; buying or selling real estate doesn’t
                                     have to be</p>
                             </Card>
+                        </div>
                         </div>
                     </div>
                 </div>
