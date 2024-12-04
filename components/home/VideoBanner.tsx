@@ -47,14 +47,14 @@ const VideoBanner = () => {
 
             {isMobileDev ? (
                                <h1
-                               className="display-4">treysta <br/> Where Trust, Integrity, and Fun <br/> Redefine <span className='text-gold fw-bold'> Real Estate</span></h1>
+                               className="display-4"> Where Trust, Integrity, and Fun <br/> Redefines <span className='text-gold fw-bold'> Real Estate</span></h1>
 
                             ) : (
                               <motion.h1
                               variants={introHeaderVariants} // Use the header animation variants
                               initial="hide"
                               whileInView="show"
-                              transition={{ duration: 1 }} className="display-4">treysta <br/> Where Trust, Integrity, and Fun <br/> Redefine <span className='text-gold fw-bold'> Real Estate</span></motion.h1>
+                              transition={{ duration: 1 }} className="display-4">Where Trust, Integrity, and Fun <br/> Redefine <span className='text-gold fw-bold'> Real Estate</span></motion.h1>
 
                             )}
 

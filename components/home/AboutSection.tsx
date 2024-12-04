@@ -65,7 +65,7 @@ const About = () => {
                                             <div >
                                                 <span className='text-sub text-gold'><i className="bi bi-dash-lg"></i> About Us</span>
                                             </div>
-                                            <h3  className="text-head py-2">trëysta: Where Trust Meets Fun in Real Estate</h3>
+                                            <h3  className="text-head py-2">treÿsta: Where Trust Meets Fun in Real Estate</h3>
                                             <p  className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY.</p>
 
                                             <p  className="text-para">Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.</p>
@@ -91,7 +91,7 @@ const About = () => {
                                             <motion.h3 variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"
-                                                transition={{ duration: 1.01 }} className="text-head py-2">trëysta: Where Trust Meets Fun in Real Estate</motion.h3>
+                                                transition={{ duration: 1.01 }} className="text-head py-2">treÿsta: Where Trust Meets Fun in Real Estate</motion.h3>
                                             <motion.p variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"
