@@ -42,7 +42,7 @@ const Footer = () => {
                                     <div>
                                         <h6 className='text-gold'>Get In Touch</h6>
                                         <div className="mainHead text-start pb-0 pb-lg-3 pb-md-3">
-                                            <p className="text-para mb-0">treysta Property Brokerage, L.L.C.</p>
+                                            <p className="text-para mb-0">Th treysta Realestate Brokerage, L.L.C.</p>
                                             <p className="text-para">Dubai UAE</p>
                                         </div>
                                         <div>
