@@ -288,7 +288,7 @@ export const SetUsApart = () => {
             <section  className={`${isMobileDev ? "py-2" : "py-2"}`}>
                 <div className="container">
                     <div className="row">
-                        <h2 className="text-head text-black fw-bold py-2 text-center"> The treysta Difference: Our Unique Approach</h2>
+                        <h2 className="text-head text-black fw-bold py-2 text-center"> The treÿsta Difference: Our Unique Approach</h2>
                         <div className="row">
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                             <Card className="p-3 bgsecondary border-none my-2 w-100">
