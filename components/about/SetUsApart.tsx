@@ -285,15 +285,15 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section> */}
-            <section  className={`${isMobileDev ? "py-2" : "py-2"}`}>
+            <section  className={`${isMobileDev ? "py-2" : "py-3"}`}>
                 <div className="container">
                     <div className="row">
                         <h2 className="text-head text-black fw-bold py-2 text-center"> The treÿsta Difference: Our Unique Approach</h2>
                        
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                             <Card className="p-3 bgsecondary border-none my-2 w-100">
-                            <h4>Coffee Fuels Us</h4>
-                            <h4>Deals Drive Us!</h4>
+                            <h6>Coffee Fuels Us</h6>
+                            <h6>Deals Drive Us!</h6>
                             <p className="text-para">
                                 We're passionate about closing great deals and staying caffeinated.
                             </p>
@@ -301,8 +301,8 @@ export const SetUsApart = () => {
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                             <Card className="p-3 bgsecondary border-none my-2 w-100">
-                            <h4>We Take Your Calls</h4>
-                            <h4>(Yes! Even at Midnight!)</h4>
+                            <h6>We Take Your Calls</h6>
+                            <h6>(Yes! Even at Midnight!)</h6>
                             <p className="text-para">
                                 Your midnight worries about curtains? That's our priority too.
                             </p>
@@ -310,7 +310,7 @@ export const SetUsApart = () => {
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                         <Card className="p-3 bgsecondary border-none my-2 w-100">
-                                <h4>No such thing as "Too Picky"</h4>
+                                <h6>No such thing as "Too Picky"</h6>
 
                                 <p className="text-para">Bring your 12-page checklist. We love a good challenge.</p>
                             </Card>
@@ -318,21 +318,21 @@ export const SetUsApart = () => {
 
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                         <Card className="p-3 bgsecondary border-none my-2 w-100">
-                                <h4>Overthinking is a skill, we've perfected</h4>
+                                <h6>Overthinking is a skill, we've perfected</h6>
 
                                 <p className="text-para">We overthink the small stuff so you don't have to.</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                         <Card className="p-3 bgsecondary border-none my-2 w-100">
-                                <h4>We're Realtors, Not Magicians( But Close)</h4>
+                                <h6>We're Realtors, Not Magicians( But Close)</h6>
 
                                 <p className="text-para">If you want a castle for the price of a studio, we'll do or bestbut no promises!</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
                         <Card className="p-3 bgsecondary border-none my-2 w-100">
-                                <h4> Fun is a Non-Negotiable</h4>
+                                <h6> Fun is a Non-Negotiable</h6>
 
                                 <p className="text-para">As you can tell, we are a little witty and we do like to have fun!
                                     Life is stressful enough; buying or selling real estate doesn’t
