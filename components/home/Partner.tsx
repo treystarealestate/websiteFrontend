@@ -38,7 +38,7 @@ const Partner = ({ developers }: PartnerProps) => {
           </div>
           <div className="col-12">
             <Swiper
-            
+              classNam="swiper-slide-developr"
               slidesPerView={2}
               spaceBetween={30}
               modules={[Autoplay]}

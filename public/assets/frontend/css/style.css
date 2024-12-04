@@ -611,3 +611,31 @@ select.form-select option {
   box-shadow: 0 1px 5px 3px rgba(0, 0, 0, .12);
 }
   
+
+
+/* Ensure all SwiperSlides have equal height */
+.swiper-slide-developr {
+  display: flex;
+  justify-content: center;   /* Centers the content horizontally */
+  align-items: center;       /* Centers the content vertically */
+  height: 100%;               /* Ensures the slide takes full height of the container */
+}
+
+/* Make sure client-box inside swiper-slide stretches and has equal height */
+.client-box {
+  display: flex;
+  justify-content: center;    /* Centers the logo horizontally */
+  align-items: center;        /* Centers the logo vertically */
+  height: 100%;                /* Makes the client-box take the full height of the slide */
+  min-height: 120px;           /* Optional: Set a minimum height to ensure consistency */
+  padding: 10px;               /* Optional: Adds padding around the image */
+  box-sizing: border-box;      /* Ensures padding doesn't affect the box model */
+}
+
+/* Make sure the images are contained and scaled appropriately */
+.client-box img {
+  object-fit: contain;        /* Ensures the image doesn't stretch and fits within the box */
+  max-width: 100%;             /* Prevents the image from stretching horizontally */
+  max-height: 100%;            /* Ensures the image doesn't stretch vertically */
+  height: auto;                /* Allow height to adjust proportionally */
+}
