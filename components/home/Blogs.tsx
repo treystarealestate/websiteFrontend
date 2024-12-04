@@ -42,7 +42,7 @@ const Blogs = ({ blogs }: PartnerProps) => {
                         </div>
                     </Col>
                     <Col xs={12} md={6} lg={6} className='my-auto'>
-                        <div className="text-center text-md-end text-lg-end mb-3">
+                        <div className={`text-md-end text-lg-end mb-3${isMobileDev ? "" : "text-center"}`}>
 
                             {isMobileDev ? (
                                 <div>
