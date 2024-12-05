@@ -92,16 +92,20 @@ export const MeetTheTeam = () => {
               loop={true}
               modules={[Autoplay, Navigation]}
               breakpoints={{
+                320: {
+                  slidesPerView: 1.25,  // This ensures 1.5 slides on very small screens (mobile view)
+                  spaceBetween: 10,     // Optional: adjust space between slides for better mobile display
+                },
                 768: {
-                  slidesPerView: 1,
+                  slidesPerView: 1.5,  // Still 1.5 slides for tablet view
                   spaceBetween: 20,
                 },
                 992: {
-                  slidesPerView: 2.2,
+                  slidesPerView: 2.2,  // 2.2 slides for medium to large tablets
                   spaceBetween: 20,
                 },
                 1200: {
-                  slidesPerView: 3.2,
+                  slidesPerView: 3.2,  // 3.2 slides for larger screens
                   spaceBetween: 20,
                 },
               }}
