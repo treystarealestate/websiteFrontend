@@ -25,7 +25,7 @@ export const generateMetadata = async ({
 
 async function About() {
   const teams = await getTeams();
-
+  console.log(teams);
   return (
     <>
       <AboutPage teamData={teams?.data} />
