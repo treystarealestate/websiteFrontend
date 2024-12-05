@@ -4,6 +4,26 @@ import Image from 'next/image';
 const Footer = () => {
     return (
         <div>
+             <div className="floatingBtn">
+          <div className="iconMain shake">
+            <a
+              id="websiteWhatsapp"
+              className="whatsappBtnClick"
+              target="_blank"
+              href={process.env.WHATSAPP_LINK}
+            >
+              <Image
+                loading="lazy"
+                className=""
+                src="assets/frontend/images/whatsapp.png"
+                alt="whatsapp"
+                width={60}
+                height={60}
+                unoptimized
+              />
+            </a>
+          </div>
+        </div>
             <footer className='py-5 bg-black'>
                 <div className="container">
                     <div className="row justify-content-center">
@@ -42,7 +62,7 @@ const Footer = () => {
                                     <div>
                                         <h6 className='text-gold'>Get In Touch</h6>
                                         <div className="mainHead text-start pb-0 pb-lg-3 pb-md-3">
-                                            <p className="text-para mb-0">treysta Property Brokerage, L.L.C.</p>
+                                            <p className="text-para mb-0">The treysta Realestate Brokerage, L.L.C.</p>
                                             <p className="text-para">Dubai UAE</p>
                                         </div>
                                         <div>

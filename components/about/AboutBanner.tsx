@@ -12,7 +12,7 @@ export const AboutBanner = () => {
                             </div>
                             <div className="col-12 col-lg-6 col-md-6 my-auto">
                                 <div className="descCont text-white p-2 p-md-3 p-lg-5">
-                                    <h3 className="text-head py-2"><span className='text-gold fw-bold'> trëysta:</span> Where Trust Meets Fun in Real Estate
+                                    <h3 className="text-head py-2"><span className='text-gold fw-bold'> treÿsta:</span> Where Trust Meets Fun in Real Estate
                                     </h3>
                                     <p className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY. Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.
 

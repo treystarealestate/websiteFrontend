@@ -57,10 +57,10 @@ export const CeoMessage = () => {
                     {showMore && (
                       <div className="text-sec text-white">
                         <p>
-                          This sense of purpose became the foundation of Treÿsta, a boutique real estate agency named after the Nordic word for “trust.” Fatherhood didn’t just change the way he approached life; it redefined his vision for real estate. Inspired by his role as a father, he committed to creating a company where every client and agent would feel like part of an extended family—valued, cared for, and secure.
+                          This sense of purpose became the foundation of treÿsta, a boutique real estate agency named after the Nordic word for “trust.” Fatherhood didn’t just change the way he approached life; it redefined his vision for real estate. Inspired by his role as a father, he committed to creating a company where every client and agent would feel like part of an extended family—valued, cared for, and secure.
                         </p>
                         <p>
-                          Today, Vaibhav leads Treÿsta with the same values that guide him as a father: trust, transparency, and care. His civil engineering expertise ensures a detail-oriented approach, while his fatherly instincts drive his commitment to building lifelong relationships. Treÿsta isn’t just a real estate agency; it’s a big family of agents, clients, and partners, working together to create something meaningful.
+                          Today, Vaibhav leads treÿsta with the same values that guide him as a father: trust, transparency, and care. His civil engineering expertise ensures a detail-oriented approach, while his fatherly instincts drive his commitment to building lifelong relationships. Treÿsta isn’t just a real estate agency; it’s a big family of agents, clients, and partners, working together to create something meaningful.
                         </p>
                       </div>
                     )}
