@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useResponsive } from "@/src/hooks/useResposive";
+
 
 interface Team {
   id: number;
@@ -12,8 +13,37 @@ interface Team {
   image: string;
   role?: string;  // Optional role property
 }
-export const MeetTheTeam = ({teamData}: { teamData: any }) => {
-  console.log(teamData);
+export const MeetTheTeam = () => {
+
+
+  const [teamData, setTeamData] = useState<{
+    id: number;
+  name: string;
+  image: string;
+  role?: string;  // Optional role property
+  } | null>(null);
+
+
+
+  useEffect(() => {
+    const fetchOptions = async () => {
+      try {
+        const developerRes = await fetch(
+          `${process.env.API_HOST}agents`
+        );
+        const developerData = await developerRes.json();
+        if (developerData.success) {
+          setTeamData(developerData.data);
+        }
+      } catch (error) {
+        console.error("Error fetching dropdown options:", error);
+      }
+    };
+
+    fetchOptions();
+  }, []);
+
+
   const isMobileDev = useResponsive();
   return (
     <section className="py-5">
@@ -77,7 +107,7 @@ export const MeetTheTeam = ({teamData}: { teamData: any }) => {
               }}
               className="projectSwiper"
             >
-              {teamData.map((team: Team) => (
+              {Array.isArray(teamData) && teamData.map((team: Team) => (
                 <SwiperSlide key={team.id}>
                   <div className="card bg-transparent border-0">
                     <img
@@ -87,7 +117,6 @@ export const MeetTheTeam = ({teamData}: { teamData: any }) => {
                     />
                     <div className="card-body">
                       <h5 className="mb-0">{team.name}</h5>
-                      {/* <p className="text-sec text-gold">Client Manager</p> */}
                     </div>
                   </div>
                 </SwiperSlide>

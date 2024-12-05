@@ -13,7 +13,7 @@ export default function Page({ teamData }: { teamData: any }) {
       <SetUsApart />
       <VisionMission />
      
-      <MeetTheTeam teamData={teamData}/>
+      <MeetTheTeam/>
     </main>
   );
 }
