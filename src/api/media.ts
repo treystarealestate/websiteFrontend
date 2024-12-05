@@ -1,8 +1,5 @@
 export async function getMediaBySlug(slug: string) {
-    const response = await fetch(`${process.env.API_HOST}medias/${slug}/detail`, {
-        cache: "force-cache",
-        next: { tags: [`medias:${slug}`, "medias:*"] },
-    });
+    const response = await fetch(`${process.env.API_HOST}medias/${slug}/detail`);
 
     if (!response.ok) return undefined;
 
