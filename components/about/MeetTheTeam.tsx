@@ -13,6 +13,7 @@ interface Team {
   role?: string;  // Optional role property
 }
 export const MeetTheTeam = ({teamData}: { teamData: any }) => {
+  console.log(teamData);
   const isMobileDev = useResponsive();
   return (
     <section className="py-5">
