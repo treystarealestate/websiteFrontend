@@ -32,7 +32,8 @@ export default function page() {
                                     </div>
                                     <div className="my-auto">
                                         <h6 className="mb-1 text-gold">Address</h6>
-                                        <p className='mb-0'>123 Business Bay, Dubai, UAE</p>
+                                        <p className='mb-0'>I Rise Tower
+                                        Barsha Heights</p>
                                     </div>
                                 </div>
                                 <div className="d-flex mb-4">

@@ -115,7 +115,7 @@ const Footer = () => {
                                 <div className="col-12 col-lg-6 col-md-6 my-auto">
                                     <div className="text-center text-lg-end text-md-end pt-4">
                                         <div className="footCopy">
-                                            <p className='mb-0 text-white'>© {new Date().getFullYear()} - treysta Property</p>
+                                            <p className='mb-0 text-white'>© {new Date().getFullYear()} - The treysta Realestate Brokerage</p>
                                         </div>
                                     </div>
                                 </div>
