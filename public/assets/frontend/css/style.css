@@ -660,3 +660,39 @@ select.form-select option {
     animation: shake 2.5s;
     animation-iteration-count: infinite;
 }
+/* Fade-in effect */
+.fade-in {
+  animation: fadeIn 3.5s ease-in-out;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Dissolve effect */
+.dissolve {
+  animation: dissolve 2s ease-in-out forwards;
+}
+
+/* Keyframes for dissolve effect */
+@keyframes dissolve {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

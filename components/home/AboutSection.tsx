@@ -20,7 +20,8 @@ const About = () => {
                             <div className="col-12 col-lg-6 col-md-6 my-auto">
                                 <div className='about-left py-5'>
                                     <div className="patternBg" style={{ backgroundImage: `url(${patternImg.src})`, height: '100%', width: 'auto' }}></div>
-                                    <div className="position-relative shadow p-2 rounded-top-pill rounded-5 bg-offwhite img-one">
+
+                                    {/* <div className="position-relative shadow p-2 rounded-top-pill rounded-5 bg-offwhite img-one">
 
                                         {isMobileDev ? (
                                             <img
@@ -29,7 +30,7 @@ const About = () => {
                                                 alt="about"
                                             />
                                         ) : (
-                                            <motion.img variants={introHeaderVariants} // Use the header animation variants
+                                            <motion.img variants={introHeaderVariants}
                                                 initial="hide"
                                                 whileInView="show"
                                                 transition={{ duration: 1 }} src='/assets/frontend/images/about1.jpg' className="img-fluid rounded-top-pill rounded-5" alt="about"></motion.img>
@@ -45,7 +46,7 @@ const About = () => {
                                         </div>
                                     ) : (
 
-                                        <motion.div variants={introHeaderVariants} // Use the header animation variants
+                                        <motion.div variants={introHeaderVariants} 
                                             initial="hide"
                                             whileInView="show"
                                             transition={{ duration: 1.1 }}>
@@ -53,7 +54,21 @@ const About = () => {
                                                 <Image src={aboutImage} className="img-fluid rounded-3" alt="" />
                                             </div>
                                         </motion.div>
-                                    )}
+                                    )} */}
+
+
+                                    <div className="position-relative shadow p-2 rounded-top-pill rounded-5 bg-offwhite img-one dissolve">
+                                        <img
+                                            src='/assets/frontend/images/about1.jpg'
+                                            className="img-fluid rounded-top-pill rounded-5"
+                                            alt="about"
+                                        />
+                                    </div>
+                                    <div className="">
+                                        <div className="img-two shadow rounded-3 overflow-hidden p-2 bg-offwhite dissolve">
+                                            <Image src={aboutImage} className="img-fluid rounded-3" alt="" />
+                                        </div>
+                                    </div>
                                 </div>
                                 {/* <Image src={aboutImage}  alt='about us' className='img-fluid' /> */}
                             </div>
@@ -62,20 +77,20 @@ const About = () => {
                                     {isMobileDev ? (
                                         <>
                                             <>
-                                            <div >
-                                                <span className='text-sub text-gold'><i className="bi bi-dash-lg"></i> About Us</span>
-                                            </div>
-                                            <h3  className="text-head py-2">treÿsta: Where Trust Meets Fun in Real Estate</h3>
-                                            <p  className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY.</p>
+                                                <div >
+                                                    <span className='text-sub text-gold'><i className="bi bi-dash-lg"></i> About Us</span>
+                                                </div>
+                                                <h3 className="text-head py-2">treÿsta: Where Trust Meets Fun in Real Estate</h3>
+                                                <p className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY.</p>
 
-                                            <p  className="text-para">Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.</p>
+                                                <p className="text-para">Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.</p>
 
-                                            <p  className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal—it can be exciting, enjoyable, and surprisingly refreshing.</p>
-                                            <div>
-                                                <Link href="/about-us" className='btn btn-main'>
-                                                    <span className='align-top'>Know More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
-                                                </Link>
-                                            </div>
+                                                <p className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal—it can be exciting, enjoyable, and surprisingly refreshing.</p>
+                                                <div>
+                                                    <Link href="/about-us" className='btn btn-main'>
+                                                        <span className='align-top'>Know More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
+                                                    </Link>
+                                                </div>
                                             </>
 
                                         </>
