@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import { useVariants } from "@/src/hooks/useVariants";
+import { console } from "inspector";
 
 interface Developer {
   logo: string; // Assuming 'logo' is a path to the partner's logo
@@ -19,10 +20,7 @@ interface PartnerProps {
 
 const Partner = ({ developers }: PartnerProps) => {
 
-  const developerCount = developers.length;
-  const updatedDevelopers = developerCount < 10 
-    ? [...developers, ...developers, ...developers, ...developers] // Repeat the array multiple times to ensure there are at least 12 slides
-    : developers;  // If there are 10 or more, just use the original list
+  console.log(developers)
   const { introTopVariants } = useVariants();
 
   return (
@@ -67,7 +65,7 @@ const Partner = ({ developers }: PartnerProps) => {
                 },
               }}
             >
-              {updatedDevelopers?.map((developer, index) => (
+              {developers?.map((developer, index) => (
                 <SwiperSlide key={index}>
                   <div className="client-box">
                     <Image
