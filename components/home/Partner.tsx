@@ -20,7 +20,6 @@ interface PartnerProps {
 
 const Partner = ({ developers }: PartnerProps) => {
 
-  console.log(developers)
   const { introTopVariants } = useVariants();
 
   return (
