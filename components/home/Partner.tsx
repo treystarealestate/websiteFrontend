@@ -23,7 +23,7 @@ const Partner = ({ developers }: PartnerProps) => {
   const updatedDevelopers = developerCount < 10 
     ? [...developers, ...developers, ...developers, ...developers] // Repeat the array multiple times to ensure there are at least 12 slides
     : developers;  // If there are 10 or more, just use the original list
-
+  console.log(updatedDevelopers)
   const { introTopVariants } = useVariants();
 
   return (
