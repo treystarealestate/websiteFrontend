@@ -18,6 +18,12 @@ interface PartnerProps {
 }
 
 const Partner = ({ developers }: PartnerProps) => {
+
+  const developerCount = developers.length;
+  const updatedDevelopers = developerCount < 10 
+    ? [...developers, ...developers, ...developers, ...developers] // Repeat the array multiple times to ensure there are at least 12 slides
+    : developers;  // If there are 10 or more, just use the original list
+
   const { introTopVariants } = useVariants();
 
   return (
@@ -57,12 +63,12 @@ const Partner = ({ developers }: PartnerProps) => {
                   spaceBetween: 40,
                 },
                 1200: {
-                  slidesPerView: 6,
+                  slidesPerView: 5,
                   spaceBetween: 40,
                 },
               }}
             >
-              {developers?.map((developer, index) => (
+              {updatedDevelopers?.map((developer, index) => (
                 <SwiperSlide key={index}>
                   <div className="client-box">
                     <Image
