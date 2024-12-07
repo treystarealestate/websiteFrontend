@@ -1,17 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay"; // Optional, Swiper autoplay functionality doesn't need a separate module
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
-import { useVariants } from "@/src/hooks/useVariants";
-import { console } from "inspector";
 
 interface Developer {
-  logo: string; // Assuming 'logo' is a path to the partner's logo
-  name: string; // Assuming each developer has a name, you can adjust this as needed
+  logo: string; // Path to partner's logo
+  name: string; // Name of the partner
 }
 
 interface PartnerProps {
@@ -19,8 +17,36 @@ interface PartnerProps {
 }
 
 const Partner = ({ developers }: PartnerProps) => {
+  const [developerData, setDeveloperData] = useState<Developer[]>([]); // Initialize as empty array
+  const [loading, setLoading] = useState<boolean>(true);
 
-  const { introTopVariants } = useVariants();
+  useEffect(() => {
+    const fetchOptions = async () => {
+      try {
+        const developerRes = await fetch(`${process.env.API_HOST}developers`);
+        const developerData = await developerRes.json();
+        if (developerData.success && Array.isArray(developerData.data.data)) { // Check if it's an array
+          setDeveloperData(developerData.data.data);
+        } else {
+          console.error("Invalid data format", developerData);
+        }
+      } catch (error) {
+        console.error("Error fetching dropdown options:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchOptions();
+  }, []);
+
+  if (loading) {
+    return <div>Loading Partners...</div>; // Fallback loading state
+  }
+
+  if (developerData.length === 0) {
+    return <div>No partners available at the moment.</div>; // Error handling for empty data
+  }
 
   return (
     <section className="py-5">
@@ -28,9 +54,7 @@ const Partner = ({ developers }: PartnerProps) => {
         <div className="row">
           <div className="col-12">
             <div className="descCont text-center py-4">
-              <div
-                
-              >
+              <div>
                 <span className="text-sub text-gold">
                   <i className="bi bi-dash-lg"></i> Partners
                 </span>
@@ -64,7 +88,7 @@ const Partner = ({ developers }: PartnerProps) => {
                 },
               }}
             >
-              {developers?.map((developer, index) => (
+              {developerData.map((developer, index) => (
                 <SwiperSlide key={index}>
                   <div className="client-box">
                     <Image
