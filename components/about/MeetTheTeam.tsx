@@ -89,7 +89,7 @@ export const MeetTheTeam = () => {
                 delay: 2500,
                 disableOnInteraction: true,
               }}
-              loop={true}
+             
               modules={[Autoplay, Navigation]}
               breakpoints={{
                 320: {
