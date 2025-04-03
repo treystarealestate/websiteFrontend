@@ -253,9 +253,7 @@ function blogs() {
             <br></br>
             If you need more information about our Privacy Policy, feel free to
             write to us at info@treysta.<br></br>
-            <br></br>
-            This Privacy Policy was created with the help of a free privacy
-            policy generator.
+           
           </p>
         </div>
                                     </div>
