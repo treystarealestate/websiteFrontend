@@ -6,7 +6,8 @@ const nextConfig = {
   env: {
     API_HOST: process.env.API_HOST,
     NEXT_PUBLIC_IMAGE_DOMAIN : process.env.NEXT_PUBLIC_IMAGE_DOMAIN,
-    WHATSAPP_LINK : process.env.WHATSAPP_LINK
+    WHATSAPP_LINK : process.env.WHATSAPP_LINK,
+    GOOGLE_TAG_MANAGER: process.env.GOOGLE_TAG_MANAGER
   },
   images: {
     formats: ["image/avif", "image/webp"],
