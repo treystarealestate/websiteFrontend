@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               j.async=true;
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
               f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${process.env.GOOGLE_TAG_MANAGER}');
+            })(window,document,'script','dataLayer','GTM-5N3T8V89');
           `,
           }}
         />
@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* GTM noscript */}
         <noscript>
           <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${process.env.GOOGLE_TAG_MANAGER}`}
+            src={`https://www.googletagmanager.com/ns.html?id=GTM-5N3T8V89`}
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
