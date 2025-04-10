@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         <CustomNavbar />
         {children}
-       
+         <Footer/>
         </body>
     </html>
   );
