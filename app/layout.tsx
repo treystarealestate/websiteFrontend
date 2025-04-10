@@ -44,6 +44,10 @@ export default function RootLayout({
         <meta name="robots" content="index,follow" />
       </head>
       <body>
+       
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5N3T8V89"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
         <CustomNavbar />
         {children}
          <Footer/>
