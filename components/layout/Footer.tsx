@@ -68,7 +68,7 @@ const Footer = () => {
                                         <div>
                                             <div className="mainHead text-start pb-4">
                                                 <div className="mb-2">
-                                                    <a href="tel:+971585336375" target="_blank" rel="noopener noreferrer"><img src="/assets/frontend/images/icons/call.webp" className="img-fluid align-middle" width={29} alt="insight1" /> <span className="text-para text-white mb-0">&nbsp; +971 58 533 6375</span></a>
+                                                    <a href="tel:+971582475234" target="_blank" rel="noopener noreferrer"><img src="/assets/frontend/images/icons/call.webp" className="img-fluid align-middle" width={29} alt="insight1" /> <span className="text-para text-white mb-0">&nbsp; +971 58 247 5234</span></a>
                                                 </div>
                                                 {/* <div className="mb-2">
                                                     <a href="tel:+971585000000" target="_blank" rel="noopener noreferrer"><img src="/assets/frontend/images/icons/call.webp" className="img-fluid align-middle" width={29} alt="insight1" /> <span className="text-para text-white mb-0">&nbsp; +971 58 500 0000</span></a>
