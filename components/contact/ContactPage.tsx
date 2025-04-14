@@ -46,7 +46,7 @@ export default function page() {
                                     </div>
                                     <div className="my-auto">
                                         <h6 className="mb-1 text-gold">Phone</h6>
-                                        <p className='mb-0'><a href="tel:+971585336375" className="text-decoration-none text-black">+971 58 533 6375</a></p>
+                                        <p className='mb-0'><a href="tel:+971582475234" className="text-decoration-none text-black">+971 58 247 5234</a></p>
                                     </div>
                                 </div>
                                 <div className="d-flex mb-4">
