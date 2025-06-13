@@ -7,7 +7,7 @@ export async function getProjectDetailsBySlug(slug: string) {
   );
 
   if (!response.ok) return undefined;
-  console.log(response.json());
+
   return response.json();
 }
 
