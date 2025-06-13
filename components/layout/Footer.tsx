@@ -15,7 +15,7 @@ const Footer = () => {
               <Image
                 loading="lazy"
                 className=""
-                src="assets/frontend/images/whatsapp.png"
+                src="/assets/frontend/images/whatsapp.png"
                 alt="whatsapp"
                 width={60}
                 height={60}
