@@ -20,6 +20,7 @@ export default async function SingleProject({ params }: Props) {
   }
   // Fetch project details   by slug
   const projects = await getProjectDetailsBySlug(slug);
+  console.log(projects);
 
   // Fetch nearby projects
   const nearbyProjects = await getNearbyProjectsBySlug(slug);
