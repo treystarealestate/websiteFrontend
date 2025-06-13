@@ -86,7 +86,7 @@ interface SingeleDetailsProps {
 }
 
 const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, projectData }) => {
-    console.log(nearByProjects)
+    
     const project = {
         title: "Damac Sun City",
         fileUrl: "/assets/frontend/images/service1.webp", // Replace with actual image paths
@@ -103,7 +103,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
     const interiorImages = projectData?.interiorGallery?.map((image) => image.path) || [];
     const exteriorImages = projectData?.exteriorGallery?.map((image) => image.path) || [];
 
-
+    console.log(projectData);
     const [selectedProject, setSelectedProject] = useState<{
         projectName: string;
         fileUrl: string;
