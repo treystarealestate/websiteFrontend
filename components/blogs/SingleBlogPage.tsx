@@ -25,7 +25,7 @@ interface MediaData {
 }
 function SingleBlogPage({ mediaData }: { mediaData: MediaData }) {
 
-
+console.log(mediaData)
     const breadcrumbItems = [
         { label: "Home", link: "/", active: false },
         { label: "Blogs", link: "/blogs", active: false },
