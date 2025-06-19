@@ -20,7 +20,7 @@ export default async function SingleMedia({ params }: Props) {
     const media = await getMediaBySlug(slug);
   
     if (!media) notFound();
-  
+    console.log(media);
     return <SingleMediaPage mediaData={media?.data}></SingleMediaPage>;
   }
   
