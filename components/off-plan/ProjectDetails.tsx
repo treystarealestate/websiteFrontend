@@ -36,7 +36,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectData }) => {
             <p className="mb-0 fs-14">Starting from: <span className="fw-bold">AED {startingPrice}</span></p>
           </Col>
           <Col xs="12" lg="3">
-            <p className="mb-0 fs-14">Starting Size: <span className="fw-bold">{startingSize} Sq.Ft</span></p>
+            <p className="mb-0 fs-14">Size: <span className="fw-bold">{startingSize} Sq.Ft</span></p>
 
           </Col>
           <Col xs="12" lg="3">
