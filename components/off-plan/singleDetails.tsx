@@ -63,6 +63,7 @@ interface Project {
     mainImage: string,
     price: string,
     area: string,
+    permit_number:string,
     longDescription: string,
     bedrooms: string,
     accommodation: string,
