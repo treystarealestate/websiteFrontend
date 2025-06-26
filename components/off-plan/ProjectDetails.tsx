@@ -53,13 +53,15 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectData }) => {
           <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Handover: <span className="fw-bold">{handoverDate}</span></p>
           </Col>
-          <Col xs="12" lg={permit_number ? 4 : 8}>
+          <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Handover: <span className="fw-bold">{handoverDate}</span></p>
           </Col>
 
           {permit_number && (
             <Col xs="12" lg="4">
               <p className="mb-0 fs-14">Permit Number: <span className="fw-bold">{permit_number}</span></p>
+            </Col>
+            <Col xs="12" lg="4">
             </Col>
           )}
         </Row>
