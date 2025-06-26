@@ -32,7 +32,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectData }) => {
     <div>
       <div className="bg-darkGold p-3 rounded-4 mb-3">
         <Row className="justify-content-center g-3">
-          <Col xs="12" lg="3">
+          <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Starting from: <span className="fw-bold">AED {startingPrice}</span></p>
           </Col>
           <Col xs="12" lg="3">
