@@ -61,8 +61,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectData }) => {
             <Col xs="12" lg="4">
               <p className="mb-0 fs-14">Permit Number: <span className="fw-bold">{permit_number}</span></p>
             </Col>
-            <Col xs="12" lg="4">
-            </Col>
+            
           )}
         </Row>
       </div>
