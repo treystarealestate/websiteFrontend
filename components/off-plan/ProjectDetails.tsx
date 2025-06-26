@@ -35,26 +35,32 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectData }) => {
           <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Starting from: <span className="fw-bold">AED {startingPrice}</span></p>
           </Col>
-          <Col xs="12" lg="3">
+          <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Size: <span className="fw-bold">{startingSize} Sq.Ft</span></p>
 
           </Col>
-          <Col xs="12" lg="3">
+          <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Bedrooms: <span className="fw-bold">{bedrooms}</span></p>
 
           </Col>
-          <Col xs="12" lg="3">
+          <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Property Type: <span className="fw-bold">{propertyType}</span></p>
           </Col>
-          <Col xs="12" lg="3">
+          <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Developer: <span className="fw-bold">{developer}</span></p>
 
           </Col>
-          <Col xs="12" lg="3">
+          <Col xs="12" lg="4">
             <p className="mb-0 fs-14">Handover: <span className="fw-bold">{handoverDate}</span></p>
           </Col>
-           <Col xs="12" lg="3">
+           <Col xs="12" lg="4">
               <p className="mb-0 fs-14">Permit Number: <span className="fw-bold">{permit_number}</span></p>
+            </Col>
+          <Col xs="12" lg="4">
+             
+            </Col>
+          <Col xs="12" lg="4">
+              
             </Col>
         </Row>
         
