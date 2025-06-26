@@ -177,7 +177,8 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                                 propertyType: projectData?.accommodation,
                                 developer: projectData?.developerName,
                                 handoverDate: projectData?.handOver,
-                                description: projectData?.longDescription
+                                description: projectData?.longDescription,
+                                permit_number: projectData?.permit_number
                             }} />
                         </div>
                         <div className="col-12 col-lg-4 col-md-4">
