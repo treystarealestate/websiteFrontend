@@ -54,6 +54,10 @@ const Footer = () => {
                                                 {/* <div className='d-inline p-2'>
                                                     <a href="http://"><center><img src="/assets/frontend/images/icons/youtube.webp" className="img-fluid align-middle" width={29} alt="insight1" /></center></a>
                                                 </div> */}
+                                                
+                                            </div>
+                                            <div>
+                                                <p>Permit Number: 119090</p>
                                             </div>
                                         </div>
                                     </div>
@@ -76,6 +80,7 @@ const Footer = () => {
                                                 <div className='mb-2'>
                                                     <a href="mailto:hello@treysta.ae" target="_blank" rel="noopener noreferrer"><img src="/assets/frontend/images/icons/email.webp" className="img-fluid align-middle" width={29} alt="insight1" /> <span className="text-para text-white">&nbsp; Hello@treysta.ae</span></a>
                                                 </div>
+                                                
                                             </div>
                                         </div>
 
