@@ -38,6 +38,9 @@ const Footer = () => {
                                                 </Link>
                                             </div>
                                             <p className="text-desc">Where Trust Meets Fun in Real Estate</p>
+                                            <p className="text-desc">Permit Number: 119090</p>
+                                            <img src="/assets/frontend/images/QR.png" className="img-fluid align-middle" width={100} alt="QR" />
+                                           
                                         </div>
                                         <div>
                                             <h6 className='text-gold'>Stay Connected</h6>
@@ -56,10 +59,7 @@ const Footer = () => {
                                                 </div> */}
                                                 
                                             </div>
-                                            <div>
-                                                <p>Permit Number: 119090</p>
-                                                <img src="/assets/frontend/images/QR.png" className="img-fluid align-middle" width={100} alt="QR" />
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
