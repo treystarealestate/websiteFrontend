@@ -58,7 +58,7 @@ const Footer = () => {
                                             </div>
                                             <div>
                                                 <p>Permit Number: 119090</p>
-                                                <img src="/assets/frontend/images/QR.png" className="img-fluid align-middle" width={29} alt="QR" />
+                                                <img src="/assets/frontend/images/QR.png" className="img-fluid align-middle" width={100} alt="QR" />
                                             </div>
                                         </div>
                                     </div>
