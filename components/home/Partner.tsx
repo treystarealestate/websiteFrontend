@@ -92,10 +92,11 @@ const Partner = ({ developers }: PartnerProps) => {
                 if (typeof window !== "undefined") {
                   console.log("Developer logo URL:", developer.logo);
                 }
+                const normalizeUrl = (url: string) => url.replace(/([^:]\/)\/+/g, "$1");
                 return (<SwiperSlide key={index}>
                                 <div className="client-box">
                                   <Image
-                                    src={developer?.logo} // Dynamic logo source
+                                   src={normalizeUrl(developer?.logo)}
                                     alt={`Partner Logo ${developer.name}`} // Dynamic alt text
                                     className="img-fluid"
                                     width={150}
