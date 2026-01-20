@@ -88,7 +88,7 @@ function ServiceList() {
                     </div>
                     <div className="row g-5">
                         {services.map((service, index) => (
-                            <div className="col-12" key={index} id={service.id}>
+                            <div className="col-12" key={index} id={String(service.id)}>
                                 <div className={`row align-items-center ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
                                     <div className="col-12 col-md-6">
                                         <img
