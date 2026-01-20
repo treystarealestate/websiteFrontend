@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, Offcanvas, Button, NavbarBrand, NavbarCollapse,
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { NavDropdown } from 'react-bootstrap';
 
 const CustomNavbar = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -31,9 +32,17 @@ const CustomNavbar = () => {
               <NavLink as={Link} href="/about-us">
                 About Us
               </NavLink>
-              <NavLink as={Link} href="/services">
+              {/* <NavLink as={Link} href="/services">
                 Services
-              </NavLink>
+              </NavLink> */}
+               <NavDropdown title="Services" id="services-dropdown">
+                <NavDropdown.Item as={Link} href="/services#1">Property Management</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/services#2">Holiday Homes</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/services#3">Concierge & Relocation Services</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/services#4">PRO Services</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/services#5">Maintenance & Home Inspection</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/services#6">Staging & Home Design</NavDropdown.Item>
+              </NavDropdown>
               <NavLink as={Link} href="/off-plan">
                 Off-Plan
               </NavLink>
