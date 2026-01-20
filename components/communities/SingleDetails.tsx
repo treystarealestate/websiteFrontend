@@ -129,7 +129,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ communityData }) => {
                         <div className="col-12 col-lg-8 col-md-8">
                             <div className="descCont">
                                 <div className="pb-3">
-                                    <h4 className="text-subhead">{communityData?.name}</h4>
+                                    <h1 className="text-subhead">{communityData?.name}</h1>
                                     <small>
                                         <i className="bi bi-geo-alt text-gold"></i> {communityData?.address}
                                     </small>
