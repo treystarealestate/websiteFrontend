@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
        {/* Ensure title is a string */}
-       <title>{String(metadata.title)}</title>
+       {/* <title>{String(metadata.title)}</title> */}
 
         {/* Ensure description is a string */}
         <meta
