@@ -128,7 +128,7 @@ const SingeleDetails: React.FC<SingeleDetailsProps> = ({ nearByProjects, project
                         <div className="col-12 col-lg-8 col-md-8">
                             <div className="descCont">
                                 <div className="pb-3">
-                                    <h4 className="text-subhead">{projectData?.title}</h4>
+                                    <h1 className="text-subhead">{projectData?.title}</h1>
                                     <small>
                                         <i className="bi bi-geo-alt text-gold"></i> {projectData?.communityName}
                                     </small>
