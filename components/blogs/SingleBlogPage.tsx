@@ -42,7 +42,7 @@ console.log(mediaData)
                         <div className="col-12 col-lg-8 col-md-8">
                             <div className="descCont pe-2 pb-3">
                                 <div className="pb-3">
-                                    <h4 className="text-subhead">{mediaData?.media?.title || "Untitled Blog"}</h4>
+                                    <h1 className="text-subhead">{mediaData?.media?.title || "Untitled Blog"}</h1>
                                     <small>
                                         <i className="bi bi-clock text-gold"></i>{" "}
                                         {moment(mediaData?.media?.date).format("MMMM D, YYYY")}
