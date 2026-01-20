@@ -88,19 +88,23 @@ const Partner = ({ developers }: PartnerProps) => {
                 },
               }}
             >
-              {developerData.map((developer, index) => (
-                <SwiperSlide key={index}>
-                  <div className="client-box">
-                    <Image
-                      src={developer?.logo} // Dynamic logo source
-                      alt={`Partner Logo ${developer.name}`} // Dynamic alt text
-                      className="img-fluid"
-                      width={150}
-                      height={100}
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
+              {developerData.map((developer, index) => {
+                if (typeof window !== "undefined") {
+                  console.log("Developer logo URL:", developer.logo);
+                }
+                return (<SwiperSlide key={index}>
+                                <div className="client-box">
+                                  <Image
+                                    src={developer?.logo} // Dynamic logo source
+                                    alt={`Partner Logo ${developer.name}`} // Dynamic alt text
+                                    className="img-fluid"
+                                    width={150}
+                                    height={100}
+                                  />
+                                </div>
+                              </SwiperSlide>
+                              );
+              })}
             </Swiper>
           </div>
         </div>
