@@ -17,7 +17,7 @@ export const AboutBanner = () => {
                                     <p className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY. Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.
 
                                     </p>
-                                    <p className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal—it can be exciting, enjoyable, and surprisingly refreshing.</p>
+                                    <p className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal, it can be exciting, enjoyable, and surprisingly refreshing.</p>
 
                                 </div>
                             </div>
