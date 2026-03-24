@@ -120,7 +120,7 @@ const About = () => {
                                             <motion.p variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"
-                                                transition={{ duration: 1.04 }} className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal—it can be exciting, enjoyable, and surprisingly refreshing.</motion.p>
+                                                transition={{ duration: 1.04 }} className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal, it can be exciting, enjoyable, and surprisingly refreshing.</motion.p>
                                             <motion.div variants={introPictureVariants} // Use the header animation variants
                                                 initial="hide"
                                                 whileInView="show"
