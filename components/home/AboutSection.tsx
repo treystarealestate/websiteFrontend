@@ -85,7 +85,7 @@ const About = () => {
 
                                                 <p className="text-para">Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.</p>
 
-                                                <p className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal—it can be exciting, enjoyable, and surprisingly refreshing.</p>
+                                                <p className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal, it can be exciting, enjoyable, and surprisingly refreshing.</p>
                                                 <div>
                                                     <Link href="/about-us" className='btn btn-main'>
                                                         <span className='align-top'>Know More </span>&nbsp;<i className="bi bi-arrow-up-right-circle-fill text-gold"></i>
