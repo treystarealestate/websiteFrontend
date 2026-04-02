@@ -146,7 +146,7 @@ export const SetUsApart = () => {
             </section>  */}
 
 
-            <section className='py-5 bg-darkGold position-relative'>
+            <section className='py-5 bg-black position-relative'>
                 <div className="bgSkyline"></div>
                 <div className="container">
                     <div className="row">
@@ -154,35 +154,35 @@ export const SetUsApart = () => {
 
 <div className="row">
     
-    <h2 className={`text-head text-black text-center fw-bold  ${isMobileDev ? "py-2" : "py-2"}`}>Core Values: Our Foundation</h2>
+    <h2 className={`text-head text-white text-center fw-bold  ${isMobileDev ? "py-2" : "py-2"}`}>Core Values: Our Foundation</h2>
     <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
-        <div className="icon-container mb-3 d-flex">
+        <div className="icon-container mb-3 d-flex text-white">
             <FontAwesomeIcon icon={faHandshake} size="2x" />
         </div>
-        <h5 className="text-dark mb-3">Trust as Our Foundation</h5>
-        <p className="text-muted">
+        <h5 className="text-white mb-3">Trust as Our Foundation</h5>
+        <p className="text-white">
             We earn your trust every step of the
             way.
         </p>
     </div>
 
     <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
-        <div className="icon-container mb-3 d-flex">
+        <div className="icon-container mb-3 d-flex text-white">
             <FontAwesomeIcon icon={faSmile} size="2x" />
         </div>
-        <h5 className="text-dark mb-3">Fun in the Process</h5>
-        <p className="text-muted">
+        <h5 className="text-white mb-3">Fun in the Process</h5>
+        <p className="text-white">
             Buying property should feel like a win,
             not a chore.
         </p>
     </div>
 
     <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
-        <div className="icon-container mb-3 d-flex">
+        <div className="icon-container mb-3 d-flex text-white">
             <FontAwesomeIcon icon={faDoorOpen} size="2x" />
         </div>
-        <h5 className="text-dark mb-3">Transparency Always</h5>
-        <p className="text-muted">
+        <h5 className="text-white mb-3">Transparency Always</h5>
+        <p className="text-white">
             We provide straight answers and
             clear processes, with no surprises
         </p>
@@ -190,11 +190,11 @@ export const SetUsApart = () => {
 
 
     <div className={`col-6 d-flex flex-column  ${isMobileDev ? "py-2 my-1" : "py-2 my-1"}`}>
-        <div className="icon-container mb-3 d-flex">
+        <div className="icon-container mb-3 d-flex text-white">
             <FontAwesomeIcon icon={faHeart} size="2x" />
         </div>
-        <h5 className="text-dark mb-3">Experience Matters</h5>
-        <p className="text-muted">
+        <h5 className="text-white mb-3">Experience Matters</h5>
+        <p className="text-white">
             Turning what could be a nervewracking process into a rewarding
             experience.
         </p>
@@ -285,13 +285,13 @@ export const SetUsApart = () => {
                     </div>
                 </div>
             </section> */}
-            <section  className={`${isMobileDev ? "py-2" : "py-3"}`}>
+            <section className={`bgsecondary ${isMobileDev ? "py-2" : "py-3"}`}>
                 <div className="container">
                     <div className="row">
                         <h2 className="text-head text-black fw-bold py-2 text-center"> The treÿsta Difference: Our Unique Approach</h2>
                        
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                            <Card className="p-3 bgsecondary border-none my-2 w-100">
+                            <Card className="p-3 bg-offwhite border-none my-2 w-100">
                             <h6>Coffee Fuels Us</h6>
                             <h6>Deals Drive Us!</h6>
                             <p className="text-para">
@@ -300,7 +300,7 @@ export const SetUsApart = () => {
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                            <Card className="p-3 bgsecondary border-none my-2 w-100">
+                            <Card className="p-3 bg-offwhite border-none my-2 w-100">
                             <h6>We Take Your Calls</h6>
                             <h6>(Yes! Even at Midnight!)</h6>
                             <p className="text-para">
@@ -309,7 +309,7 @@ export const SetUsApart = () => {
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-3 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bg-offwhite border-none my-2 w-100">
                                 <h6>No such thing as "Too Picky"</h6>
 
                                 <p className="text-para">Bring your 12-page checklist. We love a good challenge.</p>
@@ -317,21 +317,21 @@ export const SetUsApart = () => {
                         </div>
 
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-3 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bg-offwhite border-none my-2 w-100">
                                 <h6>Overthinking is a skill, we've perfected</h6>
 
                                 <p className="text-para">We overthink the small stuff so you don't have to.</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-3 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bg-offwhite border-none my-2 w-100">
                                 <h6>We're Realtors, Not Magicians( But Close)</h6>
 
                                 <p className="text-para">If you want a castle for the price of a studio, we'll do or bestbut no promises!</p>
                             </Card>
                         </div>
                         <div className="col-lg-6 col-md-6 d-flex align-items-stretch">
-                        <Card className="p-3 bgsecondary border-none my-2 w-100">
+                        <Card className="p-3 bg-offwhite border-none my-2 w-100">
                                 <h6> Fun is a Non-Negotiable</h6>
 
                                 <p className="text-para">As you can tell, we are a little witty and we do like to have fun!

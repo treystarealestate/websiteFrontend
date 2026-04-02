@@ -1,30 +1,44 @@
-import React from 'react'
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useVariants } from '@/src/hooks/useVariants';
+import { useResponsive } from "@/src/hooks/useResposive";
 
 export const AboutBanner = () => {
-    return (
-        <section className='bg-black'>
-            <div className="container-fluid px-0">
-                <div className="row g-0">
-                    <div className="col-12 col-lg-12 col-md-12">
-                        <div className="row position-relative">
-                            <div className="col-12 col-lg-5 col-md-5">
-                                <div className="aboutBannerimg"></div>
-                            </div>
-                            <div className="col-12 col-lg-6 col-md-6 my-auto">
-                                <div className="descCont text-white p-2 p-md-3 p-lg-5">
-                                    <h3 className="text-head py-2"><span className='text-gold fw-bold'> treÿsta:</span> Where Trust Meets Fun in Real Estate
-                                    </h3>
-                                    <p className="text-para">At treysta, trust isn’t just a value; it’s our IDENTITY. Inspired by the Nordic word for “trust,” we’re here to bring integrity, reliability, and a little fun into the world of real estate.
+  const { introHeaderVariants } = useVariants();
+  const isMobileDev = useResponsive();
 
-                                    </p>
-                                    <p className="text-para pb-2">We believe that buying, selling, or investing in property doesn’t have to be a stressful ordeal, it can be exciting, enjoyable, and surprisingly refreshing.</p>
+  return (
+    /* Reduced minHeight from 40vh to 20vh to bring the edges closer to the text */
+    <section className="bg-darkgold d-flex align-items-center justify-content-center" style={{ minHeight: '20vh' }}>
+      {/* Changed py-5 to py-2 to drastically reduce top/bottom internal margin */}
+      <div className="container py-2">
+        <div className="row justify-content-center">
+          <div className="col-12 col-lg-10 col-md-10 text-center">
+            
+            {isMobileDev ? (
+              <h2 className="text-black fw-bold text-uppercase m-0" style={{ fontSize: '1.5rem', letterSpacing: '2px', lineHeight: '1.2' }}>
+                AS EXPERT ADVISORS, TRUSTED <br className="d-none d-md-block"/> ENTREPRENEURS, MENTORS and VISIONARIES.
+              </h2>
+            ) : (
+              <motion.h2
+                variants={introHeaderVariants}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="text-black fw-bold text-uppercase m-0"
+                /* Reduced lineHeight from 1.5 to 1.2 to tighten the space between the two lines of text */
+                style={{ letterSpacing: '2px', lineHeight: '1.2' }}
+              >
+                AS EXPERT ADVISORS, TRUSTED <br className="d-none d-md-block"/> ENTREPRENEURS, MENTORS and VISIONARIES.
+              </motion.h2>
+            )}
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

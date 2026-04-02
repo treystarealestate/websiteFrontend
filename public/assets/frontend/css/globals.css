@@ -55,6 +55,9 @@ a {
 .text-gold {
   color: #B37749 !important;
 }
+.bg-gold {
+  background-color: #B37749;
+}
 .topRightCont .bg-gold {
   background-color: #B37749 !important;
 }

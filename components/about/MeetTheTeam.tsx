@@ -46,7 +46,7 @@ export const MeetTheTeam = () => {
 
   const isMobileDev = useResponsive();
   return (
-    <section className="py-5">
+    <section className="bg-black py-5">
       <div className="container-fluid">
         <div className="row">
           {/* Text Content */}
@@ -55,24 +55,24 @@ export const MeetTheTeam = () => {
               <span className="text-sub text-gold">
                 <i className="bi bi-dash-lg"></i> Our Team
               </span>
-              <h3 className="text-head py-2">Meet the treysta Team
+              <h3 className="text-white py-2">Meet the treysta Team
               </h3>
-              <p className="text-para mb-4">
+              <p className="text-white mb-4">
               At treysta, we don’t just know real estate—we live it, with a passion that goes beyond just closing deals. Each of us is here because we love what we do, but more importantly, we’re here because we believe in making your experience smoother, simpler, and more human. Buying or selling a home can feel overwhelming, but with us, it’s never just about the transaction—it’s about you. We blend sharp data-driven insights with a genuine care for your goals, ensuring that every step is guided by a personal touch. At treysta, trust isn’t a promise, it’s a way of life, and we’re here to make your journey effortless, with the knowledge and passion to back it up.
               </p>
               {/* Swiper Navigation */}
               <div className="d-flex justify-content-start my-3">
                 <button
                   title="Previous Slide"
-                  className="swiper-button-prevNew btn btn-outline-dark me-3"
+                  className="swiper-button-prevNew btn btn-outline-light me-3"
                 >
-                  <i className="bi bi-chevron-left"></i>
+                  <i className="bi bi-chevron-left text-white"></i>
                 </button>
                 <button
                   title="Next Slide"
-                  className="swiper-button-nextNew btn btn-outline-dark"
+                  className="swiper-button-nextNew btn btn-outline-light"
                 >
-                  <i className="bi bi-chevron-right"></i>
+                  <i className="bi bi-chevron-right text-white"></i>
                 </button>
               </div>
             </div>
@@ -120,7 +120,7 @@ export const MeetTheTeam = () => {
                       className="card-img-top teamImage rounded-3"
                     />
                     <div className="card-body">
-                      <h5 className="mb-0">{team.name}</h5>
+                      <h5 className="mb-0 text-white">{team.name}</h5>
                     </div>
                   </div>
                 </SwiperSlide>

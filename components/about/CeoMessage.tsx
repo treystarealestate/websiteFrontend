@@ -15,7 +15,7 @@ export const CeoMessage = () => {
 
   return (
     <section className="bg-black">
-      <div  className={`container ${isMobileDev ? "py-2" : "py-2"}`}>
+      <div  className={`container ${isMobileDev ? "py-5" : "py-5"}`}>
         <div className="row">
           <div className="col-12 col-lg-12">
             <div className="row">
