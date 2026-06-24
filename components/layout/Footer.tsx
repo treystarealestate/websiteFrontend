@@ -49,7 +49,7 @@ const Footer = () => {
                                                     <a href="https://www.facebook.com/share/14fehtDxNr/?mibextid=LQQJ4d"><center><img src="/assets/frontend/images/icons/facebook.webp" className="img-fluid align-middle" width={29} alt="insight1" /></center></a>
                                                 </div>
                                                 <div className='d-inline p-2'>
-                                                    <a href="https://www.instagram.com/treysta.ae/"><center><img src="/assets/frontend/images/icons/instagram.webp" className="img-fluid align-middle" width={29} alt="insight1" /></center></a>
+                                                    <a href="https://www.instagram.com/treysta.realestate/"><center><img src="/assets/frontend/images/icons/instagram.webp" className="img-fluid align-middle" width={29} alt="insight1" /></center></a>
                                                 </div>
                                                 <div className='d-inline p-2'>
                                                     <a href="https://www.linkedin.com/company/tre%C3%BFsta"><center><img src="/assets/frontend/images/icons/linkedin.webp" className="img-fluid align-middle" width={29} alt="insight1" /></center></a>
