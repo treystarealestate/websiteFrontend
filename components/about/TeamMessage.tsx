@@ -67,7 +67,7 @@ export const TeamMessage = () => {
 
               {/* Partners Info */}
               <div className="text-black border-top pt-3">
-                <h5 className="mb-0 fw-bold">Vaibhav Setiya & Simran</h5>
+                <h5 className="mb-0 fw-bold">Vaibhav Setiya & Simran Sethi</h5>
                 <p className="text-sec text-gold fw-bold">Founding Partners</p>
               </div>
             </div>
